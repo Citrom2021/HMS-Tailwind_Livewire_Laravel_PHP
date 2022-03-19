@@ -15,7 +15,7 @@ class HomeController extends Controller
         if($role=="Admin")
         {
             return view('admin.dashboard');
-            //return redirect()->away('http://localhost/hms22/hms/admin/dashboard.php');
+            
         }
         else
         {
