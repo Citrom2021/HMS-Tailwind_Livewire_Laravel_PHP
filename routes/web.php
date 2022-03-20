@@ -27,6 +27,10 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
    return view('dashboard');
  })->name('dashboard');
- Route::get('/user/home','App\Http\Controllers\HomeController@index', function(){
+
+ Route::get('user/home','App\Http\Controllers\HomeController@UservsAdmin', function(){
  })->middleware('verified');
- Route::get("index",[GuestController::class,"index"]);
+
+ 
+
+/*  Route::get("index",[GuestController::class,"index"]); */

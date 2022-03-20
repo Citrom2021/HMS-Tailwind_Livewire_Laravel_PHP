@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -25,6 +28,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        $role=Auth::user()->role;
+
+        if($role=="Admin")
+    
+    {
         $request->validate([
             'name' => 'required',
             'slug' => 'required',
@@ -33,7 +41,13 @@ class ProductController extends Controller
 
         return Product::create($request->all());
     }
-
+    else
+    {
+        return response([
+            'message' => 'Forbidden'
+        ], 403);
+    }
+}
     /**
      * Display the specified resource.
      *
