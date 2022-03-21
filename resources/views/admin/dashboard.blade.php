@@ -6,4 +6,6 @@
     </x-slot>
 
     <center><h1>ADMIN DASHBOARD FOR ADMIN</h1></center>
+    
+    
 </x-app-layout>
