@@ -12,8 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class ProductController extends Controller
 {
-
-    
+   
     /**
      * Display a listing of the resource.
      *
@@ -67,8 +66,8 @@ class ProductController extends Controller
         ]);
         Product::create($request->all());
         return Redirect::route('products.index');
-
         return Product::create($request->all());
+    
     }
     else
     {
@@ -148,3 +147,6 @@ class ProductController extends Controller
         return Product::where('name', 'like', '%'.$name.'%')->get();
     }
 }
+
+
+
