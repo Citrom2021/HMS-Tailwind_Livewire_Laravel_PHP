@@ -13,12 +13,14 @@ use Illuminate\Support\Facades\Redirect;
 
 class Products extends Component
 {
-    public$products;
+    public $products,$name,$slug,$description,$price;
+    public $modal = false;
 
     public function render()
     {
         $this-> products = Product::all();
             return view('livewire.products');
+            
             
            //  blocking user to see products
            
@@ -33,8 +35,32 @@ class Products extends Component
         if($role=="User")
         
         {
+            return view('livewire.products')
             return view('welcome');
         }
      */
     }
+
+    public function create()
+    {
+        $this->cleanupFields();
+        $this->openModal();
+    }
+
+    public function openModal(){
+        $this->modal = true;
+    }
+
+    public function closeModal(){
+        $this->modal = false;
+    }
+    public function cleanupFields(){
+        
+        $this->name = "";
+        $this->slug = "";
+        $this->description = "";
+        $this->price = "";
+        
+    }
+
 }
