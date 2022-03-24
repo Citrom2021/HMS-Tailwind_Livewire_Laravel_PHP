@@ -22,6 +22,7 @@ class Products extends Component
             return view('livewire.products');
             
             
+            
            //  blocking user to see products
            
         /* $role=Auth::user()->role;
@@ -62,5 +63,23 @@ class Products extends Component
         $this->price = "";
         
     }
+
+   public function edit($id)
+   {
+       $product = Product::findOrFail($id);
+       $this->id = $id;
+       $this->name = $product-> name;
+       $this->slug = $product -> slug;
+       $this->description = $product ->description;
+       $this->price = $product -> price;
+       $this -> openModal();
+   }
+
+   public function delete($id)
+ {
+     Product::find($id) -> delete();
+ }  
+
+ 
 
 }

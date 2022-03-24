@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\AdminvsUserWebController;
 use App\Http\Livewire\Products;
 
 /*
@@ -23,12 +24,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/index', function () {
+    return view('index');
+});
+
 /* Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
   })->name('dashboard'); */
 
   Route::middleware(['auth:sanctum', 'verified'])->group(function(){
       Route::get('/products', Products::class);
+      /* Route::get('/restaurantandbar',UserProducts::class); */
       Route::get('/dashboard', function(){
           return view('dashboard');
       })->name('dashboard');
@@ -38,13 +44,11 @@ Route::get('/', function () {
  Route::get('user/home','App\Http\Controllers\HomeController@UservsAdmin', function(){
  })->middleware('verified');
 
- /* Route::group(['middleware' => ['auth:sanctum']], function () {
-    Route::post('user/home/products', [ProductController::class, 'store']);
-    Route::put('user/home/products/{id}', [ProductController::class, 'update']);
-    Route::delete('user/home/products/{id}', [ProductController::class, 'destroy']);
-    Route::post('user/home/logout', [AuthController::class, 'logout']);
-    Route::get('user/home/products', [ProductController::class, 'index']);
-    Route::get('user/home/products/{id}', [ProductController::class, 'show']);
-    Route::get('user/home/products/search/{name}', [ProductController::class, 'search']);
- }); */
+ Route::group(['middleware' => ['auth', 'admin']], function() {
+    Route::get('/products');
+});
+
+/* Route::get('/restaurantandbar','App\Http\Controllers\AdminvsUserWebController@UserProductAdminProduct', function(){
+})->middleware('verified'); */
+ 
 
