@@ -2,9 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\AdminvsUserWebController;
+use App\Http\Controllers\UserProductsController;
 use App\Http\Livewire\Products;
+use App\Http\Livewire\Transactions;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,18 +38,24 @@ Route::get('/index', function () {
 
   Route::middleware(['auth:sanctum', 'verified'])->group(function(){
       Route::get('/products', Products::class);
-      /* Route::get('/restaurantandbar',UserProducts::class); */
+      Route::get('/transactions', Transactions::class);
+      /* Route::get('/restaurantandbar', UserProducts::class); */
       Route::get('/dashboard', function(){
           return view('dashboard');
       })->name('dashboard');
   });
 
+ /*  Route::get('/restaurantandbar',function(){
+        return view('livewire.restaurantandbar');
+    })->name('livewire.restaurantandbar'); */
 
  Route::get('user/home','App\Http\Controllers\HomeController@UservsAdmin', function(){
  })->middleware('verified');
 
  Route::group(['middleware' => ['auth', 'admin']], function() {
-    Route::get('/products');
+    Route::get('/products', Products::class);
+    Route::get('/transactions', Transactions::class);
+    
 });
 
 /* Route::get('/restaurantandbar','App\Http\Controllers\AdminvsUserWebController@UserProductAdminProduct', function(){

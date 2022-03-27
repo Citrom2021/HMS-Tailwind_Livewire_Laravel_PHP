@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
 
-class ProductoController extends Controller
+class UserProductsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +17,7 @@ class ProductoController extends Controller
     public function renderall()
     {
          $products = Product::all();
-         return  Inertia::render('Showing', ['products'=>$products]);
+         /* return  Inertia::render('Showing', ['products'=>$products]); */
     }
 
     /**

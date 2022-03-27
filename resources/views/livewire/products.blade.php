@@ -6,6 +6,16 @@
     <div class="max-w-7cl mx-auto sm:px6 lg:px-8">
         <div class="bg-white overflow-auto shadow-xl sm:rounded-lg px-4 py-4">
             
+            @if(session()->has('message'))
+            <div class="bg-teal-100 rounded-b text-teal-900 px-4 py-4 shadow-md my-3" role="alert">
+                <div class="flex">
+                    <div>
+                        <h4>{{ session('message')}}</h4>
+                    </div>
+                </div>
+            </div>
+            @endif
+            
             <button type="button" wire:click="create()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3">New</button>
            
             
@@ -53,7 +63,7 @@
                     <td class="border px-4 py-2">{{$product->slug}}</td>
                     <td class="border px-4 py-2">{{$product->description}}</td>
                     <td class="border px-4 py-2">{{$product->price}}</td>
-                    <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto ">
+                    <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">
                         <button wire:click="edit({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Edit</button>
                         <button wire:click="delete({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
                     </td>

@@ -23,24 +23,7 @@ class Products extends Component
             
             
             
-           //  blocking user to see products
-           
-        /* $role=Auth::user()->role;
-
-        if($role=="Admin")
-        {
-            $this-> products = Product::all();
-            return view('livewire.products');
-        }
-
-        if($role=="User")
-        
-        {
-            return view('livewire.products')
-            return view('welcome');
-        }
-     */
-    }
+              }
 
     public function create()
     {
@@ -61,13 +44,14 @@ class Products extends Component
         $this->slug = "";
         $this->description = "";
         $this->price = "";
+        $this->product_id ="";
         
     }
 
    public function edit($id)
    {
        $product = Product::findOrFail($id);
-       $this->id = $id;
+       $this->product_id = $id;
        $this->name = $product-> name;
        $this->slug = $product -> slug;
        $this->description = $product ->description;
@@ -78,8 +62,27 @@ class Products extends Component
    public function delete($id)
  {
      Product::find($id) -> delete();
+     session()->flash('message', 'Product has been deleted successfully');
  }  
 
+ public function save()
+
+ {
+    Product::updateOrCreate(['id'=>$this->product_id],
+        [
+
+        'name'=> $this->name,
+        'slug'=>  $this->slug,
+        'description'=> $this->description,
+        'price'=>  $this->price,
+
+        ]);
+        session()->flash('message', 
+        $this ->product_id ? 'Product has been updated successfully' : 'Product has been created successfully');
+        $this->closeModal();
+        $this->cleanupFields();
+
+ }
  
 
 }
