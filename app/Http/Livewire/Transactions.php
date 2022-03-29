@@ -80,11 +80,14 @@ class Transactions extends Component
 
  public function save()
 
+
+
  {
     Transaction::updateOrCreate(['id'=>$this->transaction_id],
         [
 
-        
+        /* 'user_id' => GetUserID();
+        'room_id' => GetRoomID(); */
         'user_name'=>$this->user_name,
         'email'=>$this->email,
         'phone'=>$this->phone,

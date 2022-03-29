@@ -7,6 +7,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\AdminvsUserWebController;
 use App\Http\Controllers\UserProductsController;
 use App\Http\Livewire\Products;
+use App\Http\Livewire\UserProducts;
 use App\Http\Livewire\Transactions;
 use Inertia\Inertia;
 
@@ -39,8 +40,8 @@ Route::get('/index', function () {
   Route::middleware(['auth:sanctum', 'verified'])->group(function(){
       Route::get('/products', Products::class);
       Route::get('/transactions', Transactions::class);
-      /* Route::get('/restaurantandbar', UserProducts::class); */
-      Route::get('/dashboard', function(){
+      Route::get('/restaurantandbar', UserProducts::class); 
+        Route::get('/dashboard', function(){
           return view('dashboard');
       })->name('dashboard');
   });

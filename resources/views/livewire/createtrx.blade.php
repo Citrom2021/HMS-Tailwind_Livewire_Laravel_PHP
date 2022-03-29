@@ -45,12 +45,12 @@
                             {{-- <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="room_id" wire:model="room_id"> --}}
                             <select name="room_name"  id="room_name" wire:model="room_name">
                                 <option disabled value="">Room types:</option>
-                                <option value="">Single</option>
-                                <option value="">Double</option>  
-                                <option value="">Luxury</option>  
-                                <option value="">Executive</option>  
-                                <option value="">Budget</option>  
-                                <option value="">Danube view</option>    
+                                <option value="Single">Single</option>
+                                <option value="Double">Double</option>  
+                                <option value="Luxury">Luxury</option>  
+                                <option value="Executive">Executive</option>  
+                                <option value="Budget">Budget</option>  
+                                <option value="Danube view">Danube view</option>    
                             </select>
                         </div>
 
@@ -78,8 +78,8 @@
                             {{-- <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="halfboard" wire:model="halfboard"> --}}
                             <select for="halfboard" name="halfboard"  id="halfboard" wire:model="halfboard">
                                 <option disabled value="">Options:</option>
-                                <option value="">Yes</option>
-                                <option value="">No</option>    
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>    
                             </select>
                         </div>
                         <div class="mb-4">
