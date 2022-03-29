@@ -116,7 +116,7 @@ p {
                 font-family: 'Nunito', sans-serif;
             }
             .hotel-cover {
-	background-image: url('/images/thumb-1920-349835.jpg');
+	background-image: url('../images/rooms/6.jpg');
 }
 
 .bg-gradient-black-transparent {
@@ -199,7 +199,7 @@ html {
 
       
 
-        <a href="#" class="navbar-brand nav-link"></i><i class="fa-solid fa-hotel"></i><span style="margin-left:5%;">Budapest Hotels</span></a>
+        <a href="../index" class="navbar-brand nav-link"></i><i class="fa-solid fa-hotel"></i><span style="margin-left:5%;">Budapest Hotels</span></a>
     
 
         <button class="navbar-toggler" style="margin-right:5px !important;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -208,22 +208,22 @@ html {
         <div class="collapse navbar-collapse top_nav" id="navbarSupportedContent">
       <ul class="navbar-nav mx-auto ">
         <li class="navbar-brand">
-          <a href="http://localhost/hms22/hms/index.php" class="nav-link">Home</a>
+          <a href="../index" class="nav-link">Home</a>
         <!--   <hr class="hr_nav"> -->
         </li>
-       <li class="navbar-brand"><a href="http://localhost/hms22/hms/reservation.php" class="nav-link">Reservations</a>
+       <li class="navbar-brand"><a href="#services" class="nav-link">Services</a>
         </li>
-        <li class="navbar-brand"><a href="http://localhost/hms22/hms/about.php" class="nav-link">Restaurant</a>
+        <li class="navbar-brand"><a href="#food" class="nav-link">Restaurant</a>
         </li>
-        <li class="navbar-brand"><a href="http://localhost/hms22/hms/about.php" class="nav-link">About</a>
+        <li class="navbar-brand"><a href="#theteam" class="nav-link">Our team</a>
         </li>
         <li class="navbar-brand"><a href="#contact" class="nav-link">Contact</a>
         </li>
-        <li class="navbar-brand"><a href="http://localhost/hms22/hms/index.php/#instagram" class="nav-link">Gallery</a>
+        <li class="navbar-brand"><a href="#gallery" class="nav-link">Gallery</a>
         </li>
         <li class="navbar-brand"><a href="#rooms" class="nav-link">Rooms</a>
         </li>
-        <li class="navbar-brand"><a href="http://127.0.0.1:8000/login" class="nav-link ">Book now</a>
+        <li class="navbar-brand"><a href="../login" class="nav-link ">Book now</a>
         </li>
       </ul>
       <ul class="navbar navbar-nav navbar-right" style="display:flex;">
@@ -248,7 +248,7 @@ html {
                                 <a href="{{ route('register') }}" class="btn btn-primary">Register</a>
                             @endif
                         @endauth
-                        <a href="http://localhost/hms22/hms/" target="_blank" class="btn btn-primary">Back to Site</a>
+                        {{-- <a href="" target="_blank" class="btn btn-primary">Back to Site</a> --}}
                     </div>
                 @endif
             </ul>
@@ -291,32 +291,32 @@ html {
   <div class="carousel-inner relative w-full overflow-hidden">
     <div class="carousel-item active relative float-left w-full">
       <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(123).jpg" class="block w-full" />
+        <img src="../images/carousel/thumb-1920-349835.jpg" class="block w-full" />
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
       </div>
       <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5 class="text-xl">Our lobby</h5>
+        <p>Modern technology combined with natural architecture</p>
       </div>
     </div>
     <div class="carousel-item relative float-left w-full">
       <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(124).jpg" class="block w-full" />
+        <img src="../images/carousel/li-yang-a8iCZvtrHpQ-unsplash.jpg" class="block w-full" />
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
       </div>
       <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5 class="text-xl">Leisure</h5>
+        <p>Perfect environment to rest yourself</p>
       </div>
     </div>
     <div class="carousel-item relative float-left w-full">
       <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-        <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(125).jpg" class="block w-full" />
+        <img src="../images/gallery/5.jpg" class="block w-full" />
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
       </div>
       <div class="carousel-caption hidden md:block absolute text-center">
-        <h5 class="text-xl">Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+        <h5 class="text-xl">Conferences for Businesses</h5>
+        <p>Big conference room with video / audio technology</p>
       </div>
     </div>
   </div>
@@ -528,7 +528,7 @@ html {
                     <article class="overflow-hidden rounded-lg shadow-lg">
         
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/6.jpg">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/6.jpg" style="min-height: 326px;">
                         </a>
         
                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -648,7 +648,7 @@ html {
                     <article class="overflow-hidden rounded-lg shadow-lg">
         
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-2.jpg">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-2.jpg" style="max-height: 333px;">
                         </a>
         
                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -1230,12 +1230,12 @@ html {
 <!-- Hotel Promo cards -->
 
 <section> 
-  <div class="container max-w-full mx-auto py-12 px-6">
+  <div id="services" class="container max-w-full mx-auto py-12 px-6">
     <h1 class="text-center text-4xl text-black font-medium leading-snug tracking-wider">
-      Pricing
+      Free services
     </h1>
     <p class="text-center text-lg text-gray-700 mt-2 px-6">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+      We are offering free premium services to our customer wihout any hidden charges.
     </p>
     <div class="h-1 mx-auto bg-indigo-200 w-24 opacity-75 mt-4 rounded"></div>
 
@@ -1245,11 +1245,11 @@ html {
           <div class="bg-white text-black rounded-lg shadow-inner shadow-lg overflow-hidden">
             <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
               <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
-                Hobby
+                Broadcasts
               </h1>
               <h2 class="text-sm text-gray-500 text-center pb-6">FREE</h2>
 
-              Stripe offers everything needed to run an online business at scale. Get in touch for details.
+              Everything to entertain you.
             </div>
 
             <div class="flex flex-wrap mt-3 px-6">
@@ -1265,7 +1265,7 @@ html {
       ></polyline>
     </svg>
                   </div>
-                  <span class="text-gray-700 text-lg ml-3">No setup</span
+                  <span class="text-gray-700 text-lg ml-3">HBO GO</span
   >
 </li>
 <li class="flex items-center">
@@ -1292,7 +1292,7 @@ html {
 </svg>
 </div>
 <span class="text-gray-700 text-lg ml-3"
->No setups</span
+>Netflix</span
 >
                 </li>
                 <li class="flex items-center">
@@ -1306,7 +1306,7 @@ html {
   ></polyline>
 </svg>
                   </div>
-                  <span class="text-gray-700 text-lg ml-3">Speed</span>
+                  <span class="text-gray-700 text-lg ml-3">Sky Sports</span>
                 </li>
               </ul>
             </div>
@@ -1325,11 +1325,11 @@ html {
           </div>
           <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
             <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
-              Expert
+              Wellness
             </h1>
-            <h2 class="text-sm text-gray-500 text-center pb-6"><span class="text-3xl">€19</span> /mo</h2>
+            <h2 class="text-sm text-gray-500 text-center pb-6"><span class="text-3xl">FREE</span></h2>
 
-            Stripe offers everything needed to run an online business at scale. Get in touch for details.
+            Everything to comfort your body.
           </div>
           <div class="flex pl-12 justify-start sm:justify-start mt-3">
             <ul>
@@ -1340,7 +1340,7 @@ html {
       <polyline points="22 4 12 14.01 9 11.01"></polyline>
     </svg>
                 </div>
-                <span class="text-gray-700 text-lg ml-3">No setup</span>
+                <span class="text-gray-700 text-lg ml-3">Japanese massage chair</span>
               </li>
               <li class="flex items-center">
                 <div class=" rounded-full p-2 fill-current text-green-700">
@@ -1349,7 +1349,7 @@ html {
   <polyline points="22 4 12 14.01 9 11.01"></polyline>
 </svg>
                 </div>
-                <span class="text-gray-700 text-lg ml-3">Hidden fees</span
+                <span class="text-gray-700 text-lg ml-3">Spa & Jakuzzi</span
 >
               </li>
               <li class="flex items-center">
@@ -1359,7 +1359,7 @@ html {
   <polyline points="22 4 12 14.01 9 11.01"></polyline>
 </svg>
                 </div>
-                <span class="text-gray-700 text-lg ml-3">Original</span>
+                <span class="text-gray-700 text-lg ml-3">Sauna</span>
               </li>
             </ul>
           </div>
@@ -1376,11 +1376,11 @@ html {
           <div class="bg-white text-black rounded-lg shadow-inner shadow-lg overflow-hidden">
             <div class="block text-left text-sm sm:text-md max-w-sm mx-auto mt-2 text-black px-8 lg:px-6">
               <h1 class="text-lg font-medium uppercase p-3 pb-0 text-center tracking-wide">
-                Enterprise
+                Sports
               </h1>
-              <h2 class="text-sm text-gray-500 text-center pb-6">€39 /mo</h2>
+              <h2 class="text-sm text-gray-500 text-center pb-6">FREE</h2>
 
-              Stripe offers everything needed to run an online business at scale. Get in touch for details.
+             All type of courts to have fun.
             </div>
             <div class="flex flex-wrap mt-3 px-6">
               <ul>
@@ -1395,7 +1395,7 @@ html {
       ></polyline>
     </svg>
                   </div>
-                  <span class="text-gray-700 text-lg ml-3">Electric</span
+                  <span class="text-gray-700 text-lg ml-3">Tennis</span
   >
 </li>
 <li class="flex items-center">
@@ -1422,7 +1422,7 @@ html {
 </svg>
 </div>
 <span class="text-gray-700 text-lg ml-3"
->Monthly</span
+>Golf</span
 >
                 </li>
                 <li class="flex items-center">
@@ -1436,7 +1436,7 @@ html {
   ></polyline>
 </svg>
                   </div>
-                  <span class="text-gray-700 text-lg ml-3">No setup</span
+                  <span class="text-gray-700 text-lg ml-3">Gym</span
 >
                 </li>
               </ul>
@@ -1461,7 +1461,7 @@ html {
   <hr>
   <!-- Gallery -->
 
-  <div class="row" style="text-align: center; margin-top:2em;margin-bottom:2em;">
+  <div id="gallery" class="row" style="text-align: center; margin-top:2em;margin-bottom:2em;">
     <h2 style="font-size: 2em;">Gallery</h2>
     <p>We are offering complete relaxation for our beloved guests</p> <br>
     <p>Visit are instagram page for more images</p>
@@ -1594,22 +1594,22 @@ html {
 <hr>
 
 <!-- Meet the team -->
-<div class="row" style="text-align: center; margin-top:2em;margin-bottom:2em;">
+<div  class="row" style="text-align: center; margin-top:2em;margin-bottom:2em;">
     <h2 style="font-size: 2em;">Meet The Team</h2>
     <p>Our team is dedicated to serving our customers</p>
     <br>
 </div>
 
 
-<div class="row">
+<div id="theteam" class="row">
   <div class="column">
     <div class="card">
       <img src="../images/team/team3.jpg" alt="Jane" style="width:100%">
       <div class="container">
-        <h2>Jane Doe</h2>
+        <h2>James Doe</h2>
         <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
+        <p>Investor with 20 years experience in hotel indistry.</p>
+        <p>james@hms.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -1620,10 +1620,10 @@ html {
       <img src="../images/team/team2.jpg" alt="Mike" style="width:100%">
       <div class="container">
         <h2>Mike Ross</h2>
-        <p class="title">Art Director</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
-        <p><button class="button">Contact</button></p>
+        <p class="title">Head chef</p>
+        <p>5 Michelin star chef</p>
+        <p>mike@hms.com</p>
+        <p><button class="button" >Contact</button></p>
       </div>
     </div>
   </div>
@@ -1632,10 +1632,10 @@ html {
     <div class="card">
       <img src="../images/team/team1.jpg" alt="John" style="width:100%">
       <div class="container">
-        <h2>John Doe</h2>
-        <p class="title">Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-        <p>example@example.com</p>
+        <h2>Jane Xena</h2>
+        <p class="title">Head of Operations</p>
+        <p>10 years inernation experience in Marriott worldwide.</p>
+        <p>jane@hms.com</p>
         <p><button class="button">Contact</button></p>
       </div>
     </div>
@@ -1645,12 +1645,12 @@ html {
 <div class="row">
     <div class="column">
       <div class="card">
-        <img src="../images/team/team3.jpg" alt="Jane" style="width:100%">
+        <img src="../images/how-to-take-a-good-photo-for-your-cv-our-top-tips-5f07136208f95a331fe50de978f4b4b4.jpg" alt="Jane" style="width:100%; max-height:415px">
         <div class="container">
-          <h2>Jane Doe</h2>
-          <p class="title">CEO & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <h2>Suzy Smith</h2>
+          <p class="title">Customer Relations Director</p>
+          <p>10+ years experience in customer realations</p>
+          <p>suzy@hms.com</p>
           <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -1658,12 +1658,12 @@ html {
   
     <div class="column">
       <div class="card">
-        <img src="../images/team/team2.jpg" alt="Mike" style="width:100%">
+        <img src="../images/person_3.jpg" alt="Istvan" style="width:100%; max-height:380px; ">
         <div class="container">
-          <h2>Mike Ross</h2>
-          <p class="title">Art Director</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <h2>Istvan Buza</h2>
+          <p class="title">Technical Director</p>
+          <p>10+ years industry experienc in building hotels.</p>
+          <p>istvan@hms.com</p>
           <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -1671,12 +1671,12 @@ html {
     
     <div class="column">
       <div class="card">
-        <img src="../images/team/team1.jpg" alt="John" style="width:100%">
+        <img src="../images/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg" alt="John" style="width:100%; min-height:380px;">
         <div class="container">
-          <h2>John Doe</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>example@example.com</p>
+          <h2>Amanda Bella</h2>
+          <p class="title">F&B Director</p>
+          <p>Amanda is a dedicated director serving out hotel for 5 years.</p>
+          <p>amanda@hms.com</p>
           <p><button class="button">Contact</button></p>
         </div>
       </div>
@@ -1730,7 +1730,7 @@ html {
         <!-- Food -->
 
         <section class="about-area pt-60">
-          <div class="container">
+          <div id="food" class="container">
              <div class="row">
                 <div class="col-xl-12 mb-60">
                    <div class="section-title text-center">
@@ -2275,6 +2275,79 @@ html {
   <!-- Section: Design Block -->
 </div>
 <!-- Container for demo purpose -->
+
+
+<!-- Reviews -->
+
+<section class="mb-20 text-gray-700">
+  <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto">
+    <h3 class="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
+    <p class="mb-6 pb-2 md:mb-12 md:pb-0">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
+      iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum
+      porro a pariatur veniam.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-6 text-center">
+    <div>
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #9d789b;"></div>
+        <div class="w-24 -mt-12 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-4">Maria Smantha</h4>
+          <hr />
+          <p class="mt-4">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+            </svg>
+            Lorem ipsum dolor sit amet eos adipisci, consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #7a81a8;"></div>
+        <div class="w-24 -mt-12 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-4">Lisa Cudrow</h4>
+          <hr />
+          <p class="mt-4">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+            </svg>
+            Neque cupiditate assumenda in maiores
+            repudi mollitia architecto.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block rounded-lg shadow-lg bg-white">
+        <div class="overflow-hidden rounded-t-lg h-28" style="background-color: #6d5b98;"></div>
+        <div class="w-24 -mt-12 overflow-hidden border border-2 border-white rounded-full mx-auto bg-white">
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" />
+        </div>
+        <div class="p-6">
+          <h4 class="text-2xl font-semibold mb-4">John Smith</h4>
+          <hr />
+          <p class="mt-4">
+            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
+            </svg>
+            Delectus impedit saepe officiis ab
+            aliquam repellat rem unde ducimus.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- Footer -->
 
