@@ -153,11 +153,13 @@
 
             <!-- Hamburger -->
             <div class="-mr-2 flex items-center sm:hidden">
-                <button @click="open = ! open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition">
-                    
-                </button>
+                <button @click="open = ! open" class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                        <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}" />
+                    </button>
+                
             </div>
         </div>
+        
     </div>
 
     <!-- Responsive Navigation Menu -->
@@ -166,11 +168,19 @@
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
-            <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                anyad
+            
+            <x-jet-responsive-nav-link href="../restaurantandbar" >
+                {{ __('Menu & bar') }}
+            </x-jet-responsive-nav-link>
+
+            <x-jet-responsive-nav-link href="../index" >
+                {{ __('Home page') }}
             </x-jet-responsive-nav-link>
             
+            
         </div>
+
+        
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">

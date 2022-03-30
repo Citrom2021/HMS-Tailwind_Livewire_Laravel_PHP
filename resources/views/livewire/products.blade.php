@@ -2,7 +2,7 @@
 <x-slot name="header">
     <div style="text-align: center" >
 <h1 class="text-grey-900" style="text-align: center">Products from Bar & Restaurant</h1>
-<a href="../user/home" style="text-align: center; font-size:0.8em; font-color:blue;"> <u>Back to Admin Centre</u> </a>
+<a href="../user/home" style="text-align: center; font-size:0.8em; color:blue;"> <u>Back to Admin Centre</u> </a>
 </div>
 </x-slot>
 

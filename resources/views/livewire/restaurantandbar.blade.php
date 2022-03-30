@@ -1,6 +1,11 @@
 
 <x-slot name="header">
-    <h1 class="text-grey-900" style="text-align: center">Products from Bar & Restaurant</h1>
+    <div style="text-align: center;">
+        <h1 class="text-grey-900" style="text-align: center">Products from Bar & Restaurant</h1>
+        <a href="../user/home" style="color:blue; font-size:0.8em;"> <u>Return to User Centre</u> </a>
+
+    </div>
+    
     </x-slot>
     <div class="py-12">
         <div class="max-w-7cl mx-auto sm:px6 lg:px-8">

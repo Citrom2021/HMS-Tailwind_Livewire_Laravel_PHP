@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Home</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -215,6 +215,8 @@ html {
         </li>
         <li class="navbar-brand"><a href="#food" class="nav-link">Restaurant</a>
         </li>
+        <li class="navbar-brand"><a href="#faq" class="nav-link ">FAQ</a>
+        </li>
         <li class="navbar-brand"><a href="#theteam" class="nav-link">Our team</a>
         </li>
         <li class="navbar-brand"><a href="#contact" class="nav-link">Contact</a>
@@ -225,6 +227,7 @@ html {
         </li>
         <li class="navbar-brand"><a href="../login" class="nav-link ">Book now</a>
         </li>
+        
       </ul>
       <ul class="navbar navbar-nav navbar-right" style="display:flex;">
         <!--<li>
@@ -426,7 +429,7 @@ html {
                                 </p>
                             </div>
                             <div class="mt-3 sm:mt-3 sm:-mr-8">
-                                <a href="../login" class="bg-blue-500 shadow text-blue-100 py-3 px-6 font-bold inline-block">Book Now</a>
+                                <a href="http://127.0.0.1:8000/login" class="bg-blue-500 shadow text-blue-100 py-3 px-6 font-bold inline-block">Book Now</a>
                             </div>
                         </div>
                         
@@ -1474,37 +1477,37 @@ html {
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+            src="../images/gallery/juan-burgos-IfbkIQ0aQ5c-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
+            src="../images/gallery/louis-hansel-93ccfD84tCA-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
+            src="../images/gallery/5.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp">
+            src="../images/gallery/4.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp">
+            src="../images/gallery/3.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp">
+            src="../images/gallery/1.jpg">
         </div>
       </div>
     </div>
@@ -1518,29 +1521,29 @@ html {
       <div class="flex flex-wrap w-1/2">
         <div class="w-1/2 p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp">
+            src="../images/gallery/2.jpg">
         </div>
         <div class="w-1/2 p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp">
+            src="../images/gallery/eiliv-sonas-aceron-2LzqR50_NTw-unsplash.jpg">
         </div>
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+            src="../images/gallery/reisetopia-pSDe7ePo0Tc-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/2">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
+            src="../images/gallery/mara-conan-design-O_6dZUyxezo-unsplash.jpg">
         </div>
         <div class="w-1/2 p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
+            src="../images/gallery/patrick-robert-doyle-AH8zKXqFITA-unsplash.jpg">
         </div>
         <div class="w-1/2 p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(77).webp">
+            src="../images/gallery/roberto-nickson-MA82mPIZeGI-unsplash.jpg">
         </div>
       </div>
     </div>
@@ -1554,37 +1557,37 @@ html {
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp">
+            src="../images/gallery/venti-views-ej52Nm_-RUA-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(74).webp">
+            src="../images/gallery/roberto-nickson-EeeKjwm2vDo-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(75).webp">
+            src="../images/gallery/nur-athirah-hamzah-oTOuuoRQcR0-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp">
+            src="../images/gallery/point3d-commercial-imaging-ltd-oR1M4Bl1PUU-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(76).webp">
+            src="../images/gallery/crew-szCvt1gP2d4-unsplash.jpg">
         </div>
       </div>
       <div class="flex flex-wrap w-1/3">
         <div class="w-full p-1 md:p-2">
           <img alt="gallery" class="block object-cover object-center w-full h-full rounded-lg"
-            src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(72).webp">
+            src="../images/gallery/adam-winger-VGs8z60yT2c-unsplash.jpg">
         </div>
       </div>
     </div>
@@ -1634,7 +1637,7 @@ html {
       <div class="container">
         <h2>Jane Xena</h2>
         <p class="title">Head of Operations</p>
-        <p>10 years inernation experience in Marriott worldwide.</p>
+        <p>10 years inernational experience in Marriott worldwide.</p>
         <p>jane@hms.com</p>
         <p><button class="button">Contact</button></p>
       </div>
@@ -1658,7 +1661,7 @@ html {
   
     <div class="column">
       <div class="card">
-        <img src="../images/person_3.jpg" alt="Istvan" style="width:100%; max-height:380px; ">
+        <img src="../images/team/Corporate-suit-business-man-photography-melbourne-12-1.jpg" alt="Istvan" style="width:100%;">
         <div class="container">
           <h2>Istvan Buza</h2>
           <p class="title">Technical Director</p>
@@ -1742,81 +1745,81 @@ html {
              <div class="row menu_style1">
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                      <img src="../images/dine/1.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                         <h4>Chicken Salad  <span>HUF 2000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-6.jpg" alt="">
+                      <img src="../images/dine/2.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                         <h4>Ceaser Salad  <span>$HUF 3000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
+                      <img src="../images/dine/3.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                         <h4>Lobster  <span>HUF 20000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
+                      <img src="../images/dine/4.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                         <h4>Sushi  <span>HUF 5000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                      <img src="../images/dine/5.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <h4> Fruit & Cereal <span> HUF 1999</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                      <img src="../images/dine/6.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <h4>Lasagna <span> HUF 2000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                      <img src="../images/dine/7.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <h4>Tapas <span>HUF 2499</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
+                      <img src="../images/dine/8.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <h4> Fish & chips  <span>HUF 3000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
                 </div>
                 <div class="col-md-4">
                    <div class="single_menu_list">
-                      <img src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                      <img src="../images/dine/9.jpg" alt="">
                       <div class="menu_content">
-                         <h4>Chicken Fried Salad  <span>$45</span></h4>
+                         <h4> Shrimp pasta <span>HUF 3000</span></h4>
                          <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
                       </div>
                    </div>
@@ -1841,58 +1844,48 @@ html {
       <section class="mb-32 text-gray-800">
         <h2 class="text-3xl font-bold mb-12 text-center">Frequently asked questions</h2>
     
-        <div class="grid lg:grid-cols-3 gap-6">
+        <div id="faq" class="grid lg:grid-cols-3 gap-6">
           <div class="mb-12">
-            <p class="font-bold mb-4">Anim pariatur cliche reprehenderit?</p>
+            <p class="font-bold mb-4">Is really services advertised here free?</p>
             <p class="text-gray-500">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt autem numquam dolore
-              molestias aperiam culpa alias veritatis architecto eos, molestiae vitae ex eligendi
-              libero eveniet dolorem, doloremque rem aliquid perferendis.
+             Yes all of our services which we are promoting on ou site are completely free such as golf, tennis, sauan, jakuzzi all included in your booking price.
             </p>
           </div>
     
           <div class="mb-12">
-            <p class="font-bold mb-4">Non cupidatat skateboard dolor brunch?</p>
+            <p class="font-bold mb-4">We have two small children; can we get extra beds in the room?</p>
             <p class="text-gray-500">
-              Distinctio corporis, iure facere ducimus quos consectetur ipsa ut magnam autem
-              doloremque ex! Id, sequi. Voluptatum magnam sed fugit iusto minus et suscipit? Minima
-              sunt at nulla tenetur, numquam unde quod modi magnam ab deserunt ipsam sint aliquid
-              dolores libero repellendus cupiditate mollitia quidem dolorem odit
+              In general one extra bed for one child is available at a minor additional charge. However, please note that this possibility depends on each hotel’s policy and availability. We advise you to check the overview page of the hotel, or to send an email to customerservice@hms.com
             </p>
           </div>
     
           <div class="mb-12">
             <p class="font-bold mb-4">
-              Praesentium voluptatibus temporibus consequatur non aspernatur?
+              Are the rates on your website per person or per room?
             </p>
             <p class="text-gray-500">
-              Minima sunt at nulla tenetur, numquam unde quod modi magnam ab deserunt ipsam sint
-              aliquid dolores libero repellendus cupiditate mollitia quidem dolorem.
+              All rates on the website are per room per stay, unless stated differently.
             </p>
           </div>
     
           <div class="col-md-12 mb-12">
-            <p class="font-bold mb-4">Voluptatum magnam sed fugit iusto minus et suscipit?</p>
+            <p class="font-bold mb-4">Do you offer special discounts (for seniors, airlines employees, etc)?</p>
             <p class="text-gray-500">
-              Laudantium perferendis, est alias iure ut veniam suscipit dolorem fugit. Et ipsam
-              corporis earum ea ut quae cum non iusto blanditiis ipsum dolor eius reiciendis, velit
-              adipisci quas.
+              We provide the best available rates for the dates of your stay. The discounts are already included and therefore it is not possible to have any other discount on the confirmed price.
             </p>
           </div>
     
           <div class="mb-12">
-            <p class="font-bold mb-4">Minima sunt at nulla tenetur,?</p>
+            <p class="font-bold mb-4">Why do you need my credit card details?</p>
             <p class="text-gray-500">
-              Numquam unde quod modi magnam ab deserunt ipsam sint aliquid dolores libero
-              repellendus cupiditate mollitia quidem dolorem odit
+              In general your credit card details are only required as a guarantee for the hotel in case you don't arrive or cancel too late. This might result in a "no-show" charge (generally the equivalent to one night stay) by the hotel. We will never charge your credit card. You will pay for your stay at the hotel.
             </p>
           </div>
     
           <div class="mb-12">
-            <p class="font-bold mb-4">Distinctio corporis, iure facere ducimus?</p>
+            <p class="font-bold mb-4">What are the check-in and check-out times of a hotel?</p>
             <p class="text-gray-500">
-              Eaque eos corrupti debitis tenetur repellat, beatae quibusdam incidunt, fuga non iste
-              dignissimos officiis nam officia obcaecati commodi ratione qui nesciunt.
+              The check-in and check-out times differ. You will find them on the “Hotel Policies” section at the bottom of the overview page of the hotel. If you are going to arrive late or very early, we advise you to let the hotel know in advance using the Remarks field in the reservation form (in English or the language of the hotel if possible), or inform the hotel directly using the contact details you will find in your confirmation email.
             </p>
           </div>
         </div>
@@ -1910,7 +1903,7 @@ html {
   <!-- Section: Design Block -->
   <section class="mb-32 text-gray-800 text-center">
 
-    <h2 class="text-3xl font-bold mb-12 text-center">Latest articles</h2>
+    <h2 class="text-3xl font-bold mb-12 text-center">Articles written about us</h2>
 
     <div class="grid lg:grid-cols-3 gap-6 xl:gap-x-12">
       <div class="mb-6 lg:mb-0">
@@ -1918,26 +1911,24 @@ html {
           <div
             class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6"
             data-mdb-ripple="true" data-mdb-ripple-color="light">
-            <img src="https://mdbootstrap.com/img/new/standard/city/018.jpg"
-              class="w-full" alt="Louvre" />
+            <img src="../images/carousel/visualsofdana-T5pL6ciEn-I-unsplash.jpg"
+              class="w-full" alt="Louvre" style="max-height:315px;"/>
             <a href="#!">
               <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
                 style="background-color: rgba(251, 251, 251, 0.2)"></div>
             </a>
           </div>
 
-          <h5 class="text-lg font-bold mb-3">Welcome to California</h5>
+          <h5 class="text-lg font-bold mb-3">Small luxury hotel run by family.</h5>
           <div class="mb-3 text-red-600 font-medium text-sm flex items-center justify-center">
             <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm82.29 357.6c-3.9 3.88-7.99 7.95-11.31 11.28-2.99 3-5.1 6.7-6.17 10.71-1.51 5.66-2.73 11.38-4.77 16.87l-17.39 46.85c-13.76 3-28 4.69-42.65 4.69v-27.38c1.69-12.62-7.64-36.26-22.63-51.25-6-6-9.37-14.14-9.37-22.63v-32.01c0-11.64-6.27-22.34-16.46-27.97-14.37-7.95-34.81-19.06-48.81-26.11-11.48-5.78-22.1-13.14-31.65-21.75l-.8-.72a114.792 114.792 0 0 1-18.06-20.74c-9.38-13.77-24.66-36.42-34.59-51.14 20.47-45.5 57.36-82.04 103.2-101.89l24.01 12.01C203.48 89.74 216 82.01 216 70.11v-11.3c7.99-1.29 16.12-2.11 24.39-2.42l28.3 28.3c6.25 6.25 6.25 16.38 0 22.63L264 112l-10.34 10.34c-3.12 3.12-3.12 8.19 0 11.31l4.69 4.69c3.12 3.12 3.12 8.19 0 11.31l-8 8a8.008 8.008 0 0 1-5.66 2.34h-8.99c-2.08 0-4.08.81-5.58 2.27l-9.92 9.65a8.008 8.008 0 0 0-1.58 9.31l15.59 31.19c2.66 5.32-1.21 11.58-7.15 11.58h-5.64c-1.93 0-3.79-.7-5.24-1.96l-9.28-8.06a16.017 16.017 0 0 0-15.55-3.1l-31.17 10.39a11.95 11.95 0 0 0-8.17 11.34c0 4.53 2.56 8.66 6.61 10.69l11.08 5.54c9.41 4.71 19.79 7.16 30.31 7.16s22.59 27.29 32 32h66.75c8.49 0 16.62 3.37 22.63 9.37l13.69 13.69a30.503 30.503 0 0 1 8.93 21.57 46.536 46.536 0 0 1-13.72 32.98zM417 274.25c-5.79-1.45-10.84-5-14.15-9.97l-17.98-26.97a23.97 23.97 0 0 1 0-26.62l19.59-29.38c2.32-3.47 5.5-6.29 9.24-8.15l12.98-6.49C440.2 193.59 448 223.87 448 256c0 8.67-.74 17.16-1.82 25.54L417 274.25z"/></svg>Travels
           </div>
           <p class="text-gray-500 mb-6">
             <small>Published <u>13.01.2022</u> by
-              <a href="" class="text-gray-900">Anna Maria Doe</a></small>
+              <a href="https://magyarnemzet.hu/rovat/english" target="_blank" class="text-gray-900">Magyar Nemzet</a></small>
           </p>
           <p class="text-gray-500">
-            Ut pretium ultricies dignissim. Sed sit amet mi eget urna
-            placerat vulputate. Ut vulputate est non quam dignissim
-            elementum. Donec a ullamcorper diam.
+            This small family run hotel which has been started 10 years ago is a really special place. The owners took a big risk in taking a business loan to make their dream happen...
           </p>
         </div>
       </div>
@@ -1947,7 +1938,7 @@ html {
           <div
             class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6"
             data-mdb-ripple="true" data-mdb-ripple-color="light">
-            <img src="https://mdbootstrap.com/img/new/standard/city/032.jpg"
+            <img src="../images/carousel/roberto-nickson-emqnSQwQQDo-unsplash.jpg"
               class="w-full" alt="Louvre" />
             <a href="#!">
               <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
@@ -1955,18 +1946,16 @@ html {
             </a>
           </div>
 
-          <h5 class="text-lg font-bold mb-3">Exhibition in Paris</h5>
+          <h5 class="text-lg font-bold mb-3">Hidden jewellery</h5>
           <div class="mb-3 text-blue-600 font-medium text-sm flex items-center justify-center">
             <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z"/></svg>Art
           </div>
           <p class="text-gray-500 mb-6">
             <small>Published <u>12.01.2022</u> by
-              <a href="" class="text-gray-900">Halley Frank</a></small>
+              <a href="https://hvg.hu/" target="_blank" class="text-gray-900">HVG Hungary</a></small>
           </p>
           <p class="text-gray-500">
-            Suspendisse in volutpat massa. Nulla facilisi. Sed aliquet diam
-            orci, nec ornare metus semper sed. Integer volutpat ornare erat
-            sit amet rutrum.
+            A new treasue inside the city, absolutely worth it what they offer B2B and B2C are special. 
           </p>
         </div>
       </div>
@@ -1976,7 +1965,7 @@ html {
           <div
             class="relative overflow-hidden bg-no-repeat bg-cover relative overflow-hidden bg-no-repeat bg-cover ripple shadow-lg rounded-lg mb-6"
             data-mdb-ripple="true" data-mdb-ripple-color="light">
-            <img src="https://mdbootstrap.com/img/new/standard/city/059.jpg"
+            <img src="../images/carousel/ralph-ravi-kayden-FqqiAvJejto-unsplash.jpg"
               class="w-full" alt="Louvre" />
             <a href="#!">
               <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed opacity-0 hover:opacity-100 transition duration-300 ease-in-out"
@@ -1984,18 +1973,16 @@ html {
             </a>
           </div>
 
-          <h5 class="text-lg font-bold mb-3">Stock market boom</h5>
+          <h5 class="text-lg font-bold mb-3">An amazing hotel</h5>
           <div class="mb-3 text-yellow-500 font-medium text-sm flex items-center justify-center">
             <svg class="w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M608 64H32C14.33 64 0 78.33 0 96v320c0 17.67 14.33 32 32 32h576c17.67 0 32-14.33 32-32V96c0-17.67-14.33-32-32-32zM48 400v-64c35.35 0 64 28.65 64 64H48zm0-224v-64h64c0 35.35-28.65 64-64 64zm272 176c-44.19 0-80-42.99-80-96 0-53.02 35.82-96 80-96s80 42.98 80 96c0 53.03-35.83 96-80 96zm272 48h-64c0-35.35 28.65-64 64-64v64zm0-224c-35.35 0-64-28.65-64-64h64v64z"/></svg>Business
           </div>
           <p class="text-gray-500 mb-6">
             <small>Published <u>10.01.2022</u> by
-              <a href="" class="text-gray-900">Joe Svan</a></small>
+              <a href="https://www.budapesttimes.hu/" target="_blank" class="text-gray-900">Budapest Times</a></small>
           </p>
           <p class="text-gray-500">
-            Curabitur tristique, mi a mollis sagittis, metus felis mattis
-            arcu, non vehicula nisl dui quis diam. Mauris ut risus eget
-            massa volutpat feugiat. Donec.
+            An amazing hotel with beautiful views sun terrace a real treasue in the city , a special place.
           </p>
         </div>
       </div>
@@ -2027,7 +2014,8 @@ html {
       }
     </style>
 
-    <!-- Jumbotron -->
+    <!-- Jumbotron image -->
+
     <div class="container mx-auto xl:px-32 text-center lg:text-left">
       <div class="grid lg:grid-cols-2 flex items-center">
         <div class="mb-12 lg:mb-0">
@@ -2035,27 +2023,25 @@ html {
             class="relative block rounded-lg shadow-lg px-6 py-12 md:px-12 lg:-mr-14"
             style="background: hsla(0, 0%, 100%, 0.55); backdrop-filter: blur(30px); z-index: 1"
           >
-            <h2 class="text-3xl font-bold mb-4 display-5">Why is it so great?</h2>
+            <h2 class="text-3xl font-bold mb-4 display-5">Why are we special?</h2>
             <p class="text-gray-500 mb-12">
-              Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque iaculis
-              malesuada. Aenean gravida magna orci, non efficitur est porta id. Donec magna
-              diam.
+              
             </p>
 
             <div class="grid md:grid-cols-3 gap-x-6">
               <div class="mb-12 md:mb-0">
-                <h2 class="text-3xl font-bold text-dark mb-4">10%</h2>
-                <h5 class="text-lg font-medium text-gray-500 mb-0">Less sugar</h5>
+                <h2 class="text-3xl font-bold text-dark mb-4">+80%</h2>
+                <h5 class="text-lg font-medium text-gray-500 mb-0">Customers returning <br> within 2 years </h5>
               </div>
 
               <div class="mb-12 md:mb-0">
-                <h2 class="text-3xl font-bold text-dark mb-4">70%</h2>
-                <h5 class="text-lg font-medium text-gray-500 mb-0">More flavor</h5>
+                <h2 class="text-3xl font-bold text-dark mb-4">+70%</h2>
+                <h5 class="text-lg font-medium text-gray-500 mb-0">Bigger room sizes <br> than average hotels</h5>
               </div>
 
               <div class="">
                 <h2 class="text-3xl font-bold text-dark mb-4">0%</h2>
-                <h5 class="text-lg font-medium text-gray-500 mb-0">Gluten</h5>
+                <h5 class="text-lg font-medium text-gray-500 mb-0">Of competitors offers <br> our services free </h5>
               </div>
             </div>
           </div>
@@ -2063,7 +2049,7 @@ html {
 
         <div>
           <img
-            src="https://mdbootstrap.com/img/new/ecommerce/vertical/088.jpg"
+            src="../images/carousel/saad-khan-425b2PhNuHA-unsplash.jpg"
             class="w-full shadow-lg fancy-border-radius rotate-lg-6"
             alt=""
           />
@@ -2084,14 +2070,13 @@ html {
   <section class="mb-32 text-gray-800">
     <div class="flex flex-wrap items-center">
       <div class="grow-0 shrink-0 basis-auto w-full lg:w-4/12 mb-6 md:mb-0 px-3">
-        <p class="uppercase text-blue-600 font-bold mb-6">Features</p>
+        <p class="uppercase text-blue-600 font-bold mb-6">Availability and extra offers</p>
         <h2 class="text-3xl font-bold mb-6">
-          Why is it so<u class="text-blue-600"> great?</u>
+          What are we<u class="text-blue-600"> offering as extras?</u>
         </h2>
 
         <p class="text-gray-500 mb-12">
-          Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque iaculis malesuada.
-          Aenean gravida magna orci, non efficitur est porta id. Donec magna diam.
+          We provide plenty of support free of charge to let you enjoy your holidy and onyl focus on having a good time with friedns and family.
         </p>
       </div>
 
@@ -2109,10 +2094,9 @@ html {
                 </div>
               </div>
               <div class="grow ml-4">
-                <p class="font-bold mb-1">Support 24/7</p>
+                <p class="font-bold mb-1">Reception 24/7</p>
                 <p class="text-gray-500">
-                  Pellentesque mollis, metus nec fringilla aliquam. Donec consequat orci quis
-                  volutpat imperdiet.
+                  Every day our reception is open day and night for your queries.
                 </p>
               </div>
             </div>
@@ -2130,10 +2114,9 @@ html {
                 </div>
               </div>
               <div class="grow ml-4">
-                <p class="font-bold mb-1">Safe and solid</p>
+                <p class="font-bold mb-1">Safe storage</p>
                 <p class="text-gray-500">
-                  Magna lacus iaculis elit, quis pharetra varius. Aenean lectus ex, placerat id
-                  tellus in eros.
+                  We have secure swiss made safe in case you want to stroe your valuables while you are with us.
                 </p>
               </div>
             </div>
@@ -2151,10 +2134,9 @@ html {
                 </div>
               </div>
               <div class="grow ml-4">
-                <p class="font-bold mb-1">Extremely fast</p>
+                <p class="font-bold mb-1">Luggage transport</p>
                 <p class="text-gray-500">
-                  Pellentesque varius ex vel consequat quis. Sed mauris ex, imperdiet sit amet
-                  nisl ac, ultrices.
+                 We help you picking up your luggages at the airport and will take you back once you leave the hotel.
                 </p>
               </div>
             </div>
@@ -2174,8 +2156,7 @@ html {
               <div class="grow ml-4">
                 <p class="font-bold mb-1">Money back guarantee</p>
                 <p class="text-gray-500">
-                  Vestibulum gravida iaculis nisl, vel lobortis eros. Praesent vulputate lacus
-                  bibendum augue.
+                  You don't have to worry about insurance, 24 hours prior to arrival you can cancel and we will refund you.
                 </p>
               </div>
             </div>
@@ -2281,11 +2262,10 @@ html {
 
 <section class="mb-20 text-gray-700">
   <div class="text-center md:max-w-xl lg:max-w-3xl mx-auto">
-    <h3 class="text-3xl font-bold mb-6 text-gray-800">Testimonials</h3>
+    <h3 class="text-3xl font-bold mb-6 text-gray-800">Guest reviews</h3>
     <p class="mb-6 pb-2 md:mb-12 md:pb-0">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam
-      iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum
-      porro a pariatur veniam.
+      We are focusing on our customers wellbeing as a reason of this we have a 4.7 TripAdvisor rating. <br>
+      Visit our <a href="https://www.tripadvisor.com/" style="color: #1877f2"> <u>TripAdvisor</u> </a> page to read more about the user experience with us. 
     </p>
   </div>
 
@@ -2297,13 +2277,13 @@ html {
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
         </div>
         <div class="p-6">
-          <h4 class="text-2xl font-semibold mb-4">Maria Smantha</h4>
+          <h4 class="text-2xl font-semibold mb-4">Maria Volhana</h4>
           <hr />
           <p class="mt-4">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
             </svg>
-            Lorem ipsum dolor sit amet eos adipisci, consectetur adipisicing elit.
+           Best place I ever been to!
           </p>
         </div>
       </div>
@@ -2315,14 +2295,13 @@ html {
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" />
         </div>
         <div class="p-6">
-          <h4 class="text-2xl font-semibold mb-4">Lisa Cudrow</h4>
+          <h4 class="text-2xl font-semibold mb-4">Lisa Jameson</h4>
           <hr />
           <p class="mt-4">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
             </svg>
-            Neque cupiditate assumenda in maiores
-            repudi mollitia architecto.
+            Had a great time! Staff were extremely helpful!
           </p>
         </div>
       </div>
@@ -2334,14 +2313,13 @@ html {
           <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" />
         </div>
         <div class="p-6">
-          <h4 class="text-2xl font-semibold mb-4">John Smith</h4>
+          <h4 class="text-2xl font-semibold mb-4">Jan Müller</h4>
           <hr />
           <p class="mt-4">
             <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="quote-left" class="w-6 pr-2 inline-block" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
               <path fill="currentColor" d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z"></path>
             </svg>
-            Delectus impedit saepe officiis ab
-            aliquam repellat rem unde ducimus.
+            Great views, spacious rooms, delicious food. Luxury at affordable price!
           </p>
         </div>
       </div>
