@@ -426,7 +426,7 @@ html {
                                 </p>
                             </div>
                             <div class="mt-3 sm:mt-3 sm:-mr-8">
-                                <a href="http://127.0.0.1:8000/login" class="bg-blue-500 shadow text-blue-100 py-3 px-6 font-bold inline-block">Book Now</a>
+                                <a href="../login" class="bg-blue-500 shadow text-blue-100 py-3 px-6 font-bold inline-block">Book Now</a>
                             </div>
                         </div>
                         

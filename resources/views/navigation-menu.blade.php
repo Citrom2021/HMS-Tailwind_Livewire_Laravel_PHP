@@ -18,9 +18,18 @@
                 </div> --}}
 
                  <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="http://localhost/hms22/hms/" :active="request()->routeIs('http://localhost/hms22/hms/')">
-                        Main site
+                    <x-jet-nav-link href="../index" :active="request()->routeIs('../index')">
+                        Home page
                     </x-jet-nav-link>
+
+                    
+                </div> 
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="../restaurantandbar" :active="request()->routeIs('../restaurantandbar')">
+                        Menu & bar
+                    </x-jet-nav-link>
+
+                    
                 </div> 
             </div>
 
