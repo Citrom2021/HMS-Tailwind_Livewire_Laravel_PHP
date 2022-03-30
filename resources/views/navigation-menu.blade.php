@@ -31,6 +31,14 @@
 
                     
                 </div> 
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="../user/home" :active="request()->routeIs('../user/home')">
+                       User Center
+                    </x-jet-nav-link>
+
+                    
+                </div> 
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -175,6 +183,10 @@
 
             <x-jet-responsive-nav-link href="../index" >
                 {{ __('Home page') }}
+            </x-jet-responsive-nav-link>
+
+            <x-jet-responsive-nav-link href="../user/home" >
+                {{ __('User Center') }}
             </x-jet-responsive-nav-link>
             
             

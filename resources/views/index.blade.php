@@ -299,7 +299,7 @@ html {
       </div>
       <div class="carousel-caption hidden md:block absolute text-center">
         <h5 class="text-xl">Our lobby</h5>
-        <p>Modern technology combined with natural architecture</p>
+        <p>Modern technology combined with aristocratic architecture</p>
       </div>
     </div>
     <div class="carousel-item relative float-left w-full">
@@ -314,7 +314,7 @@ html {
     </div>
     <div class="carousel-item relative float-left w-full">
       <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-        <img src="../images/gallery/5.jpg" class="block w-full" />
+        <img src="../images/gallery/6.jpg" class="block w-full" />
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
       </div>
       <div class="carousel-caption hidden md:block absolute text-center">
