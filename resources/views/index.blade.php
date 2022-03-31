@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+{{-- @extends('layouts.master') --}}
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -191,7 +193,7 @@ html {
     </head>
 
     <body class="antialiased">
-    
+  
       <!--  Navigation bar Bootstrap-->
     <section>
     <nav class="navbar navbar-expand-lg navbar-light">
@@ -314,7 +316,7 @@ html {
     </div>
     <div class="carousel-item relative float-left w-full">
       <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-        <img src="../images/gallery/6.jpg" class="block w-full" />
+        <img src="../images/gallery/reisetopia-Vl5DAQxNBbM-unsplash.jpg" class="block w-full" />
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
       </div>
       <div class="carousel-caption hidden md:block absolute text-center">
@@ -531,7 +533,7 @@ html {
                     <article class="overflow-hidden rounded-lg shadow-lg">
         
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/6.jpg" style="min-height: 326px;">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/6.jpg">
                         </a>
         
                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -651,7 +653,7 @@ html {
                     <article class="overflow-hidden rounded-lg shadow-lg">
         
                         <a href="#">
-                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-2.jpg" style="max-height: 333px;">
+                            <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-2.jpg">
                         </a>
         
                         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
@@ -1648,7 +1650,7 @@ html {
 <div class="row">
     <div class="column">
       <div class="card">
-        <img src="../images/how-to-take-a-good-photo-for-your-cv-our-top-tips-5f07136208f95a331fe50de978f4b4b4.jpg" alt="Jane" style="width:100%; max-height:415px">
+        <img src="../images/how-to-take-a-good-photo-for-your-cv-our-top-tips-5f07136208f95a331fe50de978f4b4b4.jpg" alt="Jane" style="width:100%;">
         <div class="container">
           <h2>Suzy Smith</h2>
           <p class="title">Customer Relations Director</p>
@@ -1674,7 +1676,7 @@ html {
     
     <div class="column">
       <div class="card">
-        <img src="../images/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg" alt="John" style="width:100%; min-height:380px;">
+        <img src="../images/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg" alt="John" style="width:100%;">
         <div class="container">
           <h2>Amanda Bella</h2>
           <p class="title">F&B Director</p>

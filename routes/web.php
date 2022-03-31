@@ -33,22 +33,17 @@ Route::get('/index', function () {
     return view('index');
 });
 
-/* Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-  })->name('dashboard'); */
 
   Route::middleware(['auth:sanctum', 'verified'])->group(function(){
       Route::get('/products', Products::class);
       Route::get('/transactions', Transactions::class);
       Route::get('/restaurantandbar', UserProducts::class); 
-        Route::get('/dashboard', function(){
+      Route::get('/dashboard', function(){
           return view('dashboard');
       })->name('dashboard');
   });
 
- /*  Route::get('/restaurantandbar',function(){
-        return view('livewire.restaurantandbar');
-    })->name('livewire.restaurantandbar'); */
+ 
 
  Route::get('user/home','App\Http\Controllers\HomeController@UservsAdmin', function(){
  })->middleware('verified');
@@ -59,7 +54,6 @@ Route::get('/index', function () {
     
 });
 
-/* Route::get('/restaurantandbar','App\Http\Controllers\AdminvsUserWebController@UserProductAdminProduct', function(){
-})->middleware('verified'); */
+
  
 
