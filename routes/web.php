@@ -9,6 +9,7 @@ use App\Http\Controllers\UserProductsController;
 use App\Http\Livewire\Products;
 use App\Http\Livewire\UserProducts;
 use App\Http\Livewire\Transactions;
+use App\Http\Livewire\UserTransactions;
 use Inertia\Inertia;
 
 /*
@@ -38,6 +39,7 @@ Route::get('/index', function () {
       Route::get('/products', Products::class);
       Route::get('/transactions', Transactions::class);
       Route::get('/restaurantandbar', UserProducts::class); 
+      Route::get('/my-bookings', UserTransactions::class);
       Route::get('/dashboard', function(){
           return view('dashboard');
       })->name('dashboard');

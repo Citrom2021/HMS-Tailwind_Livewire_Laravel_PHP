@@ -85,7 +85,7 @@
                 After authentication you can make a booking at our hotel.
                 We store all your sensitive data securely encrypted.
                  </div>
-                 <a href="#" target="">Make a booking</a>
+                 <a href="../my-bookings" target="">Make a booking</a>
         </div>
     </div>
 </div>

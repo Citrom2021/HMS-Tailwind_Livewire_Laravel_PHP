@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\UserTransaction;
 use App\Models\Transaction;
 use Livewire\Component;
 use Illuminate\Http\Request;
@@ -11,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
 
-class Transactions extends Component
+class UserTransactions extends Component
 {
     public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests;
     public $modal = false;
@@ -19,7 +20,7 @@ class Transactions extends Component
     public function render()
     {
         $this-> transactions = Transaction::all();
-            return view('livewire.transactions');
+            return view('livewire.user-transactions');
             
                         
        
@@ -86,8 +87,8 @@ class Transactions extends Component
     Transaction::updateOrCreate(['id'=>$this->transaction_id],
         [
 
-        /* 'user_id' => GetUserID(); */
-       /*  'room_id' => GetRoomID(), */
+        /* 'user_id' => GetUserID();
+        'room_id' => GetRoomID(); */
         'user_name'=>$this->user_name,
         'email'=>$this->email,
         'phone'=>$this->phone,
@@ -98,9 +99,8 @@ class Transactions extends Component
         'bill'=>$this->bill,
         'halfboard'=> $this->halfboard,
         'number_of_guests'=> $this->number_of_guests,
-        
-        ]);
 
+        ]);
         session()->flash('message', 
         $this ->transaction_id ? 'Booking has been updated successfully' : 'Booking has been created successfully');
         $this->closeModal();
@@ -108,22 +108,5 @@ class Transactions extends Component
 
  }
  
-/*  private function GetUserID()
-  {
-
-    $user = User::where('name', $this->user_name)->get();
-    return $user->id;
- } */
-
- /* public function room()
- {
-     return $this->hasOne(Room::class);
- }
-
- public function GetRoomID()
-{
-    $room = Room::where('room_type', $this->room_name)->get();
-    return $room->id;
-} */
 
 }
