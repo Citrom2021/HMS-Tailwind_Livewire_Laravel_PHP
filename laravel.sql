@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2022 at 10:38 PM
+-- Generation Time: Apr 04, 2022 at 08:36 PM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -125,7 +125,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `name`, `slug`, `description`, `price`, `created_at`, `updated_at`) VALUES
-(1, 'Pina Colada', 'Cocktail', 'Pineapple, rum, creamy cocktail', '2000.00', '2022-03-20 18:10:10', '2022-03-27 13:12:51'),
+(1, 'Pina Colada', 'Cocktail', 'Pineapple, rum, creamy cocktail', '2399.00', '2022-03-20 18:10:10', '2022-03-31 19:44:06'),
 (2, 'Beef steak', 'Food', 'Argentinian beef', '9900.00', NULL, '2022-03-27 13:02:11'),
 (3, 'Chicken steak', 'Food', 'Countryside chicken', '3000.00', NULL, NULL),
 (4, 'Beef burger', 'Food', '330g meat, salad, mayo, burger', '3999.99', NULL, '2022-03-27 12:46:37'),
@@ -194,7 +194,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('a9catqOcABFMgp8PANnNdEHQmjwsc46eqI5Y2UYv', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicnMyMnp2c2N2U2ZJQkRKNGoxQjc2UDNoRzhtTVhoaGtTQUZOTE5oaSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1648413358);
+('TomiWZa1AWIZrZMcJ5t2rsLIZojarj0v9aE3o02C', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoib0ZITXgyN1ZMaTdSMFJ0N3BBQVdBNVFRbWtVN2JhMDI0VzhsNkgyaiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1649014109);
 
 -- --------------------------------------------------------
 
@@ -226,7 +226,9 @@ CREATE TABLE `transactions` (
 
 INSERT INTO `transactions` (`id`, `user_id`, `user_name`, `room_id`, `room_name`, `checkin`, `checkout`, `days`, `bill`, `halfboard`, `number_of_guests`, `created_at`, `updated_at`, `email`, `phone`) VALUES
 (1, 4, 'user2', 1, 'Single', '2022-04-07', '2022-04-08', 1, 40000, '', 1, NULL, '2022-03-27 17:57:36', NULL, NULL),
-(4, NULL, 'user44', NULL, '', '2022-03-31', '2022-04-01', 1, 55000, '', 2, '2022-03-27 18:11:24', '2022-03-27 18:11:24', 'user123@gmail.com', '06206652342');
+(4, NULL, 'user44', NULL, '', '2022-03-31', '2022-04-01', 1, 55000, '', 2, '2022-03-27 18:11:24', '2022-03-27 18:11:24', 'user123@gmail.com', '06206652342'),
+(5, NULL, 'anyad', NULL, 'Luxury', '2022-03-25', '2022-03-31', 5, 123000, 'Yes', 4, '2022-03-29 16:56:21', '2022-03-29 16:58:14', 'joseph@gmail.com', '06206652342'),
+(6, NULL, '', NULL, '1', '2022-04-29', '2022-05-01', 2, 60000, 'Yes', 2, '2022-04-03 16:28:04', '2022-04-03 16:28:04', '', '');
 
 -- --------------------------------------------------------
 
@@ -257,7 +259,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`, `address`, `phone_number`) VALUES
-(1, 'admin', 'admin@gmail.com', 'Admin', '2022-03-20 18:07:07', '$2y$10$6NZmpJbileEH/KWMuzXNneXrf0L4affCOYU2/tc66WANuFgdgIX/u', NULL, NULL, 'Vsj4gOJEVbZaw57K4baKSBZtcCviDja30VvvjIufiVOmxlHJQ3VzfdIX7u1U', NULL, NULL, '2022-03-20 18:06:58', '2022-03-20 18:07:07', 'Rakoczi utca 85', '+36201111111'),
+(1, 'admin', 'admin@gmail.com', 'Admin', '2022-03-20 18:07:07', '$2y$10$6NZmpJbileEH/KWMuzXNneXrf0L4affCOYU2/tc66WANuFgdgIX/u', NULL, NULL, 'qTA0KTgUDtqsVkrzKAw2yOep594pm7LcHBq8hLxtfQoIG2gPv7cgnpdcnkdJ', NULL, NULL, '2022-03-20 18:06:58', '2022-03-20 18:07:07', 'Rakoczi utca 85', '+36201111111'),
 (3, 'user', 'user@gmail.com', 'User', '2022-03-20 21:46:17', '$2y$10$4JZ2y7vxZstikTt9T/GrGOkisTbJ35qvgh0ZpQzqkKUgNfxy3HreG', NULL, NULL, NULL, NULL, NULL, '2022-03-20 21:45:28', '2022-03-21 00:59:21', 'Rakoczi utca 85, Budapest, Hungary', '+36201345678'),
 (4, 'user2', 'user2@gmail.com', 'User', '2022-03-23 23:05:36', '$2y$10$EcQJnRvnNuDwp.jJ1V2.3.fq5dn85RZefZfnjrxp/mTxS1CE.ntdm', 'eyJpdiI6IitIQmtja0RPQ1FsamdxQVhWSG1NMmc9PSIsInZhbHVlIjoid0VXWTQwMDdPOVY3TGp0TWtjRzN6Qnk4MGFzYnY4SGNENDV4MHlsbHRiUT0iLCJtYWMiOiI2NjM4N2E4YTk3ZTJkNjE2YjQ0MTY4MmM0MTZhODUzM2QxODMwZTdiOTEzNjRkN2ViMWRkZjRkZTJiNmE1YTBhIiwidGFnIjoiIn0=', 'eyJpdiI6IkorMVdrbkliM0NLajNoY1RlQUkyL1E9PSIsInZhbHVlIjoidHdWbmJ6WkU3aTJBT2VvZEdKV3pZUFdzTTUyL01CME9SQ2NDdUZhUlAvVWo3WDZJYjR2bzY1SjVPNG4xWTVXTjcrSUNWRFN3dkdIVTdXNTk4MGt1bitZNTJLc3N2Yzl1RGNRdEZqeDgwM0xqbE9CYmovRm9pcmlnVjNuMXNLVWpROVFHT0ZiUVpBZlpkNHdqS3NJbHVTUlNvS1p1Y3JOSldUbFg5dWROVXZkcFpXeFJ2cXpjcW1YZVIwV1ptV1d0THpnWTVrcTJEOE11Yks3Y1VERFVHanhnZGlQZGdHMG5RdlluVXhHb2xRWE1UdkpWMzdOeDF2SmxWVXhmclRYWDhNOWhVcVlWZndQa2I0YTRJMTlJYlE9PSIsIm1hYyI6IjA1ZGU5NjY1Y2ZiZmNlMjE3YjU1ZDA2MjVmMTZkMjRiYjdlYmZjYjRjMDhmYWE2YjY5ZjRhYWQ0YjQyOWU0NjgiLCJ0YWciOiIifQ==', NULL, NULL, NULL, '2022-03-23 23:04:31', '2022-03-23 23:06:50', 'user street 69, Miami,  Florida, USA', '+14563456999');
 
@@ -365,7 +367,7 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `users`
