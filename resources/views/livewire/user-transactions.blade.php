@@ -79,6 +79,7 @@
                     </thead>
                     <tbody>
                         @foreach ($transactions as $transaction)
+                        @if ($transaction->user_name == Auth::user()->name)
                         <tr>
                         <td class="border px-4 py-2">{{$transaction->id}}</td>
                         <td class="border px-4 py-2">{{$transaction->user_name}}</td>
@@ -96,7 +97,7 @@
                             <button wire:click="delete({{$transaction->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
                         </td>
                         </tr> 
-                        
+                        @endif
                         @endforeach
                     </tbody>
                 </table>

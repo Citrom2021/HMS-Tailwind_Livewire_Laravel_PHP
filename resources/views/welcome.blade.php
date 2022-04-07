@@ -1843,10 +1843,10 @@ html {
     <div class="container my-24 px-6 mx-auto">
   
       <!-- Section: Design Block -->
-      <section class="mb-32 text-gray-800">
+      <section class="mb-32 text-gray-800" id="faq">
         <h2 class="text-3xl font-bold mb-12 text-center">Frequently asked questions</h2>
     
-        <div id="faq" class="grid lg:grid-cols-3 gap-6">
+        <div  class="grid lg:grid-cols-3 gap-6">
           <div class="mb-12">
             <p class="font-bold mb-4">Is really services advertised here free?</p>
             <p class="text-gray-500">
