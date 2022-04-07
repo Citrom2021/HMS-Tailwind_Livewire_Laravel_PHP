@@ -1,5 +1,5 @@
 <section>
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container-fluid">
 
       
@@ -29,6 +29,8 @@
         <li class="navbar-brand"><a href="#gallery" class="nav-link">Gallery</a>
         </li>
         <li class="navbar-brand"><a href="#rooms" class="nav-link">Rooms</a>
+        </li>
+        <li class="navbar-brand"><a href="#career" class="nav-link">Career</a>
         </li>
         <li class="navbar-brand"><a href="../login" class="nav-link ">Book now</a>
         </li>
