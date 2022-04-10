@@ -66,12 +66,7 @@
             <x-jet-input-error for="email" class="mt-2" />
         </div>
 
-        <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="id" value="{{ __('ID') }}" />
-            <x-jet-input id="id" type="text" class="mt-1 block w-full" wire:model.defer="state.id" />
-            <x-jet-input-error for="id" class="mt-2" />
-        </div>
-
+        
         <!-- Address -->
         <div class="col-span-6 sm:col-span-4">
             <x-jet-label for="id" value="{{ __('Address') }}" />

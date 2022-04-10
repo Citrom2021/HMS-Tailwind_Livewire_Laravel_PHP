@@ -40,7 +40,7 @@ class UserProductsController extends Controller
     {
         $request->validate([
             'name',
-            'slug',
+            'category',
             'description',
             'price',
         ]);

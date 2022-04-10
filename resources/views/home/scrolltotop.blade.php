@@ -1,6 +1,7 @@
 <!-- Back to top button -->
 
 <button
+  style="z-index: 999;"
   type="button"
   data-mdb-ripple="true"
   data-mdb-ripple-color="light"

@@ -17,8 +17,8 @@
                         </div>
 
                         <div class="mb-4">
-                            <label for="category" class="block text-gray-700 text-sm font-bold mb-2">category:</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="category" wire:model="category">
+                            <label for="slug" class="block text-gray-700 text-sm font-bold mb-2">Slug:</label>
+                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="slug" wire:model="slug">
                         </div>
                         <div class="mb-4">
                             <label for="description" class="block text-gray-700 text-sm font-bold mb-2">Description:</label>

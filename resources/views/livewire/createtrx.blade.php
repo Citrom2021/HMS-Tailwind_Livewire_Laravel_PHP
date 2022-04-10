@@ -43,7 +43,7 @@
                         <div class="mb-4">
                             <label for="room_name" class="block text-gray-700 text-sm font-bold mb-2">Select Room</label>
                             {{-- <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="room_id" wire:model="room_id"> --}}
-                            <select name="room_name"  id="room_name" wire:model="room_name">
+                            <select name="room_name"  id="room_name" wire:model="room_name" class="w-9/12">
                                 <option disabled value="">Room types:</option>
                                 <option value="Single">Single</option>
                                 <option value="Double">Double</option>  
@@ -54,17 +54,48 @@
                             </select>
                         </div>
 
+                        @if(session()->has('unavailable_message'))
+                        <div class="bg-red-100 rounded-b text-red-900 px-4 py-4 shadow-md my-3" role="alert">
+                        <div class="flex">
+                            <div>
+                            <h4>{{ session('unavailable_message')}}</h4>
+                            </div>
+                        </div>
+                        </div>
+                        @endif
+
                         <div class="mb-4">
                             <label for="checkin" class="block text-gray-700 text-sm font-bold mb-2">Checkin:</label>
                             <input type="date" value="2022-03-22"
                             min="2022-03-22" max="2099-12-31" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="checkin" wire:model="checkin">
                         </div>
 
+                        @if(session()->has('checkin_message'))
+                        <div class="bg-red-100 rounded-b text-red-900 px-4 py-4 shadow-md my-3" role="alert">
+                        <div class="flex">
+                            <div>
+                            <h4>{{ session('checkin_message')}}</h4>
+                            </div>
+                        </div>
+                        </div>
+                        @endif
+
                         <div class="mb-4">
                             <label for="checkout" class="block text-gray-700 text-sm font-bold mb-2">Checkout:</label>
                             <input type="date" value="2022-03-22"
                             min="2022-03-22" max="2099-12-31" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="checkout" wire:model="checkout">
                         </div>
+
+                        @if(session()->has('days_message'))
+                        <div class="bg-red-100 rounded-b text-red-900 px-4 py-4 shadow-md my-3" role="alert">
+                        <div class="flex">
+                            <div>
+                            <h4>{{ session('days_message')}}</h4>
+                            </div>
+                        </div>
+                        </div>
+                        @endif
+                        
                         <div class="mb-4">
                             <label for="days" class="block text-gray-700 text-sm font-bold mb-2">Days:</label>
                             <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="days" wire:model="days">
@@ -76,7 +107,7 @@
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Halfboard:</label>
                             {{-- <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="halfboard" wire:model="halfboard"> --}}
-                            <select for="halfboard" name="halfboard"  id="halfboard" wire:model="halfboard">
+                            <select for="halfboard" name="halfboard"  id="halfboard" wire:model="halfboard" class="w-9/12">
                                 <option disabled value="">Options:</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>    
@@ -93,7 +124,7 @@
                             </span>
                             
                             <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
-                                <button wire:click.prevent="save()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-purple-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Save</button>
+                                <button wire:click.prevent="save()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-purple-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5" {{ $isDisabled ? 'disabled' : '' }}>Save</button>
                             </span>
 
                             

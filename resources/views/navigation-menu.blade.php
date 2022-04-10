@@ -34,7 +34,7 @@
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="../user/home" :active="request()->routeIs('../user/home')">
-                       User Center
+                       Dashboard
                     </x-jet-nav-link>
 
                     
@@ -174,7 +174,7 @@
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
             <x-jet-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+                {{ __('User center') }}
             </x-jet-responsive-nav-link>
             
             <x-jet-responsive-nav-link href="../restaurantandbar" >
@@ -185,8 +185,8 @@
                 {{ __('Home page') }}
             </x-jet-responsive-nav-link>
 
-            <x-jet-responsive-nav-link href="../user/home" >
-                {{ __('User Center') }}
+            <x-jet-responsive-nav-link href="../my-bookings" >
+                {{ __('My bookings') }}
             </x-jet-responsive-nav-link>
             
             

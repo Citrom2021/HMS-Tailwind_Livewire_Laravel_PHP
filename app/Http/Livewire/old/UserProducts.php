@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
 
-class Products extends Component
+class UserProducts extends Component
 {
     public $products,$name,$category,$description,$price;
     public $modal = false;
@@ -19,11 +19,28 @@ class Products extends Component
     public function render()
     {
         $this-> products = Product::all();
+            return view('livewire.restaurantandbar');
+            
+            
+            
+           //  blocking user to see products
+           
+        /* $role=Auth::user()->role;
+
+        if($role=="Admin")
+        {
+            $this-> products = Product::all();
             return view('livewire.products');
-            
-            
-            
-              }
+        }
+
+        if($role=="User")
+        
+        {
+            return view('livewire.products')
+            return view('welcome');
+        }
+     */
+    }
 
     public function create()
     {
@@ -44,14 +61,13 @@ class Products extends Component
         $this->category = "";
         $this->description = "";
         $this->price = "";
-        $this->product_id ="";
         
     }
 
    public function edit($id)
    {
        $product = Product::findOrFail($id);
-       $this->product_id = $id;
+       $this->id = $id;
        $this->name = $product-> name;
        $this->category = $product -> category;
        $this->description = $product ->description;
@@ -62,27 +78,8 @@ class Products extends Component
    public function delete($id)
  {
      Product::find($id) -> delete();
-     session()->flash('message', 'Product has been deleted successfully');
  }  
 
- public function save()
-
- {
-    Product::updateOrCreate(['id'=>$this->product_id],
-        [
-
-        'name'=> $this->name,
-        'category'=>  $this->category,
-        'description'=> $this->description,
-        'price'=>  $this->price,
-
-        ]);
-        session()->flash('message', 
-        $this ->product_id ? 'Product has been updated successfully' : 'Product has been created successfully');
-        $this->closeModal();
-        $this->cleanupFields();
-
- }
  
 
 }

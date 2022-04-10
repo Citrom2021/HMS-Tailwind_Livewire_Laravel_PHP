@@ -1,0 +1,2597 @@
+{
+	"info": {
+		"_postman_id": "eed27072-8461-431a-9010-1a5335a29cfc",
+		"name": "ProductControllerREST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/api/products",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "26|dskfYfiffS6UESLSu0NCgAmfsb7iB6m8qmdTb6tT",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Gingerbread",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "Food",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Sweet bread, allergic",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "955",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sonka",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Füstölt sonka husvétra",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:46:25 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:46:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ketchup",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Food",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Small portion of ketchup",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "248",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:04:53 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:04:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"Ketchup\",\n    \"category\": \"Food\",\n    \"description\": \"Small portion of ketchup\",\n    \"price\": \"248\",\n    \"updated_at\": \"2022-04-08T20:04:53.000000Z\",\n    \"created_at\": \"2022-04-08T20:04:53.000000Z\",\n    \"id\": 31\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ketchup",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Food",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Small portion of ketchup",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "248",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:40:36 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:40:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "17|CC0QztcBLXB1xWkiz8LmIvy27BAJ9B2BFPTEF6C",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Andras2",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "email",
+							"value": "andras2@gmail.com",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "xyz23",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "password_confirmation",
+							"value": "xyz23",
+							"type": "default",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andras2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "andras2@gmail.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "xyz23",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "xyz23",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:07 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You have succesfully logged out\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/logout",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andras2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "andras2@gmail.com",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "xyz23",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "password_confirmation",
+									"value": "xyz23",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"logout"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "22|4iBExWVp4UJg602HhUSew9CSlir2UeO8snSGYYTq",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Admin",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Admin111$",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "Admin111$",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andras2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Admin123",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "xyz23",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:47:16 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:47:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"id\": 1,\n        \"name\": \"admin\",\n        \"email\": \"admin@gmail.com\",\n        \"role\": \"Admin\",\n        \"email_verified_at\": \"2022-03-20T19:07:07.000000Z\",\n        \"current_team_id\": null,\n        \"profile_photo_path\": null,\n        \"created_at\": \"2022-03-20T19:06:58.000000Z\",\n        \"updated_at\": \"2022-03-20T19:07:07.000000Z\",\n        \"address\": \"Rakoczi utca 85\",\n        \"phone_number\": \"+36201111111\",\n        \"profile_photo_url\": \"https://ui-avatars.com/api/?name=a&color=7F9CF5&background=EBF4FF\"\n    },\n    \"token\": \"15|3XKkWLZA90yQ5sPjViOE6fUYKKNb6P4NnxPYMnCP\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Andras2",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "admin@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Admin1123",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "xyz23",
+									"type": "default",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:48:13 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:48:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "60"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Wrong credentials entered\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/products",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2|TTzfz438BOjJWEag7CEqJvznj1VjlzhQChXBpLIK",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Sonka",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "20",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Füstölt sonka husvétra",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sonka",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Füstölt sonka husvétra",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:33 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Pina Colada\",\n        \"category\": \"Cocktail\",\n        \"description\": \"Pineapple, rum, creamy cocktail\",\n        \"price\": \"2399.00\",\n        \"created_at\": \"2022-03-20T19:10:10.000000Z\",\n        \"updated_at\": \"2022-03-31T21:44:06.000000Z\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Beef steak\",\n        \"category\": \"Food\",\n        \"description\": \"Argentinian beef\",\n        \"price\": \"9900.00\",\n        \"created_at\": null,\n        \"updated_at\": \"2022-03-27T15:02:11.000000Z\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Chicken steak\",\n        \"category\": \"Food\",\n        \"description\": \"Countryside chicken\",\n        \"price\": \"3000.00\",\n        \"created_at\": null,\n        \"updated_at\": null\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Beef burger\",\n        \"category\": \"Food\",\n        \"description\": \"330g meat, salad, mayo, burger\",\n        \"price\": \"3999.99\",\n        \"created_at\": null,\n        \"updated_at\": \"2022-03-27T14:46:37.000000Z\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Long Island\",\n        \"category\": \"Cocktail\",\n        \"description\": \"Rum, Tequila, Vodka, Coke\",\n        \"price\": \"3999.00\",\n        \"created_at\": \"2022-03-21T02:03:35.000000Z\",\n        \"updated_at\": \"2022-03-23T08:02:03.000000Z\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Mliano spaghetti\",\n        \"category\": \"Food\",\n        \"description\": \"Meatballs with pasta\",\n        \"price\": \"2699.00\",\n        \"created_at\": \"2022-03-23T07:59:36.000000Z\",\n        \"updated_at\": \"2022-03-23T07:59:36.000000Z\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Chilli con carne\",\n        \"category\": \"Food\",\n        \"description\": \"Mexican spicy minced meat\",\n        \"price\": \"2699.00\",\n        \"created_at\": \"2022-03-23T08:00:06.000000Z\",\n        \"updated_at\": \"2022-03-23T08:00:06.000000Z\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Tequila Sunrire\",\n        \"category\": \"Cocktail\",\n        \"description\": \"Lemony tequila cocktail\",\n        \"price\": \"2999.00\",\n        \"created_at\": \"2022-03-23T08:25:54.000000Z\",\n        \"updated_at\": \"2022-03-23T08:25:54.000000Z\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Sparkling water\",\n        \"category\": \"Beverage\",\n        \"description\": \"Still water sparkling\",\n        \"price\": \"499.00\",\n        \"created_at\": \"2022-03-23T08:34:32.000000Z\",\n        \"updated_at\": \"2022-03-23T08:34:32.000000Z\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Coca-Cola\",\n        \"category\": \"Beverage\",\n        \"description\": \"Cola 0.5l\",\n        \"price\": \"499.00\",\n        \"created_at\": \"2022-03-23T08:35:55.000000Z\",\n        \"updated_at\": \"2022-03-23T08:35:55.000000Z\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Pepsi Coke\",\n        \"category\": \"Beverage\",\n        \"description\": \"Coke 0.5l\",\n        \"price\": \"499.00\",\n        \"created_at\": \"2022-03-23T08:36:09.000000Z\",\n        \"updated_at\": \"2022-03-23T08:36:09.000000Z\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Fanta Lemon\",\n        \"category\": \"Beverage\",\n        \"description\": \"Lemon drink 0.5l\",\n        \"price\": \"499.00\",\n        \"created_at\": \"2022-03-23T08:36:36.000000Z\",\n        \"updated_at\": \"2022-03-23T08:36:36.000000Z\"\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Coca-Cola can\",\n        \"category\": \"Beverage\",\n        \"description\": \"Coke drink 0.33l\",\n        \"price\": \"499.00\",\n        \"created_at\": \"2022-03-23T08:36:56.000000Z\",\n        \"updated_at\": \"2022-03-23T08:36:56.000000Z\"\n    },\n    {\n        \"id\": 18,\n        \"name\": \"Lemonade\",\n        \"category\": \"Beverage\",\n        \"description\": \"Lemon juice 0.33 glass\",\n        \"price\": \"499.00\",\n        \"created_at\": \"2022-03-23T08:37:46.000000Z\",\n        \"updated_at\": \"2022-03-23T08:37:46.000000Z\"\n    },\n    {\n        \"id\": 21,\n        \"name\": \"Töpörtyű\",\n        \"category\": \"Food\",\n        \"description\": \"Hungarian pork specialty\",\n        \"price\": \"1999.00\",\n        \"created_at\": \"2022-03-27T14:52:15.000000Z\",\n        \"updated_at\": \"2022-03-27T14:58:50.000000Z\"\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Chicken wings\",\n        \"category\": \"Food\",\n        \"description\": \"Spicy grilled wings\",\n        \"price\": \"2350.00\",\n        \"created_at\": \"2022-03-27T14:53:50.000000Z\",\n        \"updated_at\": \"2022-03-27T14:53:50.000000Z\"\n    },\n    {\n        \"id\": 23,\n        \"name\": \"Ham and eggs\",\n        \"category\": \"Food\",\n        \"description\": \"Grilled ham and eggs\",\n        \"price\": \"2290.00\",\n        \"created_at\": \"2022-03-27T14:56:18.000000Z\",\n        \"updated_at\": \"2022-03-27T15:00:16.000000Z\"\n    },\n    {\n        \"id\": 24,\n        \"name\": \"Vodka Soda\",\n        \"category\": \"Cocktail\",\n        \"description\": \"Kalinka Vodka and Soda 2dl\",\n        \"price\": \"2999.00\",\n        \"created_at\": \"2022-03-27T15:01:10.000000Z\",\n        \"updated_at\": \"2022-03-27T15:01:22.000000Z\"\n    },\n    {\n        \"id\": 25,\n        \"name\": \"Goulash soup\",\n        \"category\": \"Food\",\n        \"description\": \"Pork chops, potato, vegetable, thick soup\",\n        \"price\": \"2999.00\",\n        \"created_at\": \"2022-03-27T15:13:49.000000Z\",\n        \"updated_at\": \"2022-03-27T15:13:49.000000Z\"\n    },\n    {\n        \"id\": 26,\n        \"name\": \"Ginger tea\",\n        \"category\": \"Drink\",\n        \"description\": \"Hot natural ginger tea\",\n        \"price\": \"799.00\",\n        \"created_at\": \"2022-03-27T15:15:24.000000Z\",\n        \"updated_at\": \"2022-03-27T15:15:24.000000Z\"\n    },\n    {\n        \"id\": 27,\n        \"name\": \"Black tea\",\n        \"category\": \"Drink\",\n        \"description\": \"Earl gray black tea\",\n        \"price\": \"599.00\",\n        \"created_at\": \"2022-03-27T15:16:43.000000Z\",\n        \"updated_at\": \"2022-03-27T15:16:56.000000Z\"\n    },\n    {\n        \"id\": 29,\n        \"name\": \"Grilled chicken\",\n        \"category\": \"Food\",\n        \"description\": \"Spicy chicken grilled\",\n        \"price\": \"2850.00\",\n        \"created_at\": \"2022-04-08T19:07:48.000000Z\",\n        \"updated_at\": \"2022-04-08T19:07:48.000000Z\"\n    },\n    {\n        \"id\": 30,\n        \"name\": \"Honey\",\n        \"category\": \"Food\",\n        \"description\": \"small box of honey\",\n        \"price\": \"699.00\",\n        \"created_at\": \"2022-04-08T19:29:14.000000Z\",\n        \"updated_at\": \"2022-04-08T19:30:29.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/products/25",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "18|G5kcx1nsVKjuxZrnd4WT1Tl8JQ40fCmzhaMoaWlZ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Sonka",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "20",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Füstölt sonka husvétra",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"4"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/products/25",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sonka",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Füstölt sonka husvétra",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"25"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:54 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:02:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 25,\n    \"name\": \"Goulash soup\",\n    \"category\": \"Food\",\n    \"description\": \"Pork chops, potato, vegetable, thick soup\",\n    \"price\": \"2999.00\",\n    \"created_at\": \"2022-03-27T15:13:49.000000Z\",\n    \"updated_at\": \"2022-03-27T15:13:49.000000Z\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/products/4",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sonka",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Füstölt sonka husvétra",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:05:39 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:05:39 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"name\": \"Beef burger\",\n    \"category\": \"Food\",\n    \"description\": \"330g meat, salad, mayo, burger\",\n    \"price\": \"3999.99\",\n    \"created_at\": null,\n    \"updated_at\": \"2022-03-27T14:46:37.000000Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/products/30",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "25|YJ7HgaH4JHxRcFUL30OvEO7knzJpec5OoJHsC6SE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Honey",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "Food",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "small box of honey",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "499",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"30"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/products/30",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Honey",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Food",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "small box of honey",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "245",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"30"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:06:13 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:06:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/products/30",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Honey",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Food",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "small box of honey",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "899",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"30"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:06:41 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:06:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 30,\n    \"name\": \"Honey\",\n    \"category\": \"Food\",\n    \"description\": \"small box of honey\",\n    \"price\": \"899\",\n    \"created_at\": \"2022-04-08T19:29:14.000000Z\",\n    \"updated_at\": \"2022-04-08T20:06:41.000000Z\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/products/30",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Honey",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Food",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "small box of honey",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "499",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"30"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:39:54 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:39:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/products/search/chicken",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Sonka",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "20",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Füstölt sonka husvétra",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "100",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/search/long",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"search",
+						"long"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/products/search/chicken",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sonka",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Füstölt sonka husvétra",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/search/chicken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"search",
+								"chicken"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:32:46 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:32:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"Chicken steak\",\n        \"category\": \"Food\",\n        \"description\": \"Countryside chicken\",\n        \"price\": \"3000.00\",\n        \"created_at\": null,\n        \"updated_at\": null\n    },\n    {\n        \"id\": 22,\n        \"name\": \"Chicken wings\",\n        \"category\": \"Food\",\n        \"description\": \"Spicy grilled wings\",\n        \"price\": \"2350.00\",\n        \"created_at\": \"2022-03-27T14:53:50.000000Z\",\n        \"updated_at\": \"2022-03-27T14:53:50.000000Z\"\n    },\n    {\n        \"id\": 29,\n        \"name\": \"Grilled chicken\",\n        \"category\": \"Food\",\n        \"description\": \"Spicy chicken grilled\",\n        \"price\": \"2850.00\",\n        \"created_at\": \"2022-04-08T19:07:48.000000Z\",\n        \"updated_at\": \"2022-04-08T19:07:48.000000Z\"\n    }\n]"
+				},
+				{
+					"name": "http://localhost:8000/api/products/search/chicken",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Sonka",
+									"type": "default"
+								},
+								{
+									"key": "slug",
+									"value": "20",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Füstölt sonka husvétra",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "100",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/search/long",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"search",
+								"long"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:08:20 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:08:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 5,\n        \"name\": \"Long Island\",\n        \"category\": \"Cocktail\",\n        \"description\": \"Rum, Tequila, Vodka, Coke\",\n        \"price\": \"3999.00\",\n        \"created_at\": \"2022-03-21T02:03:35.000000Z\",\n        \"updated_at\": \"2022-03-23T08:02:03.000000Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "tester",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "user@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "Testing111",
+							"type": "default"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "Testing111",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "user",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "joska@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Joska222",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Joska211",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:50:43 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:50:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"email\": [\n            \"The email has already been taken.\"\n        ],\n        \"password\": [\n            \"The password confirmation does not match.\"\n        ]\n    }\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "tester",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "tester1234@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Testing111",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Testing111",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:01:06 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 20:01:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"name\": \"tester\",\n        \"email\": \"tester1234@gmail.com\",\n        \"updated_at\": \"2022-04-08T20:01:04.000000Z\",\n        \"created_at\": \"2022-04-08T20:01:04.000000Z\",\n        \"id\": 7,\n        \"profile_photo_url\": \"https://ui-avatars.com/api/?name=t&color=7F9CF5&background=EBF4FF\"\n    },\n    \"token\": \"16|l3cQirhIWpgDpe7vi6ngDMAxnIsjXMObGWmTtWCt\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "tester",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "user@gmail.com",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "Testing111",
+									"type": "default"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "Testing111",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"status": "Unprocessable Content",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:37:26 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:37:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"email\": [\n            \"The email has already been taken.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8000/api/products/4",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "25|YJ7HgaH4JHxRcFUL30OvEO7knzJpec5OoJHsC6SE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Long Island",
+							"type": "default"
+						},
+						{
+							"key": "category",
+							"value": "Cocktail",
+							"type": "default"
+						},
+						{
+							"key": "description",
+							"value": "Rum, Tequila, Vodka, Coke",
+							"type": "default"
+						},
+						{
+							"key": "price",
+							"value": "4999",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/products/30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"products",
+						"30"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8000/api/products/4",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Long Island",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Cocktail",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Rum, Tequila, Vodka, Coke",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "4999",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"28"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:49:14 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:49:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=UTF-8"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "1"
+				},
+				{
+					"name": "http://localhost:8000/api/products/4",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Long Island",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Cocktail",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Rum, Tequila, Vodka, Coke",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "4999",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/25",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"25"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:50:23 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 08 Apr 2022 19:50:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Unauthenticated.\"\n}"
+				},
+				{
+					"name": "http://localhost:8000/api/products/4",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Long Island",
+									"type": "default"
+								},
+								{
+									"key": "category",
+									"value": "Cocktail",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Rum, Tequila, Vodka, Coke",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "4999",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/products/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"products",
+								"30"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:39:31 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 09 Apr 2022 18:39:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.0.12"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Forbidden\"\n}"
+				}
+			]
+		}
+	]
+}

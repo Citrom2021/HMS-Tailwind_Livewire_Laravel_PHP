@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\UserTransaction;
 use App\Models\Transaction;
+use App\Models\Room;
 use Livewire\Component;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -14,7 +15,8 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserTransactions extends Component
 {
-    public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests;
+    public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests,$user_id;
+    public bool $isDisabled;
     public $modal = false;
 
     public function render()
@@ -22,7 +24,7 @@ class UserTransactions extends Component
         $this-> transactions = Transaction::all();
             return view('livewire.user-transactions');
             
-                        
+                    
        
     }
 
@@ -79,6 +81,23 @@ class UserTransactions extends Component
      session()->flash('message', 'Transaction has been deleted successfully');
  }  
 
+ public function updatedroomname()
+ {
+     self::UpdateBill();
+ }
+
+ public function updatedcheckin()
+ {
+
+    self::UpdateDays();
+ }
+
+ public function updatedcheckout()
+ {
+
+    self::UpdateDays();
+ }
+
  public function save()
 
 
@@ -87,11 +106,11 @@ class UserTransactions extends Component
     Transaction::updateOrCreate(['id'=>$this->transaction_id],
         [
 
-        /* 'user_id' => GetUserID();
-        'room_id' => GetRoomID(); */
-        'user_name'=>$this->user_name,
-        'email'=>$this->email,
-        'phone'=>$this->phone,
+        'user_id' => Auth::user()->id,
+        'room_id' => self::GetRoom()->id,
+        'user_name'=> Auth::user()->name,
+        'email'=> Auth::user()->email,
+        'phone'=> Auth::user()->phone_number,
         'room_name'=> $this->room_name,
         'checkin'=>$this->checkin,
         'checkout'=>$this->checkout,
@@ -108,5 +127,104 @@ class UserTransactions extends Component
 
  }
  
+
+ public function GetRoom()
+ {
+     $room = Room::where('room_type', $this->room_name)->first();
+     return $room;
+ }
+
+
+
+//Napok kiszámolása checkin és checkout datekből
+public function UpdateDays()
+{
+   if (!empty($this->checkin) && !empty($this->checkout))
+   {
+       $checkinDate = strtotime($this->checkin);
+       $checkoutDate = strtotime($this->checkout);
+
+       $diffSecs = $checkoutDate - $checkinDate;
+
+       if ($checkinDate < time())
+       {
+            $this->isDisabled = true;
+            session()->flash('checkin_message', 'Checkin date cannot be in the past!');
+       }
+       elseif ($diffSecs > 0)
+       {
+           
+            $this->days = round($diffSecs / (60 * 60 * 24));
+            self::UpdateBill();
+          
+       }
+       //Ha a különbség negatív, akkor a checkout dátum a checkin elött van
+       else
+       {
+
+            $this->isDisabled = true;
+            $this->bill = 0;
+            $this->days = 0;
+            session()->flash('days_message', 'Checkout date must be after checkin!');
+       
+       }
+
+   }
+
+}
+
+
+
+
+//Összeg kiszámolása szobafajtából és napok számából
+public function UpdateBill()
+{
+    if (!empty($this->room_name) && !empty($this->days))
+   {
+        if (self::IsRoomAvailable())
+        {
+
+            $this->isDisabled = false;
+            $this->bill = self::GetRoom()->price * $this->days;
+        }   
+        else
+        {
+            session()->flash('unavailable_message', 'Room is already booked from {} that time period!');
+            $this->isDisabled = true;
+        
+        }
+   }
+   else
+   {
+        $this->isDisabled = true;
+        $this->bill = 0;
+   }
+  
+}
+
+//Megnézzük, hogy a kiválasztott időszakra a szoba foglalt-e
+private function IsRoomAvailable()
+{
+   foreach ($this->transactions as $transaction)
+   {
+
+       $checkinStamp = strtotime($transaction->checkin);
+       $checkoutStamp = strtotime($transaction->checkout);
+
+       $checkinStampTrans = strtotime($this->checkin);
+       $checkoutStampTrans = strtotime($this->checkout);
+
+       if ($transaction->room_name == $this->room_name && $checkoutStamp > time())
+       {
+
+           if ($checkinStamp >= $checkoutStampTrans || $checkoutStamp <= $checkinStampTrans)
+           {
+                
+                return false;
+           }
+       }
+   }
+   return true;
+}
 
 }

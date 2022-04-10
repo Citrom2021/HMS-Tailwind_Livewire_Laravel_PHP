@@ -10,7 +10,8 @@ class Transaction extends Model
     use HasFactory;
     protected $fillable = [
         
-            
+            'room_id',
+            'user_id',
             'user_name',
             'email',
             'phone',           
@@ -22,5 +23,15 @@ class Transaction extends Model
             'halfboard',
             'number_of_guests',
     ];
+
+    public function User()
+    {
+        return $this->belongsTo(User::class);
+    }
+
+    public function Room()
+    {
+        return $this->belongsTo(Room::class);
+    }
             
 }

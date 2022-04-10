@@ -37,7 +37,7 @@
                             
                         </th>
                         
-                        <th class="px-4 py-2">Category
+                        <th class="px-4 py-2">Slug
                             
                         </th>
                         <th class="px-4 py-2">Description
@@ -64,7 +64,7 @@
                     <tr>
                     <td class="border px-4 py-2">{{$product->id}}</td>
                     <td class="border px-4 py-2">{{$product->name}}</td>
-                    <td class="border px-4 py-2">{{$product->category}}</td>
+                    <td class="border px-4 py-2">{{$product->slug}}</td>
                     <td class="border px-4 py-2">{{$product->description}}</td>
                     <td class="border px-4 py-2">{{$product->price}}</td>
                     <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">

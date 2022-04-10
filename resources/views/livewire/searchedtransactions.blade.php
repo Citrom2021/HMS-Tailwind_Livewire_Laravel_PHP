@@ -13,7 +13,7 @@
 
         <div class="container">
             <div class="row">
-               <div class="col-md-6 offset-md-2" style="margin-top:1%">
+               <div class="col-md-6" style="margin-top:1%">
                   <h4>Search booking</h4><hr>
                   <form action="{{ route('web.search') }}" method="GET">
              
@@ -48,11 +48,10 @@
                 <button type="button" wire:click="create()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3">New</button>
                
                 
-              @if($modal)
+           {{--    @if($modal)
                 @include('livewire.createtrx')   
-            @endif 
+            @endif  --}}
 
-            
             @if(isset($transactions))
     
                 <table class="table-auto w-full">
@@ -134,10 +133,10 @@
                           <tr><td>No result found!</td></tr>
                        @endif
                 </table>
-                  {{-- elvileg itt kéne paginationnek működnie --}}
-                  <div class="pagination-block">
-                    <?php //{{ $transactions->links('layouts.paginationlinks') }} ?>
-                    {{-- {{  $transactions->appends(request()->input())->links('layouts.paginationlinks') }} --}}
+                
+                <div class="pagination-block">
+                    {{-- ?php echo {{ $transactions->links('layouts.paginationlinks') }} ?>
+                    {{  $transactions->appends(request()->input())->links('app.resources.views.layouts.paginationlinks') }} --}}
                 </div>
                 </div>
  

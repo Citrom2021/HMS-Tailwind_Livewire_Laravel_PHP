@@ -40,7 +40,7 @@ class ProductoController extends Controller
     {
         $request->validate([
             'name',
-            'slug',
+            'category',
             'description',
             'price',
         ]);

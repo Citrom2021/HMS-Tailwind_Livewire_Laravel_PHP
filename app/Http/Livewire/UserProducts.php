@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserProducts extends Component
 {
-    public $products,$name,$slug,$description,$price;
+    public $products,$name,$category,$description,$price;
     public $modal = false;
 
     public function render()
@@ -22,24 +22,6 @@ class UserProducts extends Component
             return view('livewire.restaurantandbar');
             
             
-            
-           //  blocking user to see products
-           
-        /* $role=Auth::user()->role;
-
-        if($role=="Admin")
-        {
-            $this-> products = Product::all();
-            return view('livewire.products');
-        }
-
-        if($role=="User")
-        
-        {
-            return view('livewire.products')
-            return view('welcome');
-        }
-     */
     }
 
     public function create()
@@ -58,7 +40,7 @@ class UserProducts extends Component
     public function cleanupFields(){
         
         $this->name = "";
-        $this->slug = "";
+        $this->category = "";
         $this->description = "";
         $this->price = "";
         
@@ -69,7 +51,7 @@ class UserProducts extends Component
        $product = Product::findOrFail($id);
        $this->id = $id;
        $this->name = $product-> name;
-       $this->slug = $product -> slug;
+       $this->category = $product -> category;
        $this->description = $product ->description;
        $this->price = $product -> price;
        $this -> openModal();

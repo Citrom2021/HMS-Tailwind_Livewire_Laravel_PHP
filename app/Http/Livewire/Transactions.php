@@ -3,27 +3,54 @@
 namespace App\Http\Livewire;
 
 use App\Models\Transaction;
+use App\Models\User;
+use App\Models\Room;
 use Livewire\Component;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
+use Livewire\WithPagination;
 
 class Transactions extends Component
+
 {
+    use WithPagination;
+    public $searchTerm;
+
     public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests;
+    public bool $isDisabled;
     public $modal = false;
 
+    
     public function render()
     {
-        $this-> transactions = Transaction::all();
+           $this-> transactions = Transaction::all();
             return view('livewire.transactions');
-            
+        
+        $isDisabled = true;
+
+        /* $this-> transactions = Transaction::all();
+            return view('livewire.transactions',[
+                'transactions' =>Transaction::paginate(3),
+            ]); */
+        
+      /*   $isDisabled = true; */
                         
        
     }
+
+    /* public function search()
+    {
+
+        $searchTerm = '%'.$this->searchTerm.'%';
+        return view('livewire.transactions',[
+            'transactions' => Transaction::where('user_name','like', $searchTerm)->paginate(10)
+        ]);
+    } */
 
     public function create()
     {
@@ -83,11 +110,14 @@ class Transactions extends Component
 
 
  {
+    // adminos szobafoglalás felvitelnél létrehozzuk a usert is, vagy updateljük
+    self::CreateUser();
+    
     Transaction::updateOrCreate(['id'=>$this->transaction_id],
         [
 
-        /* 'user_id' => GetUserID(); */
-       /*  'room_id' => GetRoomID(), */
+        'user_id' => $this->user_id,
+        'room_id' => self::GetRoom()->id,
         'user_name'=>$this->user_name,
         'email'=>$this->email,
         'phone'=>$this->phone,
@@ -107,23 +137,156 @@ class Transactions extends Component
         $this->cleanupFields();
 
  }
- 
-/*  private function GetUserID()
-  {
 
-    $user = User::where('name', $this->user_name)->get();
-    return $user->id;
- } */
-
- /* public function room()
+ public function updatedroomname()
  {
-     return $this->hasOne(Room::class);
+     self::UpdateBill();
  }
 
- public function GetRoomID()
+ public function updatedcheckin()
+ {
+
+    self::UpdateDays();
+ }
+
+ public function updatedcheckout()
+ {
+
+    self::UpdateDays();
+ }
+
+
+ //admmin által beírt user felvitele táblába, vagy név alapján updatelése
+ //user id vissza a transactions táblába
+ private function CreateUser()
+ {
+    $user = User::updateOrCreate(['name'=>$this->user_name],
+    [
+        'name' => $this->user_name,
+        'email' => $this->email,
+        'phone'=> $this->phone,
+        'password' => bcrypt(self::generatePassword(12))
+    ]);
+
+    $this->user_id = $user->id;
+ }
+
+//Néva alapján lekérdezzük a szoba adatait
+ public function GetRoom()
+ {
+     $room = Room::where('room_type', $this->room_name)->first();
+     return $room;
+ }
+
+
+//Napok kiszámolása checkin és checkout datekből
+public function UpdateDays()
 {
-    $room = Room::where('room_type', $this->room_name)->get();
-    return $room->id;
-} */
+   if (!empty($this->checkin) && !empty($this->checkout))
+   {
+       $checkinDate = strtotime($this->checkin);
+       $checkoutDate = strtotime($this->checkout);
+
+       $diffSecs = $checkoutDate - $checkinDate;
+
+       if ($checkinDate < time())
+       {
+            $this->isDisabled = true;
+            session()->flash('checkin_message', 'Checkin date cannot be in the past!');
+       }
+       elseif ($diffSecs > 0)
+       {
+           
+            $this->days = round($diffSecs / (60 * 60 * 24));
+            self::UpdateBill();
+          
+       }
+       //Ha a különbség negatív, akkor a checkout dátum a checkin elött van
+       else
+       {
+
+            $this->isDisabled = true;
+            $this->bill = 0;
+            $this->days = 0;
+            session()->flash('days_message', 'Checkout date must be after checkin!');
+       
+       }
+
+   }
+
+}
+
+
+
+
+//Összeg kiszámolása szobafajtából és napok számából
+public function UpdateBill()
+{
+    if (!empty($this->room_name) && !empty($this->days))
+   {
+        if (self::IsRoomAvailable())
+        {
+
+            $this->isDisabled = false;
+            $this->bill = self::GetRoom()->price * $this->days;
+        }   
+        else
+        {
+            session()->flash('unavailable_message', 'Room is already booked from {} that time period!');
+            $this->isDisabled = true;
+        
+        }
+   }
+   else
+   {
+        $this->isDisabled = true;
+        $this->bill = 0;
+   }
+  
+}
+
+//Megnézzük, hogy a kiválasztott időszakra a szoba foglalt-e
+private function IsRoomAvailable()
+{
+   foreach ($this->transactions as $transaction)
+   {
+
+       $checkinStamp = strtotime($transaction->checkin);
+       $checkoutStamp = strtotime($transaction->checkout);
+
+       $checkinStampTrans = strtotime($this->checkin);
+       $checkoutStampTrans = strtotime($this->checkout);
+
+       if ($transaction->room_name == $this->room_name && $checkoutStamp > time())
+       {
+
+           if ($checkinStamp >= $checkoutStampTrans || $checkoutStamp <= $checkinStampTrans)
+           {
+                
+                return false;
+           }
+       }
+   }
+   return true;
+}
+
+ function getRandomBytes($nbBytes = 32)
+{
+    $bytes = openssl_random_pseudo_bytes($nbBytes, $strong);
+    if (false !== $bytes && true === $strong) {
+        return $bytes;
+    }
+    else {
+        throw new \Exception("Unable to generate secure token from OpenSSL.");
+    }
+}
+
+function generatePassword($length){
+    return substr(preg_replace("/[^a-zA-Z0-9]/", "", base64_encode(self::getRandomBytes($length+1))),0,$length);
+}
+
+
+
+
 
 }

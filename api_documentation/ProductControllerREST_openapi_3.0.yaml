@@ -1,0 +1,1260 @@
+openapi: 3.0.0
+info:
+  title: ProductControllerREST
+  version: 1.0.0
+servers:
+  - url: http://localhost:8000
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+    noauthAuth:
+      type: http
+      scheme: noauth
+paths:
+  /api/products:
+    post:
+      tags:
+        - default
+      summary: http://localhost:8000/api/products
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Gingerbread
+                category:
+                  type: string
+                  example: Food
+                description:
+                  type: string
+                  example: Sweet bread, allergic
+                price:
+                  type: integer
+                  example: '955'
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:04:53 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '58'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                name: Ketchup
+                category: Food
+                description: Small portion of ketchup
+                price: '248'
+                updated_at: '2022-04-08T20:04:53.000000Z'
+                created_at: '2022-04-08T20:04:53.000000Z'
+                id: 31
+        '401':
+          description: Unauthorized
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:46:25 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Unauthenticated.
+        '403':
+          description: Forbidden
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Sat, 09 Apr 2022 18:40:36 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Forbidden
+    get:
+      tags:
+        - default
+      summary: http://localhost:8000/api/products
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:02:33 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                - id: 1
+                  name: Pina Colada
+                  category: Cocktail
+                  description: Pineapple, rum, creamy cocktail
+                  price: '2399.00'
+                  created_at: '2022-03-20T19:10:10.000000Z'
+                  updated_at: '2022-03-31T21:44:06.000000Z'
+                - id: 2
+                  name: Beef steak
+                  category: Food
+                  description: Argentinian beef
+                  price: '9900.00'
+                  created_at: null
+                  updated_at: '2022-03-27T15:02:11.000000Z'
+                - id: 3
+                  name: Chicken steak
+                  category: Food
+                  description: Countryside chicken
+                  price: '3000.00'
+                  created_at: null
+                  updated_at: null
+                - id: 4
+                  name: Beef burger
+                  category: Food
+                  description: 330g meat, salad, mayo, burger
+                  price: '3999.99'
+                  created_at: null
+                  updated_at: '2022-03-27T14:46:37.000000Z'
+                - id: 5
+                  name: Long Island
+                  category: Cocktail
+                  description: Rum, Tequila, Vodka, Coke
+                  price: '3999.00'
+                  created_at: '2022-03-21T02:03:35.000000Z'
+                  updated_at: '2022-03-23T08:02:03.000000Z'
+                - id: 8
+                  name: Mliano spaghetti
+                  category: Food
+                  description: Meatballs with pasta
+                  price: '2699.00'
+                  created_at: '2022-03-23T07:59:36.000000Z'
+                  updated_at: '2022-03-23T07:59:36.000000Z'
+                - id: 9
+                  name: Chilli con carne
+                  category: Food
+                  description: Mexican spicy minced meat
+                  price: '2699.00'
+                  created_at: '2022-03-23T08:00:06.000000Z'
+                  updated_at: '2022-03-23T08:00:06.000000Z'
+                - id: 10
+                  name: Tequila Sunrire
+                  category: Cocktail
+                  description: Lemony tequila cocktail
+                  price: '2999.00'
+                  created_at: '2022-03-23T08:25:54.000000Z'
+                  updated_at: '2022-03-23T08:25:54.000000Z'
+                - id: 11
+                  name: Sparkling water
+                  category: Beverage
+                  description: Still water sparkling
+                  price: '499.00'
+                  created_at: '2022-03-23T08:34:32.000000Z'
+                  updated_at: '2022-03-23T08:34:32.000000Z'
+                - id: 13
+                  name: Coca-Cola
+                  category: Beverage
+                  description: Cola 0.5l
+                  price: '499.00'
+                  created_at: '2022-03-23T08:35:55.000000Z'
+                  updated_at: '2022-03-23T08:35:55.000000Z'
+                - id: 14
+                  name: Pepsi Coke
+                  category: Beverage
+                  description: Coke 0.5l
+                  price: '499.00'
+                  created_at: '2022-03-23T08:36:09.000000Z'
+                  updated_at: '2022-03-23T08:36:09.000000Z'
+                - id: 15
+                  name: Fanta Lemon
+                  category: Beverage
+                  description: Lemon drink 0.5l
+                  price: '499.00'
+                  created_at: '2022-03-23T08:36:36.000000Z'
+                  updated_at: '2022-03-23T08:36:36.000000Z'
+                - id: 16
+                  name: Coca-Cola can
+                  category: Beverage
+                  description: Coke drink 0.33l
+                  price: '499.00'
+                  created_at: '2022-03-23T08:36:56.000000Z'
+                  updated_at: '2022-03-23T08:36:56.000000Z'
+                - id: 18
+                  name: Lemonade
+                  category: Beverage
+                  description: Lemon juice 0.33 glass
+                  price: '499.00'
+                  created_at: '2022-03-23T08:37:46.000000Z'
+                  updated_at: '2022-03-23T08:37:46.000000Z'
+                - id: 21
+                  name: Töpörtyű
+                  category: Food
+                  description: Hungarian pork specialty
+                  price: '1999.00'
+                  created_at: '2022-03-27T14:52:15.000000Z'
+                  updated_at: '2022-03-27T14:58:50.000000Z'
+                - id: 22
+                  name: Chicken wings
+                  category: Food
+                  description: Spicy grilled wings
+                  price: '2350.00'
+                  created_at: '2022-03-27T14:53:50.000000Z'
+                  updated_at: '2022-03-27T14:53:50.000000Z'
+                - id: 23
+                  name: Ham and eggs
+                  category: Food
+                  description: Grilled ham and eggs
+                  price: '2290.00'
+                  created_at: '2022-03-27T14:56:18.000000Z'
+                  updated_at: '2022-03-27T15:00:16.000000Z'
+                - id: 24
+                  name: Vodka Soda
+                  category: Cocktail
+                  description: Kalinka Vodka and Soda 2dl
+                  price: '2999.00'
+                  created_at: '2022-03-27T15:01:10.000000Z'
+                  updated_at: '2022-03-27T15:01:22.000000Z'
+                - id: 25
+                  name: Goulash soup
+                  category: Food
+                  description: Pork chops, potato, vegetable, thick soup
+                  price: '2999.00'
+                  created_at: '2022-03-27T15:13:49.000000Z'
+                  updated_at: '2022-03-27T15:13:49.000000Z'
+                - id: 26
+                  name: Ginger tea
+                  category: Drink
+                  description: Hot natural ginger tea
+                  price: '799.00'
+                  created_at: '2022-03-27T15:15:24.000000Z'
+                  updated_at: '2022-03-27T15:15:24.000000Z'
+                - id: 27
+                  name: Black tea
+                  category: Drink
+                  description: Earl gray black tea
+                  price: '599.00'
+                  created_at: '2022-03-27T15:16:43.000000Z'
+                  updated_at: '2022-03-27T15:16:56.000000Z'
+                - id: 29
+                  name: Grilled chicken
+                  category: Food
+                  description: Spicy chicken grilled
+                  price: '2850.00'
+                  created_at: '2022-04-08T19:07:48.000000Z'
+                  updated_at: '2022-04-08T19:07:48.000000Z'
+                - id: 30
+                  name: Honey
+                  category: Food
+                  description: small box of honey
+                  price: '699.00'
+                  created_at: '2022-04-08T19:29:14.000000Z'
+                  updated_at: '2022-04-08T19:30:29.000000Z'
+  /api/logout:
+    post:
+      tags:
+        - default
+      summary: http://localhost:8000/api/logout
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Andras2
+                email:
+                  type: string
+                  example: andras2@gmail.com
+                password:
+                  type: string
+                  example: xyz23
+                password_confirmation:
+                  type: string
+                  example: xyz23
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:02:07 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: You have succesfully logged out
+        '401':
+          description: Unauthorized
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:02:23 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Unauthenticated.
+  /api/login:
+    post:
+      tags:
+        - default
+      summary: http://localhost:8000/api/login
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Admin
+                email:
+                  type: string
+                  example: admin@gmail.com
+                password:
+                  type: string
+                  example: Admin111$
+                password_confirmation:
+                  type: string
+                  example: Admin111$
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:47:16 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                user:
+                  id: 1
+                  name: admin
+                  email: admin@gmail.com
+                  role: Admin
+                  email_verified_at: '2022-03-20T19:07:07.000000Z'
+                  current_team_id: null
+                  profile_photo_path: null
+                  created_at: '2022-03-20T19:06:58.000000Z'
+                  updated_at: '2022-03-20T19:07:07.000000Z'
+                  address: Rakoczi utca 85
+                  phone_number: '+36201111111'
+                  profile_photo_url: >-
+                    https://ui-avatars.com/api/?name=a&color=7F9CF5&background=EBF4FF
+                token: 15|3XKkWLZA90yQ5sPjViOE6fUYKKNb6P4NnxPYMnCP
+        '401':
+          description: Unauthorized
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:48:13 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '60'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Wrong credentials entered
+  /api/products/4:
+    get:
+      tags:
+        - default
+      summary: http://localhost:8000/api/products/25
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:02:54 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '58'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: http://localhost:8000/api/products/25
+                  value:
+                    id: 25
+                    name: Goulash soup
+                    category: Food
+                    description: Pork chops, potato, vegetable, thick soup
+                    price: '2999.00'
+                    created_at: '2022-03-27T15:13:49.000000Z'
+                    updated_at: '2022-03-27T15:13:49.000000Z'
+                example-1:
+                  summary: http://localhost:8000/api/products/4
+                  value:
+                    id: 4
+                    name: Beef burger
+                    category: Food
+                    description: 330g meat, salad, mayo, burger
+                    price: '3999.99'
+                    created_at: null
+                    updated_at: '2022-03-27T14:46:37.000000Z'
+  /api/products/30:
+    put:
+      tags:
+        - default
+      summary: http://localhost:8000/api/products/30
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: Honey
+                category:
+                  type: string
+                  example: Food
+                description:
+                  type: string
+                  example: small box of honey
+                price:
+                  type: integer
+                  example: '499'
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:06:41 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                id: 30
+                name: Honey
+                category: Food
+                description: small box of honey
+                price: '899'
+                created_at: '2022-04-08T19:29:14.000000Z'
+                updated_at: '2022-04-08T20:06:41.000000Z'
+        '401':
+          description: Unauthorized
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:06:13 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Unauthenticated.
+        '403':
+          description: Forbidden
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Sat, 09 Apr 2022 18:39:54 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '58'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Forbidden
+    delete:
+      tags:
+        - default
+      summary: http://localhost:8000/api/products/4
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:49:14 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Content-Type:
+              schema:
+                type: string
+                example: text/html; charset=UTF-8
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            text/plain:
+              schema:
+                type: string
+              example: '1'
+        '401':
+          description: Unauthorized
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:50:23 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Unauthenticated.
+        '403':
+          description: Forbidden
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Sat, 09 Apr 2022 18:39:31 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                message: Forbidden
+  /api/products/search/long:
+    get:
+      tags:
+        - default
+      summary: http://localhost:8000/api/products/search/chicken
+      security:
+        - noauthAuth: []
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:32:46 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '57'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: http://localhost:8000/api/products/search/chicken
+                  value:
+                    - id: 3
+                      name: Chicken steak
+                      category: Food
+                      description: Countryside chicken
+                      price: '3000.00'
+                      created_at: null
+                      updated_at: null
+                    - id: 22
+                      name: Chicken wings
+                      category: Food
+                      description: Spicy grilled wings
+                      price: '2350.00'
+                      created_at: '2022-03-27T14:53:50.000000Z'
+                      updated_at: '2022-03-27T14:53:50.000000Z'
+                    - id: 29
+                      name: Grilled chicken
+                      category: Food
+                      description: Spicy chicken grilled
+                      price: '2850.00'
+                      created_at: '2022-04-08T19:07:48.000000Z'
+                      updated_at: '2022-04-08T19:07:48.000000Z'
+                example-1:
+                  summary: http://localhost:8000/api/products/search/chicken
+                  value:
+                    - id: 5
+                      name: Long Island
+                      category: Cocktail
+                      description: Rum, Tequila, Vodka, Coke
+                      price: '3999.00'
+                      created_at: '2022-03-21T02:03:35.000000Z'
+                      updated_at: '2022-03-23T08:02:03.000000Z'
+  /api/register:
+    post:
+      tags:
+        - default
+      summary: http://localhost:8000/api/register
+      requestBody:
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              properties:
+                name:
+                  type: string
+                  example: tester
+                email:
+                  type: string
+                  example: user@gmail.com
+                password:
+                  type: string
+                  example: Testing111
+                password_confirmation:
+                  type: string
+                  example: Testing111
+      parameters:
+        - name: Accept
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '201':
+          description: Created
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 20:01:06 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                user:
+                  name: tester
+                  email: tester1234@gmail.com
+                  updated_at: '2022-04-08T20:01:04.000000Z'
+                  created_at: '2022-04-08T20:01:04.000000Z'
+                  id: 7
+                  profile_photo_url: >-
+                    https://ui-avatars.com/api/?name=t&color=7F9CF5&background=EBF4FF
+                token: 16|l3cQirhIWpgDpe7vi6ngDMAxnIsjXMObGWmTtWCt
+        '422':
+          description: Unprocessable Content
+          headers:
+            Host:
+              schema:
+                type: string
+                example: localhost:8000
+            Date:
+              schema:
+                type: string
+                example: Fri, 08 Apr 2022 19:50:43 GMT
+            Connection:
+              schema:
+                type: string
+                example: close
+            X-Powered-By:
+              schema:
+                type: number
+                example: PHP/8.0.12
+            Cache-Control:
+              schema:
+                type: string
+                example: no-cache, private
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+            X-RateLimit-Limit:
+              schema:
+                type: integer
+                example: '60'
+            X-RateLimit-Remaining:
+              schema:
+                type: integer
+                example: '59'
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: '*'
+          content:
+            application/json:
+              schema:
+                type: object
+              examples:
+                example-0:
+                  summary: http://localhost:8000/api/register
+                  value:
+                    message: The given data was invalid.
+                    errors:
+                      email:
+                        - The email has already been taken.
+                      password:
+                        - The password confirmation does not match.
+                example-1:
+                  summary: http://localhost:8000/api/register
+                  value:
+                    message: The given data was invalid.
+                    errors:
+                      email:
+                        - The email has already been taken.

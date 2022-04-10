@@ -1,4 +1,4 @@
-<div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide carousel-fade relative" data-bs-ride="carousel">
     <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
       <button
         type="button"
@@ -24,7 +24,7 @@
     <div class="carousel-inner relative w-full overflow-hidden">
       <div class="carousel-item active relative float-left w-full">
         <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-          <img src="../images/carousel/thumb-1920-349835.jpg" class="block w-full" />
+          <img src="../images/carousel/thumb-1920-349835.jpg" class="block w-full" style="min-height:250px;"/>
           <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
         </div>
         <div class="carousel-caption hidden md:block absolute text-center">
@@ -34,7 +34,7 @@
       </div>
       <div class="carousel-item relative float-left w-full">
         <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-          <img src="../images/carousel/li-yang-a8iCZvtrHpQ-unsplash.jpg" class="block w-full" />
+          <img src="../images/carousel/li-yang-a8iCZvtrHpQ-unsplash.jpg" class="block w-full" style="min-height:250px;"/>
           <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
         </div>
         <div class="carousel-caption hidden md:block absolute text-center">
@@ -44,7 +44,7 @@
       </div>
       <div class="carousel-item relative float-left w-full">
         <div class="relative overflow-hidden bg-no-repeat bg-cover" style="background-position: 50%;">
-          <img src="../images/gallery/reisetopia-Vl5DAQxNBbM-unsplash.jpg" class="block w-full" />
+          <img src="../images/gallery/reisetopia-Vl5DAQxNBbM-unsplash.jpg" class="block w-full" style="min-height:250px;"/>
           <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
         </div>
         <div class="carousel-caption hidden md:block absolute text-center">

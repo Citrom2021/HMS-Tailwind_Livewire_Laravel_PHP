@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-{{-- @extends('layouts.master') --}} <!--Sok CSS style szétesik így a PostCSS, Boostrap és CSS3 keverése miatt -->
+{{-- @extends('layouts.master') --}} <!-- style -->
 
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
   <head>
