@@ -32,12 +32,12 @@ class SearchController extends Controller
               ->orWhere('email','LIKE','%'.$search_text.'%')
               ->orWhere('phone','LIKE','%'.$search_text.'%')->paginate(20);
              $transactions->appends($request->all());
-             return view('livewire.searchedtransactions',['transactions'=>$transactions]);
+             return view('livewire.transactions',['transactions'=>$transactions]);
             
          }else{
-              return view('livewire.searchedtransactions');
+              return view('livewire.transactions');
          }
-        return view('livewire.searchedtransactions');
+        return view('livewire.transactions');
        
     }
 

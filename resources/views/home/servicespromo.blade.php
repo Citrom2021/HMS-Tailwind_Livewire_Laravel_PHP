@@ -83,7 +83,7 @@
                 <button class="mt-3 text-lg font-semibold 
     bg-black w-full text-white rounded-lg 
     px-6 py-3 block shadow-xl hover:bg-gray-700">
-    Select
+    <a href="../login">Select</a>
   </button>
               </div>
             </div>
@@ -137,7 +137,7 @@
               <button class="mt-3 text-lg font-semibold 
     bg-black w-full text-white rounded-lg 
     px-6 py-3 block shadow-xl hover:bg-gray-700">
-    Select
+    <a href="../login">Select</a>
   </button>
             </div>
           </div>
@@ -214,8 +214,8 @@
               <div class="block flex items-center p-8  uppercase">
                 <button class="mt-3 text-lg font-semibold 
     bg-black w-full text-white rounded-lg 
-    px-6 py-3 block shadow-xl hover:bg-gray-700">
-    Select
+    px-6 py-3 block shadow-xl hover:bg-gray-700"><a href="../register">Select</a>
+    
   </button>
               </div>
             </div>

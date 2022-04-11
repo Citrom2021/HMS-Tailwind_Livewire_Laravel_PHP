@@ -7,10 +7,12 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\AdminvsUserWebController;
 use App\Http\Controllers\UserProductsController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\UserController;
 use App\Http\Livewire\Products;
 use App\Http\Livewire\UserProducts;
 use App\Http\Livewire\Transactions;
 use App\Http\Livewire\UserTransactions;
+use App\Http\Livewire\Users;
 use App\Http\Controllers\SearchController;
 use Inertia\Inertia;
 
@@ -65,6 +67,7 @@ Route::get('/find',[SearchController::class, 'find'])->name('web.find');
  Route::group(['middleware' => ['auth', 'admin']], function() {
     Route::get('/products', Products::class);
     Route::get('/transactions', Transactions::class);
+    Route::get('/users', Users::class);
     
 });
 

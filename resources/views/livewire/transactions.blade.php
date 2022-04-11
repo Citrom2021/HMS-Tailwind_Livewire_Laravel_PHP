@@ -47,7 +47,8 @@
                 
                 <button type="button" wire:click="create()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3">New</button>
                
-                
+                <!-- MODAL error!!!!-->
+
               @if($modal)
                 @include('livewire.createtrx')   
             @endif 
@@ -134,10 +135,10 @@
                           <tr><td>No result found!</td></tr>
                        @endif
                 </table>
-                  {{-- elvileg itt kéne paginationnek működnie --}}
+                  {{-- !!!!!!!!!!!!! elvileg itt kéne paginationnek működnie !!!!!!! --}}
                   <div class="pagination-block">
                     <?php //{{ $transactions->links('layouts.paginationlinks') }} ?>
-                    {{-- {{  $transactions->appends(request()->input())->links('layouts.paginationlinks') }} --}}
+                    {{  $transactions->appends(request()->input())->links('layouts.paginationlinks') }}
                 </div>
                 </div>
  

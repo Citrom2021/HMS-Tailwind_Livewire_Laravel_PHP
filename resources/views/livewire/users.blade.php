@@ -1,7 +1,7 @@
 
 <x-slot name="header">
     <div style="text-align: center" >
-<h1 class="text-grey-900" style="text-align: center">Products from Bar & Restaurant</h1>
+<h1 class="text-grey-900" style="text-align: center">Manage users</h1>
 <a href="../user/home" style="text-align: center; font-size:0.8em; color:blue;"> <u>Back to Admin Centre</u> </a>
 </div>
 </x-slot>
@@ -24,7 +24,7 @@
            
             
             @if($modal)
-            @include('livewire.create')   
+            @include('livewire.createusers')   
         @endif    
 
             <table class="table-auto w-full">
@@ -37,20 +37,17 @@
                             
                         </th>
                         
-                        <th class="px-4 py-2">Slug
+                        <th class="px-4 py-2">Email
                             
                         </th>
-                        <th class="px-4 py-2">Description
+                        <th class="px-4 py-2">Password
                             
                         </th>
-                        <th class="px-4 py-2">Price
-
-                            <!-- Up and down arrows for sorting -->
-                            {{-- <span class="text-sm">
-                                <x-heroicon-o-arrow-sm-down class="w-6 h-6 text-white-500 white float-right"  style="cursor: pointer"/>
-                                <x-heroicon-o-arrow-sm-up class="w-6 h-6 text-white-500 white float-right" style="cursor: pointer"/>
-
-                            </span> --}}
+                        <th class="px-4 py-2">Address
+                           
+                        </th>
+                        <th class="px-4 py-2">Phone number
+                           
                         </th>
                         <th class="px-4 py-2">Actions
                             
@@ -60,16 +57,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($products as $product)
+                    @foreach ($users as $user)
                     <tr>
-                    <td class="border px-4 py-2">{{$product->id}}</td>
-                    <td class="border px-4 py-2">{{$product->name}}</td>
-                    <td class="border px-4 py-2">{{$product->slug}}</td>
-                    <td class="border px-4 py-2">{{$product->description}}</td>
-                    <td class="border px-4 py-2">{{$product->price}}</td>
+                    <td class="border px-4 py-2">{{$user->id}}</td>
+                    <td class="border px-4 py-2">{{$user->name}}</td>
+                    <td class="border px-4 py-2">{{$user->email}}</td>
+                    <td class="border px-4 py-2">{{$user->password}}</td>
+                    <td class="border px-4 py-2">{{$user->address}}</td>
+                    <td class="border px-4 py-2">{{$user->phone_number}}</td>
                     <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">
-                        <button wire:click="edit({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Edit</button>
-                        <button wire:click="delete({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
+                        <button wire:click="edit({{$user->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Edit</button>
+                        <button wire:click="delete({{$user->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
                     </td>
                     </tr> 
                     

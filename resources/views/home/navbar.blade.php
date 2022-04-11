@@ -18,7 +18,7 @@
         </li>
        <li class="navbar-brand"><a href="#services" class="nav-link">Services</a>
         </li>
-        <li class="navbar-brand"><a href="#food" class="nav-link">Restaurant</a>
+        {{-- <li class="navbar-brand"><a href="#food" class="nav-link">Restaurant</a> --}}
         </li>
         <li class="navbar-brand"><a href="#faq" class="nav-link ">FAQ</a>
         </li>
