@@ -16,10 +16,20 @@ class Users extends Component
     public $users,$name,$email,$password,$address,$phone_number;
     public $modal = false;
 
+    public $searchTerm2;
+
     public function render()
     {
-        $this-> users = User::all();
+
+        $searchTerm2 = '%'.$this->searchTerm2.'%';
+
+        $this-> users = User::where('name','LIKE',$searchTerm2)
+                        ->orwhere('address','LIKE',$searchTerm2)
+                        ->orwhere('email','LIKE',$searchTerm2)
+                        ->orwhere('phone_number','LIKE',$searchTerm2)
+        ->orderBy('id', 'ASC')->get();
             return view('livewire.users');
+        
             
             
             

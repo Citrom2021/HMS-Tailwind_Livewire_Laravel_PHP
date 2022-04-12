@@ -20,12 +20,18 @@
             </div>
             @endif
             
-            <button type="button" wire:click="create()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3">New</button>
+            <button type="button" wire:click="create()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3 mb-4 mt-4">New</button>
            
             
             @if($modal)
             @include('livewire.createusers')   
         @endif    
+        
+        <div class="col-md-4 float-right mt-3 mb-3">
+            <input type="text" class="form-control" placeholder="Search.." wire:model="searchTerm2" style="width: 20em;"/>    
+            </div>   
+
+                         
 
             <table class="table-auto w-full">
                 <thead>
@@ -64,7 +70,7 @@
                     <td class="border px-4 py-2">{{$user->phone_number}}</td>
                     <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">
                         <button wire:click="edit({{$user->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Edit</button>
-                        <button wire:click="delete({{$user->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
+                        <button onclick="confirm('Are you sure?') || event.stopImmediatePropagation()" wire:click="delete({{$user->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
                     </td>
                     </tr> 
                     

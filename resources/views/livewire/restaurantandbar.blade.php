@@ -13,9 +13,18 @@
                 
                
                 
-
-               
-                               
+                <div class="row">
+                <div class="flex justify-center">
+                    <div class="mb-3 xl:w-96" >
+                      <div class="input-group relative flex flex-wrap items-stretch w-96 mb-4 rounded">
+                        <input style="width: 20em;" type="search" class="form-control relative flex-auto min-w-0 block w-96 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" placeholder="Search..." aria-label="Search" aria-describedby="button-addon2" wire:model="searchTerm3">
+                        <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded " id="basic-addon2">
+                                                     
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
     
                 <table class="table-auto w-full">
                     <thead>

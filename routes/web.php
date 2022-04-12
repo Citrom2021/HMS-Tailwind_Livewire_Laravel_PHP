@@ -74,3 +74,6 @@ Route::get('/find',[SearchController::class, 'find'])->name('web.find');
 // Raw Json format all product on the weben
 Route::get('/jsonproducts', [ProductController::class, 'index']);
 
+Route::get('/search-box', function () {
+    return view('searchbox');
+});

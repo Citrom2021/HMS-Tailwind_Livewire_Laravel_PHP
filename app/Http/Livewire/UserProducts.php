@@ -15,10 +15,17 @@ class UserProducts extends Component
 {
     public $products,$name,$category,$description,$price;
     public $modal = false;
+    public $searchTerm3;
 
     public function render()
     {
-        $this-> products = Product::all();
+        $searchTerm3 = '%'.$this->searchTerm3.'%';
+
+        $this-> products = Product::where('name','LIKE',$searchTerm3)
+                        ->orwhere('category','LIKE',$searchTerm3)
+                        ->orwhere('description','LIKE',$searchTerm3)
+                        
+        ->orderBy('id', 'ASC')->get();
             return view('livewire.restaurantandbar');
             
             

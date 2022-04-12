@@ -15,12 +15,14 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
 use Livewire\WithPagination;
 
+
+
 class Transactions extends Component
 
 {
     use WithPagination;
     public $searchTerm;
-    /* protected $paginationTheme = 'bootstrap'; */
+   
 
     public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests;
     public bool $isDisabled;
@@ -28,30 +30,26 @@ class Transactions extends Component
 
     
     public function render()
-    {
-           $this-> transactions = Transaction::all();
+    {      
+        
+    
+        $searchTerm = '%'.$this->searchTerm.'%';
+
+        $this-> transactions = Transaction::where('user_name','LIKE',$searchTerm)
+                                ->orwhere('room_name','LIKE',$searchTerm)
+                                ->orwhere('email','LIKE',$searchTerm)
+                                ->orwhere('phone','LIKE',$searchTerm)
+        ->orderBy('checkin', 'ASC')->get();
             return view('livewire.transactions');
         
         $isDisabled = true;
 
-        /* $this-> transactions = Transaction::all();
-            return view('livewire.transactions',[
-                'transactions' =>Transaction::paginate(3),
-            ]); */
         
-      /*   $isDisabled = true; */
-                        
+        
+                              
        
     }
-
-    /* public function search()
-    {
-
-        $searchTerm = '%'.$this->searchTerm.'%';
-        return view('livewire.transactions',[
-            'transactions' => Transaction::where('user_name','like', $searchTerm)->paginate(10)
-        ]);
-    } */
+    
 
     public function create()
     {
