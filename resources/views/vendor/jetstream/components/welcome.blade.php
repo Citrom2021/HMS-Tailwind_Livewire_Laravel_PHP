@@ -69,8 +69,12 @@
 
         <div class="ml-12">
             <div class="mt-2 text-sm text-gray-500">
-                Watch pictures of our hotel
+                <b>Prime location</b>  <br>
+                Amazing views & amazing scenery in the heart of the city
             </div>
+            <a href="https://www.google.com/maps/place/Budapest+Marriott+Hotel/@47.4948266,19.0475125,17z/data=!3m1!4b1!4m8!3m7!1s0x4741dc40ca700c25:0x2b33026e5fc78078!5m2!4m1!1i2!8m2!3d47.494823!4d19.0497012" target="_blank"><button class=" mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                Direction
+              </button></a>
         </div>
     </div>
 
@@ -85,7 +89,9 @@
                 After authentication you can make a booking at our hotel.
                 We store all your sensitive data securely encrypted.
                  </div>
-                 <a href="../my-bookings" target="">Make a booking</a>
+                 <a href="../my-bookings" target=""><button class=" mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Book now
+                  </button></a>
         </div>
     </div>
 </div>

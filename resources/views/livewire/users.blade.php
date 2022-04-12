@@ -40,9 +40,7 @@
                         <th class="px-4 py-2">Email
                             
                         </th>
-                        <th class="px-4 py-2">Password
-                            
-                        </th>
+                        
                         <th class="px-4 py-2">Address
                            
                         </th>
@@ -61,8 +59,7 @@
                     <tr>
                     <td class="border px-4 py-2">{{$user->id}}</td>
                     <td class="border px-4 py-2">{{$user->name}}</td>
-                    <td class="border px-4 py-2">{{$user->email}}</td>
-                    <td class="border px-4 py-2">{{$user->password}}</td>
+                    <td class="border px-4 py-2">{{$user->email}}</td>                    
                     <td class="border px-4 py-2">{{$user->address}}</td>
                     <td class="border px-4 py-2">{{$user->phone_number}}</td>
                     <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">

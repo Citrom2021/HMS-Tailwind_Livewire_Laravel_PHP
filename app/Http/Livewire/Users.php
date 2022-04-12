@@ -54,7 +54,7 @@ class Users extends Component
        $this->user_id = $id;
        $this->name = $user-> name;
        $this->email = $user -> email;
-       $this->password = $user ->password;
+       /* $this->password = $user ->password; */
        $this->address = $user -> address;
        $this->phone_number = $user -> phone_number;
        $this -> openModal();
@@ -74,7 +74,7 @@ class Users extends Component
 
         'name'=> $this->name,
         'email'=>  $this->email,
-        'password' => bcrypt(self::generatePassword(12)),
+        /* 'password' => bcrypt(self::generatePassword(12)), */
         'address'=>  $this->address,
         'phone_number'=>  $this->phone_number,
 
@@ -85,7 +85,7 @@ class Users extends Component
         $this->cleanupFields();
 
  }
- function getRandomBytes($nbBytes = 32)
+ public function getRandomBytes($nbBytes = 32)
 {
     $bytes = openssl_random_pseudo_bytes($nbBytes, $strong);
     if (false !== $bytes && true === $strong) {
@@ -96,8 +96,25 @@ class Users extends Component
     }
 }
 
- function generatePassword($length){
+ public function generatePassword($length){
     return substr(preg_replace("/[^a-zA-Z0-9]/", "", base64_encode(self::getRandomBytes($length+1))),0,$length);
 }
+
+public function passwordReset()
+        
+ {
+    User::updateOrCreate(['id'=>$this->user_id],
+        [
+        
+        'password' => bcrypt(self::generatePassword(12)),
+        
+
+        ]);
+        session()->flash('PasswordMessage', 
+        $this ->user_id ? 'Password has been updated successfully' : 'User has been created successfully');
+        $this->closeModal();
+        $this->cleanupFields();
+
+ }
 
 }

@@ -98,11 +98,11 @@
                         
                         <div class="mb-4">
                             <label for="days" class="block text-gray-700 text-sm font-bold mb-2">Days:</label>
-                            <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="days" wire:model="days">
+                            <input readonly type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="days" wire:model="days">
                         </div>
                         <div class="mb-4">
                             <label for="bill" class="block text-gray-700 text-sm font-bold mb-2">Bill:</label>
-                            <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="bill" wire:model="bill">
+                            <input readonly type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="bill" wire:model="bill">
                         </div>
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Halfboard:</label>

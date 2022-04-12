@@ -20,6 +20,7 @@ class Transactions extends Component
 {
     use WithPagination;
     public $searchTerm;
+    /* protected $paginationTheme = 'bootstrap'; */
 
     public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests;
     public bool $isDisabled;
@@ -189,7 +190,7 @@ public function UpdateDays()
 
        $diffSecs = $checkoutDate - $checkinDate;
 
-       if ($checkinDate < time())
+       if ($checkinDate < strtotime('today midnight'))
        {
             $this->isDisabled = true;
             session()->flash('checkin_message', 'Checkin date cannot be in the past!');
@@ -232,7 +233,7 @@ public function UpdateBill()
         }   
         else
         {
-            session()->flash('unavailable_message', 'Room is already booked from {} that time period!');
+            
             $this->isDisabled = true;
         
         }
@@ -260,9 +261,9 @@ private function IsRoomAvailable()
        if ($transaction->room_name == $this->room_name && $checkoutStamp > time())
        {
 
-           if ($checkinStamp >= $checkoutStampTrans || $checkoutStamp <= $checkinStampTrans)
+           if ($checkinStamp < $checkoutStampTrans && $checkoutStamp > $checkinStampTrans)
            {
-                
+                session()->flash('unavailable_message', sprintf('Room is already booked from %s to %s that time period!', $transaction->checkin, $transaction->checkout));
                 return false;
            }
        }

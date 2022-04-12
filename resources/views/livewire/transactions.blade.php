@@ -136,10 +136,7 @@
                        @endif
                 </table>
                   {{-- !!!!!!!!!!!!! elvileg itt kéne paginationnek működnie !!!!!!! --}}
-                  <div class="pagination-block">
-                    <?php //{{ $transactions->links('layouts.paginationlinks') }} ?>
-                    {{  $transactions->appends(request()->input())->links('layouts.paginationlinks') }}
-                </div>
+                  
                 </div>
  
               @endif
