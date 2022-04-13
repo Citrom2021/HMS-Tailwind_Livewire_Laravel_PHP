@@ -10,23 +10,26 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
+use Livewire\WithPagination;
 
 class UserProducts extends Component
 {
-    public $products,$name,$category,$description,$price;
+    public $name,$category,$description,$price;
     public $modal = false;
     public $searchTerm3;
+
+    use WithPagination;
 
     public function render()
     {
         $searchTerm3 = '%'.$this->searchTerm3.'%';
 
-        $this-> products = Product::where('name','LIKE',$searchTerm3)
+       $products = Product::where('name','LIKE',$searchTerm3)
                         ->orwhere('category','LIKE',$searchTerm3)
                         ->orwhere('description','LIKE',$searchTerm3)
                         
-        ->orderBy('id', 'ASC')->get();
-            return view('livewire.restaurantandbar');
+        ->orderBy('category', 'ASC')->paginate(15);
+            return view('livewire.restaurantandbar', ['products' => $products]);
             
             
     }

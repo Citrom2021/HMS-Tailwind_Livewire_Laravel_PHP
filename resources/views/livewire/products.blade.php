@@ -68,14 +68,18 @@
                     <td class="border px-4 py-2">{{$product->description}}</td>
                     <td class="border px-4 py-2">{{$product->price}}</td>
                     <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">
-                        <button wire:click="edit({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Edit</button>
-                        <button wire:click="delete({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
+                        <button wire:click="edit({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5 h-15">Edit</button>
+                        <button onclick="confirm('Are you sure to delete?') || event.stopImmediatePropagation()" wire:click="delete({{$product->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5 h-15">Delete</button>
                     </td>
                     </tr> 
                     
                     @endforeach
                 </tbody>
             </table>
+            <div class="mt-4">
+                {{ $products ->links()}}
+            </div>
+          
         </div>
     </div>
 </div>

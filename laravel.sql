@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 11, 2022 at 11:00 PM
+-- Generation Time: Apr 13, 2022 at 09:52 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.12
 
@@ -111,8 +111,11 @@ INSERT INTO `personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `n
 (23, 'App\\Models\\User', 3, 'myapptoken', '9498aa682659eb4cbd46d6b1e37d9f518b7670c3c3e5e733c159b5da238fd9c1', '[\"*\"]', NULL, '2022-04-09 16:33:51', '2022-04-09 16:33:51'),
 (24, 'App\\Models\\User', 1, 'myapptoken', '6368adf554d8e669f6f615c7d72a97c9152a7a633168ea3be91b08356cd7a3cb', '[\"*\"]', '2022-04-09 16:39:12', '2022-04-09 16:35:08', '2022-04-09 16:39:12'),
 (25, 'App\\Models\\User', 3, 'myapptoken', '4f9aa6236eb9ad53a4a271e2a0124024d8fd4ffb9db8b93de80b1ef0c8742988', '[\"*\"]', '2022-04-09 16:40:34', '2022-04-09 16:38:57', '2022-04-09 16:40:34'),
-(26, 'App\\Models\\User', 1, 'myapptoken', '0c56bd2f616ebd0bf2000455bfe9a1bf1bd829ff66a9e1f052bb71bf688908a6', '[\"*\"]', '2022-04-09 16:42:49', '2022-04-09 16:41:45', '2022-04-09 16:42:49'),
-(27, 'App\\Models\\User', 1, 'myapptoken', 'a878698eb910db99b8c3ccb8e505d686599ce7c4f1c1dc803cdc9e76068df39f', '[\"*\"]', NULL, '2022-04-09 17:02:03', '2022-04-09 17:02:03');
+(26, 'App\\Models\\User', 1, 'myapptoken', '0c56bd2f616ebd0bf2000455bfe9a1bf1bd829ff66a9e1f052bb71bf688908a6', '[\"*\"]', '2022-04-12 20:37:41', '2022-04-09 16:41:45', '2022-04-12 20:37:41'),
+(27, 'App\\Models\\User', 1, 'myapptoken', 'a878698eb910db99b8c3ccb8e505d686599ce7c4f1c1dc803cdc9e76068df39f', '[\"*\"]', NULL, '2022-04-09 17:02:03', '2022-04-09 17:02:03'),
+(28, 'App\\Models\\User', 1, 'myapptoken', '021a563a5c28e12edb1ded00d654590bf886efd9c6ec32a0d718d6ea451c8cb3', '[\"*\"]', '2022-04-12 20:38:48', '2022-04-12 20:38:09', '2022-04-12 20:38:48'),
+(29, 'App\\Models\\User', 1, 'myapptoken', '014fc70de1dfe649c789c815bd2877bd86ff37c0705e58624882ca5d955ad78b', '[\"*\"]', NULL, '2022-04-12 21:11:57', '2022-04-12 21:11:57'),
+(30, 'App\\Models\\User', 1, 'myapptoken', '3699f00eb8c4e1306afb96b824f0f2eb22f36913ea1e54b62f7e2bc098896a91', '[\"*\"]', '2022-04-12 21:30:07', '2022-04-12 21:14:39', '2022-04-12 21:30:07');
 
 -- --------------------------------------------------------
 
@@ -157,7 +160,7 @@ INSERT INTO `products` (`id`, `name`, `category`, `description`, `price`, `creat
 (26, 'Ginger tea', 'Drink', 'Hot natural ginger tea', '799.00', '2022-03-27 13:15:24', '2022-03-27 13:15:24'),
 (27, 'Black tea', 'Drink', 'Earl gray black tea', '599.00', '2022-03-27 13:16:43', '2022-03-27 13:16:56'),
 (29, 'Grilled chicken', 'Food', 'Spicy chicken grilled', '2850.00', '2022-04-08 17:07:48', '2022-04-08 17:07:48'),
-(32, 'Ketchup', 'Food', 'Small portion of ketchup', '248.00', '2022-04-09 16:42:02', '2022-04-09 16:42:02'),
+(32, 'Acacia honey', 'Food', 'Sweet acacia huney', '1195.00', '2022-04-09 16:42:02', '2022-04-12 21:30:07'),
 (33, 'Honey', 'Food', 'Small portion of honey', '799.00', '2022-04-09 16:42:15', '2022-04-09 16:42:15'),
 (34, 'Gingerbread', 'Food', 'Sweet bread, allergic', '955.00', '2022-04-09 16:42:49', '2022-04-09 16:42:49'),
 (35, 'Chicken soup', 'food', 'Hot spicy soup by chicken', '1499.00', '2022-04-10 16:54:26', '2022-04-10 16:54:26');
@@ -208,7 +211,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('EFVxLfpDm16mx36EriIHKLMGlwnHk4mdmV5MyReK', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.75 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiU0VCaUkyWGZSMXROSVBNRnVxTVpmbU5yeE9OWWRGN25EV1R0bm96QiI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1649710804);
+('n2vzGjn6F9imIUEUTO96kW3IfOPBivNEunj9rCk7', 1, '127.0.0.1', 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiVDhmUUlrY0c2ajRDR1BIT3hkdDVMYURGeDZicG9oaVhRODNoanlhdSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MzA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9wcm9kdWN0cyI7fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ2TlptcEpiaWxlRUgvS1dNdXpYTm5lWHJmMEw0YWZmQ09ZVTIvdGM2NldBTnVGZ2RnSVgvdSI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkNk5abXBKYmlsZUVIL0tXTXV6WE5uZVhyZjBMNGFmZkNPWVUyL3RjNjZXQU51RmdkZ0lYL3UiO30=', 1649836335);
 
 -- --------------------------------------------------------
 
@@ -242,13 +245,13 @@ INSERT INTO `transactions` (`id`, `user_id`, `user_name`, `room_id`, `room_name`
 (1, 4, 'user2', 1, 'Single', '2022-04-07', '2022-04-08', 1, 40000, '', 1, NULL, '2022-03-27 17:57:36', NULL, NULL),
 (4, NULL, 'user44', NULL, '', '2022-03-31', '2022-04-01', 1, 55000, '', 2, '2022-03-27 18:11:24', '2022-03-27 18:11:24', 'user123@gmail.com', '06206652342'),
 (5, NULL, 'anyad', NULL, 'Luxury', '2022-03-25', '2022-03-31', 5, 123000, 'Yes', 4, '2022-03-29 16:56:21', '2022-03-29 16:58:14', 'joseph@gmail.com', '06206652342'),
-(6, NULL, '', NULL, '1', '2022-04-29', '2022-05-01', 2, 60000, 'Yes', 2, '2022-04-03 16:28:04', '2022-04-03 16:28:04', '', ''),
 (9, NULL, 'Toth Zsolt', NULL, 'Single', '2022-04-09', '2022-04-16', 7, 280000, 'Yes', 2, '2022-04-08 17:13:22', '2022-04-08 17:13:22', 'zsoltika@gmail.com', '+44123456789'),
-(10, 8, 'Pelda Bela', 2, 'Double', '2022-04-10', '2022-04-11', 1, 50000, 'Yes', 2, '2022-04-09 05:39:35', '2022-04-09 05:39:35', 'bela@gmail.com', '36202345678'),
-(11, 9, 'Kiss Réka', 4, 'Executive', '2022-04-16', '2022-04-23', 7, 490000, 'Yes', 2, '2022-04-09 05:41:11', '2022-04-09 05:41:11', 'reka22@gmail.com', '36304567895'),
 (13, 10, 'Kiss Miska', 4, 'Executive', '2022-04-16', '2022-04-23', 7, 490000, 'Yes', 2, '2022-04-09 07:04:57', '2022-04-09 07:04:57', 'miska@gmail.com', '364512356894'),
 (14, 11, 'Csizmar Joska', 6, 'Danube view', '2022-04-10', '2022-04-15', 5, 275000, 'Yes', 4, '2022-04-09 08:03:29', '2022-04-09 08:03:29', 'csizmar@gmail.com', '3620456789'),
-(16, 14, 'sassaas assdadsasad', 5, 'Budget', '2022-04-12', '2022-04-13', 1, 30000, 'Yes', 2, '2022-04-11 17:07:28', '2022-04-11 17:07:28', 'asasdasasasddasd@gmail.com', '06206652342');
+(16, 14, 'sassaas assdadsasad', 5, 'Budget', '2022-04-12', '2022-04-13', 1, 30000, 'Yes', 2, '2022-04-11 17:07:28', '2022-04-11 17:07:28', 'asasdasasasddasd@gmail.com', '06206652342'),
+(17, 3, 'user', 1, 'Single', '2022-04-16', '2022-04-19', 3, 120000, 'Yes', 2, '2022-04-12 16:10:17', '2022-04-12 16:10:17', 'user@gmail.com', '+36201345678'),
+(18, 3, 'user', 1, 'Single', '2022-04-19', '2022-04-20', 1, 40000, 'Yes', 1, '2022-04-12 16:14:44', '2022-04-12 16:14:44', 'user@gmail.com', '+36201345678'),
+(19, 94, 'Kiss ramona', 1, 'Single', '2022-04-20', '2022-04-24', 4, 160000, 'Yes', 2, '2022-04-12 19:06:13', '2022-04-12 19:06:13', 'ramona@yahoo.com', '06203456789');
 
 -- --------------------------------------------------------
 
@@ -279,13 +282,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`, `address`, `phone_number`) VALUES
-(1, 'admin', 'admin@gmail.com', 'Admin', '2022-03-20 18:07:07', '$2y$10$6NZmpJbileEH/KWMuzXNneXrf0L4affCOYU2/tc66WANuFgdgIX/u', NULL, NULL, 'XRP0fSrQZIAmi08s2hcAiuWHrMfElyyGjWv49NP0MFpwEXJXRV3oCF1nJoCH', NULL, NULL, '2022-03-20 18:06:58', '2022-04-11 15:25:21', 'Sunset street 123, Miami, Florida', '+36201111111'),
-(3, 'user', 'user@gmail.com', 'User', '2022-03-20 21:46:17', '$2y$10$hVDtMnGdB41z8XlqYpxad.oLr.012n9ljpgTxPRqhAYmKU0.qjxhO', NULL, NULL, 'swf0AOeMFgg7E1YkUtsf4RKihXliRwj2O4n4tN0NLInoDguCnaPA2lyKYuaN', NULL, NULL, '2022-03-20 21:45:28', '2022-04-11 16:56:03', 'Rakoczi utca 85, Budapest, Hungary', '+36201345678'),
+(1, 'admin', 'admin@gmail.com', 'Admin', '2022-03-20 18:07:07', '$2y$10$6NZmpJbileEH/KWMuzXNneXrf0L4affCOYU2/tc66WANuFgdgIX/u', NULL, NULL, 'Lbats3pmrUq3yPLkqXQMe5oJ0wThGZM6D8gzW2XKxwrmOkDopS0p5sRutEH0', NULL, NULL, '2022-03-20 18:06:58', '2022-04-11 15:25:21', 'Sunset street 123, Miami, Florida', '+36201111111'),
+(3, 'user', 'user@gmail.com', 'User', '2022-03-20 21:46:17', '$2y$10$RNQ6HoPo2.pnJIqLfE.hOOC9G/4LEdZZgfuJYoe4GBvZh5YjVHXYi', NULL, NULL, 'DdtJ7mU4KGZyB8Yc0TxFFqfAhMCPHoO6c7nC8AaKnqxNT9vVAhkAhGV1Ivlv', NULL, NULL, '2022-03-20 21:45:28', '2022-04-12 15:29:31', 'Rakoczi utca 85, Budapest, Hungary', '+36201345678'),
 (4, 'user2', 'user2@gmail.com', 'User', '2022-03-23 23:05:36', '$2y$10$EcQJnRvnNuDwp.jJ1V2.3.fq5dn85RZefZfnjrxp/mTxS1CE.ntdm', 'eyJpdiI6IitIQmtja0RPQ1FsamdxQVhWSG1NMmc9PSIsInZhbHVlIjoid0VXWTQwMDdPOVY3TGp0TWtjRzN6Qnk4MGFzYnY4SGNENDV4MHlsbHRiUT0iLCJtYWMiOiI2NjM4N2E4YTk3ZTJkNjE2YjQ0MTY4MmM0MTZhODUzM2QxODMwZTdiOTEzNjRkN2ViMWRkZjRkZTJiNmE1YTBhIiwidGFnIjoiIn0=', 'eyJpdiI6IkorMVdrbkliM0NLajNoY1RlQUkyL1E9PSIsInZhbHVlIjoidHdWbmJ6WkU3aTJBT2VvZEdKV3pZUFdzTTUyL01CME9SQ2NDdUZhUlAvVWo3WDZJYjR2bzY1SjVPNG4xWTVXTjcrSUNWRFN3dkdIVTdXNTk4MGt1bitZNTJLc3N2Yzl1RGNRdEZqeDgwM0xqbE9CYmovRm9pcmlnVjNuMXNLVWpROVFHT0ZiUVpBZlpkNHdqS3NJbHVTUlNvS1p1Y3JOSldUbFg5dWROVXZkcFpXeFJ2cXpjcW1YZVIwV1ptV1d0THpnWTVrcTJEOE11Yks3Y1VERFVHanhnZGlQZGdHMG5RdlluVXhHb2xRWE1UdkpWMzdOeDF2SmxWVXhmclRYWDhNOWhVcVlWZndQa2I0YTRJMTlJYlE9PSIsIm1hYyI6IjA1ZGU5NjY1Y2ZiZmNlMjE3YjU1ZDA2MjVmMTZkMjRiYjdlYmZjYjRjMDhmYWE2YjY5ZjRhYWQ0YjQyOWU0NjgiLCJ0YWciOiIifQ==', NULL, NULL, NULL, '2022-03-23 23:04:31', '2022-03-23 23:06:50', 'user street 69, Miami,  Florida, USA', '+14563456999'),
 (5, 'Toth Zsolt', 'zsoltika@gmail.com', 'User', '2022-04-07 03:02:23', '$2y$10$VciGxA03dovgcSAomaDi3O1a7jmbYOf3jKlFeHc9g7M10KnuHHzia', NULL, NULL, NULL, NULL, NULL, '2022-04-07 03:01:41', '2022-04-07 03:02:23', '1234 Trafalgar Sqaure, London, UK', '+44123456789'),
 (7, 'tester', 'tester1234@gmail.com', 'User', NULL, '$2y$10$KpofoWyPNem4eEyb9EGWFumWFONnaMx1WWOPT70/GmnOe0uFr2dqy', NULL, NULL, NULL, NULL, NULL, '2022-04-08 18:01:04', '2022-04-11 15:40:14', '123 Miles street, Lincoln, UK', '+44123456789'),
-(8, 'Pelda Bela', 'bela@gmail.com', 'User', NULL, '$2y$10$I/OZJne/RPTrMsg39fJWtOVfVNqMfJ9lUn4j1uY1t2UyBUU3Xq/6y', NULL, NULL, NULL, NULL, NULL, '2022-04-09 05:39:35', '2022-04-09 05:39:35', NULL, NULL),
-(9, 'Kiss Réka', 'reka22@gmail.com', 'User', NULL, '$2y$10$Mgtn9OWcGTwozXpzr4BiqOtKIWqPVl3qRLkujl5WNLYsXRJKQYwz.', NULL, NULL, NULL, NULL, NULL, '2022-04-09 05:41:11', '2022-04-09 05:41:11', NULL, NULL),
+(9, 'Kiss Réka', 'reka22@gmail.com', 'User', NULL, '$2y$10$cNjnhavqjDTwWI0DKOAOvO4AhHLE4YAodKG9VtptT.uZ0N3lac2m.', NULL, NULL, NULL, NULL, NULL, '2022-04-09 05:41:11', '2022-04-12 15:25:26', '1132 Miami MAlibu', '11123123123'),
 (10, 'Kiss Miska', 'miska@gmail.com', 'User', NULL, '$2y$10$IecFSa7Yh9UvW7Fnwk/KGuR9fz0KzRXaySxn0hqEldwmQGhSp6Mia', NULL, NULL, NULL, NULL, NULL, '2022-04-09 07:04:57', '2022-04-09 07:04:57', NULL, NULL),
 (11, 'Csizmar Joska', 'csizmar@gmail.com', 'User', NULL, '$2y$10$DnW8BfMBcIWGZfgo8QR0nuyG8JvGqrTYUpUPPSwNZBaG5pd0Ffe46', NULL, NULL, NULL, NULL, NULL, '2022-04-09 08:03:29', '2022-04-11 16:59:37', 'Alkotas utca 12', '+36201111111'),
 (12, 'ramona tekla', 'tekla@gmail.com', 'User', NULL, '$2y$10$1mQjrT0hGvQdEjO8h2UicuaupvN2Kb80UaLbys1nNrJYB/saHLXl6', NULL, NULL, NULL, NULL, NULL, '2022-04-10 18:04:04', '2022-04-11 17:00:05', 'Rakoczi utca 85', '+36204567864'),
@@ -299,7 +301,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `passwo
 (78, 'Rubye Abshire III', 'marguerite75@mccullough.com', 'User', NULL, '$2y$10$egnGSPL19elwgyYGRzT4bOeUbBtMsHI.Jg5pguSOzNN0gv8jT0Hn.', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:28:37', NULL, '257 Eladio Roads\nEast Luisa, AZ 91613', '351-209-6410'),
 (79, 'Prof. Audrey Carter', 'mathias.hackett@kub.info', 'User', NULL, '$2y$10$CdrBcWY5hygVUHfFq2Ul1OQH.CA.YQ/15CYW.PBpHmEYlED1nYhz2', NULL, NULL, NULL, NULL, NULL, '2022-04-11 19:34:38', NULL, '7144 Brannon Brooks Suite 060\nIsaiahmouth, SD 94783', '(830) 993-6468'),
 (80, 'Mr. Lon VonRueden IV', 'winifred.prohaska@gmail.com', 'User', NULL, '$2y$10$CYP91Pehm4SMbigO0LYxc.MDYxu/cbm54OBsw0icF8PdXj4NGvuG2', NULL, NULL, NULL, NULL, NULL, '2022-04-11 19:44:26', NULL, '23825 Kiera Shores Apt. 690\nSierraland, CO 02089', '854.861.2294'),
-(81, 'Mrs. Ettie Morissette I', 'wolf.oran@gmail.com', 'User', NULL, '$2y$10$5I2Q2wDrZugxErbY5nVhC.JumoVuP.gVsus.gm2lFZ/b6s000M63W', NULL, NULL, NULL, NULL, NULL, '2022-04-11 19:40:46', NULL, '578 Hauck Knoll\nSouth Leonieside, MN 54481', '856.853.1569'),
 (82, 'Madalyn Daniel', 'wnolan@abernathy.info', 'User', NULL, '$2y$10$FIVmgucmLUUKmMu9mtPoG.zBxIu0ExK3VoHAUP9gvltFC3Gx2WOI6', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:25:35', NULL, '268 Bayer Fields Suite 552\nNorth Fabianbury, DE 00382-4040', '530-428-8426'),
 (83, 'Elena Kris', 'altenwerth.esther@pagac.com', 'User', NULL, '$2y$10$RgJKPK4yhvnAnsgNk2pP7OmR5ZjKrYcB3ByoBq9Bofmt9jbh8xpE2', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:51:57', NULL, '849 Annamarie Terrace\nLysanneborough, WY 57463-2035', '(209) 530-0762'),
 (84, 'Jovanny Rogahn', 'jaylin.rosenbaum@heathcote.org', 'User', NULL, '$2y$10$aX0FXXKK3TIA9cegzVHTFuwk72m5f.Tsi662nASU.x4owtKD250.y', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:39:12', NULL, '867 Zena Prairie\nNew Roma, UT 81663', '1-534-651-3007'),
@@ -311,7 +312,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `passwo
 (90, 'Lisette Prohaska', 'joesph.mills@schneider.org', 'User', NULL, '$2y$10$NImwrnOhe4hr8raSXjuFJ.Ha9NvusezvrPryE9rXcc0V0YBP9/sSO', NULL, NULL, NULL, NULL, NULL, '2022-04-11 19:13:58', NULL, '60158 Abel Green Apt. 149\nSchimmelfurt, CA 11193-2459', '+1.732.314.3612'),
 (91, 'Lisandro Brekke', 'xschmitt@ward.com', 'User', NULL, '$2y$10$PJc3K4K8TBw3CM5O0aX9vufN7q3E7IKnm/OKv9OpBlGDY0ZFnygUC', NULL, NULL, NULL, NULL, NULL, '2022-04-11 19:53:04', NULL, '5481 Golden Extensions Apt. 279\nMetzhaven, MT 80598-7749', '+1-832-345-2719'),
 (92, 'Prof. Demarcus Murray II', 'roderick79@okon.com', 'User', NULL, '$2y$10$9K./bLRMEIHuEUcrEfVXsusTWoEvp/sp3ZiKG.jjKMHm3OpkD.THK', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:48:00', NULL, '6757 Marquise Crossroad\nSouth Justus, UT 26156', '425-896-2114'),
-(93, 'Mr. Garnet Gibson', 'astrid.nader@heaney.com', 'User', NULL, '$2y$10$y.6CLz.IO4b10WQ9UQjCZeIbUr5FHtaPBEf6COBPdhy9zgpyj3NLy', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:22:46', NULL, '1509 Macie Harbor Apt. 382\nNaomichester, AL 82783-4392', '316.517.3840');
+(93, 'Mr. Garnet Gibson', 'astrid.nader@heaney.com', 'User', NULL, '$2y$10$y.6CLz.IO4b10WQ9UQjCZeIbUr5FHtaPBEf6COBPdhy9zgpyj3NLy', NULL, NULL, NULL, NULL, NULL, '2022-04-11 18:22:46', NULL, '1509 Macie Harbor Apt. 382\nNaomichester, AL 82783-4392', '316.517.3840'),
+(94, 'Kiss ramona', 'ramona@yahoo.com', 'User', NULL, '$2y$10$rchOmPwyzcC6hm7fqqWwAOyUhwLUyfYE.sXnQ.Ec25dWuSUcds1Ma', NULL, NULL, NULL, NULL, NULL, '2022-04-12 19:06:13', '2022-04-12 19:06:13', NULL, NULL);
 
 --
 -- Indexes for dumped tables
@@ -369,8 +371,8 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `transactions`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `transactions_user_id_foreign` (`user_id`),
-  ADD KEY `transactions_room_id_foreign` (`room_id`);
+  ADD KEY `transactions_room_id_foreign` (`room_id`),
+  ADD KEY `transactions_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -399,7 +401,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `personal_access_tokens`
 --
 ALTER TABLE `personal_access_tokens`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -417,13 +419,13 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT for table `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- Constraints for dumped tables
@@ -433,8 +435,8 @@ ALTER TABLE `users`
 -- Constraints for table `transactions`
 --
 ALTER TABLE `transactions`
-  ADD CONSTRAINT `transactions_room_id_foreign` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `transactions_room_id_foreign` FOREIGN KEY (`room_id`) REFERENCES `rooms` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE,
+  ADD CONSTRAINT `transactions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

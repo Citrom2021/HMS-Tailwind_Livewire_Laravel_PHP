@@ -29,13 +29,14 @@
                
                 <!-- MODAL error!!!!-->
 
-              @if($modal)
+                @if($modal)
                 @include('livewire.createtrx')   
-            @endif 
-            <div class="col-md-4 float-right mt-3 mb-3">
-                <input type="search" class="form-control" placeholder="Search.." wire:model="searchTerm" style="width: 20em;" aria-label="Search" aria-describedby="button-addon2"/>    
-                <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded " id="basic-addon2">    
-            </div>   
+                @endif 
+
+                <div class="col-md-4 float-right mt-3 mb-3">
+                    <input type="search" class="form-control" placeholder="Search.." wire:model="searchTerm" style="width: 20em;" aria-label="Search" aria-describedby="button-addon2"/>    
+                    <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded " id="basic-addon2">    
+                </div>   
                     
                     
                 
@@ -65,12 +66,7 @@
                             </th>
                             <th class="px-4 py-2">Checkout
     
-                                <!-- Up and down arrows for sorting -->
-                                {{-- <span class="text-sm">
-                                    <x-heroicon-o-arrow-sm-down class="w-6 h-6 text-white-500 white float-right"  style="cursor: pointer"/>
-                                    <x-heroicon-o-arrow-sm-up class="w-6 h-6 text-white-500 white float-right" style="cursor: pointer"/>
-    
-                                </span> --}}
+                                
                             </th>
                             <th class="px-4 py-2">Days
                                 
@@ -108,7 +104,7 @@
                         <td class="border px-4 py-2">{{$transaction->number_of_guests}}</td>
                         <td class="border px-4 py-2 text-center sm:flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto space-x-0.5 space-y-0.5">
                             <button wire:click="edit({{$transaction->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-indigo-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-purple-800 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Edit</button>
-                            <button wire:click="delete({{$transaction->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
+                            <button onclick="confirm('Are you sure to delete?') || event.stopImmediatePropagation()" wire:click="delete({{$transaction->id}})" class="inline-flex justify-center w-full rounded-md border border-transparent py-2 px-4 bg-red-500 text-base leading-6 font-medium text-white shadow-sm hover:bg-orange-900 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5">Delete</button>
                         </td>
                         </tr> 
                         
@@ -116,18 +112,16 @@
                     </tbody>                                      
                        
                 </table>
-
-                
-               
-                  {{-- !!!!!!!!!!!!! elvileg itt kéne paginationnek működnie !!!!!!! --}}
-                  
-                </div>
- 
+                                                
+            
               
             </div>
         </div>
     </div>
     
-        {{-- The best athlete wants his opponent at his best. --}}
+     
+    
+    
+        
     
     

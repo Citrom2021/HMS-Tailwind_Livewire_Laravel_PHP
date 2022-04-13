@@ -10,25 +10,27 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
+use Livewire\WithPagination;
 
 class Users extends Component
 {
-    public $users,$name,$email,$password,$address,$phone_number;
+    public $name,$email,$password,$address,$phone_number;
     public $modal = false;
 
     public $searchTerm2;
+    use WithPagination;
 
     public function render()
     {
 
         $searchTerm2 = '%'.$this->searchTerm2.'%';
 
-        $this-> users = User::where('name','LIKE',$searchTerm2)
+        $users = User::where('name','LIKE',$searchTerm2)
                         ->orwhere('address','LIKE',$searchTerm2)
                         ->orwhere('email','LIKE',$searchTerm2)
                         ->orwhere('phone_number','LIKE',$searchTerm2)
-        ->orderBy('id', 'ASC')->get();
-            return view('livewire.users');
+        ->orderBy('id', 'ASC')->paginate(20);
+            return view('livewire.users', ['users' =>$users]);
         
             
             
@@ -121,9 +123,9 @@ public function passwordReset()
 
         ]);
         session()->flash('PasswordMessage', 
-        $this ->user_id ? 'Password has been updated successfully' : 'User has been created successfully');
-        $this->closeModal();
-        $this->cleanupFields();
+        $this ->user_id ? 'Password has been updated successfully' : 'User has been updated successfully');
+        /* $this->closeModal();
+        $this->cleanupFields(); */
 
  }
 

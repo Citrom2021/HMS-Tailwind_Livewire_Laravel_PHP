@@ -21,6 +21,17 @@
                             <input type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
                         </div>
                         
+
+                        @if(session()->has('PasswordMessage'))
+                        <div class="bg-red-100 rounded-b text-red-900 px-4 py-4 shadow-md my-3" role="alert">
+                        <div class="flex">
+                            <div>
+                            <h4>{{ session('PasswordMessage')}}</h4>
+                            </div>
+                        </div>
+                        </div>
+                        @endif
+
                         <div class="my-3">
                             <button wire:click="passwordReset" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Reset Password</button>
                         </div>

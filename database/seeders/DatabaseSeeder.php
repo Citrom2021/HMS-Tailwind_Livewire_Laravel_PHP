@@ -18,14 +18,14 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $faker = Faker::create();
-    	foreach (range(1,20) as $index) {
+    	foreach (range(1,250) as $index) {
 	        DB::table('users')->insert([
 	            'name' => $faker->name,
 	            'email' => $faker->email,
 	            'password' => bcrypt('secret'),
                 'address' => $faker->address,
                 'phone_number' => $faker->phoneNumber,
-                'created_at' =>$faker -> dateTimeBetween('-1 hour', '+1 hour'),
+                'created_at' =>$faker -> dateTimeBetween('-3 day', '-1 day'),
 
 	        ]);
 	    }
