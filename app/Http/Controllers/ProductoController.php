@@ -68,7 +68,7 @@ class ProductoController extends Controller
      */
     public function edit(Product $product)
     {
-        return Inertia::render('FormEditar', ['product' => $product]);
+        return Inertia::render('FormEdit', ['product' => $product]);
     }
 
     /**

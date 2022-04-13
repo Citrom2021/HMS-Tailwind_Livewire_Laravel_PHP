@@ -28,8 +28,9 @@
         @endif    
         
         <div class="col-md-4 float-right mt-3 mb-3">
-            <input type="text" class="form-control" placeholder="Search.." wire:model="searchTerm2" style="width: 20em;"/>    
-            </div>   
+            <input type="search" class="form-control" placeholder="Search.." wire:model="searchTerm2" style="width: 20em;" aria-label="Search" aria-describedby="button-addon2"/>    
+            <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded " id="basic-addon2">    
+        </div>   
 
                          
 

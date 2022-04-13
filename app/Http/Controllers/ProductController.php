@@ -76,7 +76,7 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
         $product->update($request->all());
-        return $product;
+        return response()->json($product);
     }
     else
     {
@@ -120,6 +120,6 @@ class ProductController extends Controller
      */
     public function search($name)
     {
-        return Product::where('name', 'like', '%'.$name.'%')->get();
+        return response()->json(Product::where('name', 'like', '%'.$name.'%')->get());
     }
 }

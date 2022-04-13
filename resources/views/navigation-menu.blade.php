@@ -33,8 +33,24 @@
                 </div> 
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="../user/home" :active="request()->routeIs('../user/home')">
+                    <x-jet-nav-link href="../user/home" :active="request()->routeIs('../dashboard')">
                        Dashboard
+                    </x-jet-nav-link>
+
+                    
+                </div> 
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="../user/home" :active="request()->routeIs('../my-bookings')">
+                       My bookings
+                    </x-jet-nav-link>
+
+                    
+                </div> 
+
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-jet-nav-link href="../user/home" :active="request()->routeIs('../user/home')">
+                       User Center
                     </x-jet-nav-link>
 
                     
@@ -129,7 +145,7 @@
                                 Home 
                              </x-jet-dropdown-link>
  
-                             <x-jet-dropdown-link href="/products">
+                             <x-jet-dropdown-link href="../restaurantandbar">
                                  
                                  Menu 
                               </x-jet-dropdown-link>
@@ -145,10 +161,10 @@
                             <div class="border-t border-gray-100"></div>
 
                             <!-- Authentication -->
-                            <form method="POST" action="{{ route('logout') }}">
+                            <form method="POST" action=" {{ route('logout') }}">
                                 @csrf
 
-                                <x-jet-dropdown-link href="{{ route('logout') }}"
+                                <x-jet-dropdown-link href=" {{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                     {{ __('Log Out') }}
@@ -222,10 +238,10 @@
                 @endif
 
                 <!-- Authentication -->
-                <form method="POST" action="{{ route('logout') }}">
+                <form method="POST" action=" {{ route('logout') }}  ">
                     @csrf
 
-                    <x-jet-responsive-nav-link href="{{ route('logout') }}"
+                    <x-jet-responsive-nav-link href=" {{ route('logout') }} "
                                    onclick="event.preventDefault();
                                     this.closest('form').submit();">
                         {{ __('Log Out') }}

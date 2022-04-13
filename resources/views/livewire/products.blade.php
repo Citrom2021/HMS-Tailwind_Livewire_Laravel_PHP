@@ -1,7 +1,7 @@
 
 <x-slot name="header">
     <div style="text-align: center" >
-<h1 class="text-grey-900" style="text-align: center">Products from Bar & Restaurant</h1>
+<h1 class="text-grey-900" style="text-align: center">Manage Products</h1>
 <a href="../user/home" style="text-align: center; font-size:0.8em; color:blue;"> <u>Back to Admin Centre</u> </a>
 </div>
 </x-slot>
@@ -27,6 +27,11 @@
             @include('livewire.create')   
         @endif    
 
+        <div class="col-md-4 float-right mt-3 mb-3">
+            <input type="search" class="form-control" placeholder="Search.." wire:model="searchTerm4" style="width: 20em;" aria-label="Search" aria-describedby="button-addon2"/>    
+            <span class="input-group-text flex items-center px-3 py-1.5 text-base font-normal text-gray-700 text-center whitespace-nowrap rounded " id="basic-addon2">    
+        </div>   
+
             <table class="table-auto w-full">
                 <thead>
                     <tr class="bg-indigo-600 text-white">
@@ -44,14 +49,9 @@
                             
                         </th>
                         <th class="px-4 py-2">Price
-
-                            <!-- Up and down arrows for sorting -->
-                            {{-- <span class="text-sm">
-                                <x-heroicon-o-arrow-sm-down class="w-6 h-6 text-white-500 white float-right"  style="cursor: pointer"/>
-                                <x-heroicon-o-arrow-sm-up class="w-6 h-6 text-white-500 white float-right" style="cursor: pointer"/>
-
-                            </span> --}}
+                            
                         </th>
+                        
                         <th class="px-4 py-2">Actions
                             
                         </th>

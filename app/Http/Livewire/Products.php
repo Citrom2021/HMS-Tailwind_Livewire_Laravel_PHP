@@ -15,15 +15,23 @@ class Products extends Component
 {
     public $products,$name,$category,$description,$price;
     public $modal = false;
+    public $searchTerm4;
 
     public function render()
     {
-        $this-> products = Product::all();
-            return view('livewire.products');
+        $searchTerm4 = '%'.$this->searchTerm4.'%';
+
+        $this-> products = Product::where('name','LIKE',$searchTerm4)
+                                ->orwhere('category','LIKE',$searchTerm4)
+                                ->orwhere('description','LIKE',$searchTerm4)
+                                
+                                ->orderBy('category', 'ASC')->get();
+                                return view('livewire.products');
+        
             
             
             
-              }
+    }
 
     public function create()
     {
