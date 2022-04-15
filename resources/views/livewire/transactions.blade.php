@@ -27,7 +27,7 @@
                 
                 <button type="button" wire:click="create()" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 my-3 mb-4">New</button>
                
-                <!-- MODAL error!!!!-->
+                
 
                 @if($modal)
                 @include('livewire.createtrx')   
@@ -89,7 +89,7 @@
                     </thead>
                     <tbody>
                         
-                        @foreach ($transactions as $transaction)
+                        @foreach ($transactionsToList as $transaction)
                         <tr>
                         <td class="border px-4 py-2">{{$transaction->id}}</td>
                         <td class="border px-4 py-2">{{$transaction->user_name}}</td>
@@ -112,7 +112,9 @@
                     </tbody>                                      
                        
                 </table>
-                                                
+                <div class="mt-4">
+                {{ $transactionsToList ->links()}}
+                </div>                          
             
               
             </div>

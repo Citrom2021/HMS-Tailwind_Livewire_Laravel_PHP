@@ -216,12 +216,14 @@ private function IsRoomAvailable()
 
        if ($transaction->room_name == $this->room_name && $checkoutStamp > time())
        {
-
-           if ($checkinStamp < $checkoutStampTrans && $checkoutStamp > $checkinStampTrans)
-           {
-                session()->flash('unavailable_message', sprintf('Room is already booked from %s to %s that time period!', $transaction->checkin, $transaction->checkout));
-                return false;
-           }
+            if (empty($this->transaction_id) || $this->transaction_id != $transaction->id)
+            {
+                if ($checkinStamp < $checkoutStampTrans && $checkoutStamp > $checkinStampTrans)
+                {
+                    session()->flash('unavailable_message', sprintf('Room is already booked from %s to %s!', $transaction->checkin, $transaction->checkout));
+                    return false;
+                }
+            }
        }
    }
    return true;

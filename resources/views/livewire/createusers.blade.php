@@ -17,6 +17,11 @@
                         </div>
 
                         <div class="mb-4">
+                            <label for="role" class="block text-gray-700 text-sm font-bold mb-2">Role:</label>
+                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="role" wire:model="role">
+                        </div>
+
+                        <div class="mb-4">
                             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                             <input type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
                         </div>
@@ -34,6 +39,11 @@
 
                         <div class="my-3">
                             <button wire:click="passwordReset" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Reset Password</button>
+                        </div>
+
+                        <div class="mb-4" style="display: none;">
+                            <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+                            <input type="hidden" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" wire:model="password">
                         </div>
 
                         <div class="mb-4">

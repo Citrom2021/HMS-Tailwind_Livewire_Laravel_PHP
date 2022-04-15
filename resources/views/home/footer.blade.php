@@ -1,7 +1,7 @@
 <footer class="text-center bg-gray-900 text-white">
     <div class="container px-6 pt-6">
       <div class="flex justify-center mb-6">
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <a style="pointer-events: none;" href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
           <svg aria-hidden="true"
           focusable="false"
           data-prefix="fab"
@@ -18,7 +18,7 @@
           </svg>
         </a>
   
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <a style="pointer-events: none;" href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
           <svg aria-hidden="true"
           focusable="false"
           data-prefix="fab"
@@ -35,7 +35,7 @@
           </svg>
         </a>
   
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <a  style="pointer-events: none;" href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
           <svg aria-hidden="true"
           focusable="false"
           data-prefix="fab"
@@ -52,7 +52,7 @@
           </svg>
         </a>
   
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <a  style="pointer-events: none;" href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
           <svg aria-hidden="true"
           focusable="false"
           data-prefix="fab"
@@ -69,7 +69,7 @@
           </svg>
         </a>
   
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <a  style="pointer-events: none;" href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
           <svg aria-hidden="true"
           focusable="false"
           data-prefix="fab"
@@ -86,7 +86,7 @@
           </svg>
         </a>
   
-        <a href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
+        <a  style="pointer-events: none;" href="#!" type="button" class="rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1">
           <svg aria-hidden="true"
           focusable="false"
           data-prefix="fab"
@@ -105,76 +105,46 @@
       </div>
   
       <div>
-        <form action="">
+        
           <div class="grid md:grid-cols-3 gird-cols-1 gap-4 flex justify-center items-center">
             <div class="md:ml-auto md:mb-6">
-              <p class="">
-                <strong>Sign up for our newsletter</strong>
-              </p>
+              
             </div>
   
-            <div class="md:mb-6">
-              <input
-                type="text"
-                class="
-                  form-control
-                  block
-                  w-full
-                  px-3
-                  py-1.5
-                  text-base
-                  font-normal
-                  text-gray-700
-                  bg-white bg-clip-padding
-                  border border-solid border-gray-300
-                  rounded
-                  transition
-                  ease-in-out
-                  m-0
-                  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-                "
-                id="exampleFormControlInput1"
-                placeholder="Email address"/>
-            </div>
+            
   
-            <div class="md:mr-auto mb-6">
-              <button type="submit" class="inline-block px-6 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out">
-                Subscribe
-              </button>
-            </div>
+            
           </div>
-        </form>
+        
       </div>
   
       <div class="mb-6">
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt distinctio earum
-          repellat quaerat voluptatibus placeat nam, commodi optio pariatur est quia magnam
-          eum harum corrupti dicta, aliquam sequi voluptate quas.
+          In any case let us know about your experience in any case if you have questions let us know via <a href="mailto:enquiry@hmsystems.com"> Enail</a>
         </p>
       </div>
   
       <div class="grid lg:grid-cols-4 md:grid-cols-2">
         <div class="mb-6">
-          <h5 class="uppercase font-bold mb-2.5">Links</h5>
+          <h5 class="uppercase font-bold mb-2.5"> <a href="mailto:contact@hmsystems.com">Contact us for any question</a> </h5>
   
           
         </div>
   
         <div class="mb-6">
-          <h5 class="uppercase font-bold mb-2.5">Links</h5>
+          <h5 class="uppercase font-bold mb-2.5"><a href="mailto:bookings@hmsystems.com">Enquire about your Bookings</a> </h5>
   
           
         </div>
   
         <div class="mb-6">
-          <h5 class="uppercase font-bold mb-2.5">Links</h5>
+          <h5 class="uppercase font-bold mb-2.5"> <a href="../terms-of-service"> Terms of Service </a> </h5>
   
          
         </div>
   
         <div class="mb-6">
-          <h5 class="uppercase font-bold mb-2.5">Links</h5>
+          <h5 class="uppercase font-bold mb-2.5"> <a href="../privacy-policy"> Privacy Policy </a> </h5>
   
           
         </div>
@@ -183,6 +153,6 @@
   
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2021 Copyright:
-      <a class="text-white" href="#">HMS Systems</a>
+      <a class="text-white" href="#" style="pointer-events: none;">HMS Systems</a>
     </div>
   </footer>

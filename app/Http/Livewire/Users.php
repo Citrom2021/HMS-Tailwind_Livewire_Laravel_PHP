@@ -27,6 +27,7 @@ class Users extends Component
 
         $users = User::where('name','LIKE',$searchTerm2)
                         ->orwhere('address','LIKE',$searchTerm2)
+                        ->orwhere('role','LIKE',$searchTerm2)
                         ->orwhere('email','LIKE',$searchTerm2)
                         ->orwhere('phone_number','LIKE',$searchTerm2)
         ->orderBy('id', 'ASC')->paginate(20);
@@ -54,6 +55,7 @@ class Users extends Component
         
         $this->name = "";
         $this->email = "";
+        $this->role = "";
         $this->password = "";
         $this->address = "";
         $this->phone_number ="";
@@ -65,11 +67,13 @@ class Users extends Component
        $user = User::findOrFail($id);
        $this->user_id = $id;
        $this->name = $user-> name;
+       $this->role = $user-> role;
        $this->email = $user -> email;
-       /* $this->password = $user ->password; */
+       $this->password = $user ->password;
        $this->address = $user -> address;
        $this->phone_number = $user -> phone_number;
        $this -> openModal();
+       
    }
 
    public function delete($id)
@@ -86,7 +90,8 @@ class Users extends Component
 
         'name'=> $this->name,
         'email'=>  $this->email,
-        /* 'password' => bcrypt(self::generatePassword(12)), */
+        'role'=>  $this->role,
+        'password' => $this ->password,
         'address'=>  $this->address,
         'phone_number'=>  $this->phone_number,
 
@@ -122,10 +127,9 @@ public function passwordReset()
         
 
         ]);
-        session()->flash('PasswordMessage', 
-        $this ->user_id ? 'Password has been updated successfully' : 'User has been updated successfully');
-        /* $this->closeModal();
-        $this->cleanupFields(); */
+        session()->flash('PasswordMessage', 'Password reset successfully');
+       
+        
 
  }
 

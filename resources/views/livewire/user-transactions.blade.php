@@ -51,12 +51,7 @@
                             </th>
                             <th class="px-4 py-2">Checkout
     
-                                <!-- Up and down arrows for sorting -->
-                                {{-- <span class="text-sm">
-                                    <x-heroicon-o-arrow-sm-down class="w-6 h-6 text-white-500 white float-right"  style="cursor: pointer"/>
-                                    <x-heroicon-o-arrow-sm-up class="w-6 h-6 text-white-500 white float-right" style="cursor: pointer"/>
-    
-                                </span> --}}
+                                
                             </th>
                             <th class="px-4 py-2">Days
                                 

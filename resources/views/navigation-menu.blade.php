@@ -41,7 +41,7 @@
                 </div> 
 
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="../user/home" :active="request()->routeIs('../my-bookings')">
+                    <x-jet-nav-link href="../my-bookings" :active="request()->routeIs('../my-bookings')">
                        My bookings
                     </x-jet-nav-link>
 

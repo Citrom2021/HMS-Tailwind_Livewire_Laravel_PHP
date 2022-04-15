@@ -25,7 +25,7 @@ class Transactions extends Component
    
 
     public $transactions,$user_name,$email,$phone,$room_name,$checkin,$checkout,$days,$bill,$halfboard,$number_of_guests;
-    public bool $isDisabled;
+    public bool $isDisabled = true;
     public $modal = false;
 
     
@@ -35,15 +35,17 @@ class Transactions extends Component
     
         $searchTerm = '%'.$this->searchTerm.'%';
 
-        $this-> transactions = Transaction::where('user_name','LIKE',$searchTerm)
+        $transactionsToList = Transaction::where('user_name','LIKE',$searchTerm)
                                 ->orwhere('room_name','LIKE',$searchTerm)
                                 ->orwhere('email','LIKE',$searchTerm)
                                 ->orwhere('phone','LIKE',$searchTerm)
-        ->orderBy('checkin', 'ASC')->get();
-            return view('livewire.transactions');
-        
-        $isDisabled = true;
+        ->orderBy('checkin', 'ASC')->paginate(10);
 
+
+        $this->transactions = Transaction::all();
+
+        return view('livewire.transactions', ['transactionsToList' => $transactionsToList]);
+        
         
         
                               
@@ -225,13 +227,11 @@ public function UpdateBill()
    {
         if (self::IsRoomAvailable())
         {
-
             $this->isDisabled = false;
             $this->bill = self::GetRoom()->price * $this->days;
         }   
         else
         {
-            
             $this->isDisabled = true;
         
         }
@@ -258,12 +258,14 @@ private function IsRoomAvailable()
 
        if ($transaction->room_name == $this->room_name && $checkoutStamp > time())
        {
-
-           if ($checkinStamp < $checkoutStampTrans && $checkoutStamp > $checkinStampTrans)
-           {
-                session()->flash('unavailable_message', sprintf('Room is already booked from %s to %s that time period!', $transaction->checkin, $transaction->checkout));
-                return false;
-           }
+            if (empty($this->transaction_id) || $this->transaction_id != $transaction->id)
+            {
+                if ($checkinStamp < $checkoutStampTrans && $checkoutStamp > $checkinStampTrans)
+                {
+                    session()->flash('unavailable_message', sprintf('Room is already booked from %s to %s!', $transaction->checkin, $transaction->checkout));
+                    return false;
+                }
+            }
        }
    }
    return true;

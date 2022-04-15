@@ -18,13 +18,13 @@
         </li>
        <li class="navbar-brand"><a href="#services" class="nav-link">Services</a>
         </li>
-        {{-- <li class="navbar-brand"><a href="#food" class="nav-link">Restaurant</a> --}}
+        <li class="navbar-brand"><a href="#food" class="nav-link">Food</a>
         </li>
         <li class="navbar-brand"><a href="#faq" class="nav-link ">FAQ</a>
         </li>
         <li class="navbar-brand"><a href="#theteam" class="nav-link">Our team</a>
         </li>
-        <li class="navbar-brand"><a href="#contact" class="nav-link">Contact</a>
+        {{-- <li class="navbar-brand"><a href="#contact" class="nav-link">Contact</a> --}}
         </li>
         <li class="navbar-brand"><a href="#gallery" class="nav-link">Gallery</a>
         </li>

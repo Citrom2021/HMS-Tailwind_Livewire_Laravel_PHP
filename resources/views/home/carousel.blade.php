@@ -27,7 +27,7 @@
           <img src="../images/carousel/thumb-1920-349835.jpg" class="block w-full" style="min-height:250px;"/>
           <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
         </div>
-        <div class="carousel-caption hidden md:block absolute text-center">
+        <div class="carousel-caption  md:block absolute text-center">
           <h5 class="text-xl">Our lobby</h5>
           <p>Modern technology combined with aristocratic architecture</p>
         </div>
@@ -37,7 +37,7 @@
           <img src="../images/carousel/li-yang-a8iCZvtrHpQ-unsplash.jpg" class="block w-full" style="min-height:250px;"/>
           <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
         </div>
-        <div class="carousel-caption hidden md:block absolute text-center">
+        <div class="carousel-caption  md:block absolute text-center">
           <h5 class="text-xl">Leisure</h5>
           <p>Perfect environment to rest yourself</p>
         </div>
@@ -47,7 +47,7 @@
           <img src="../images/gallery/reisetopia-Vl5DAQxNBbM-unsplash.jpg" class="block w-full" style="min-height:250px;"/>
           <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed bg-black opacity-50"></div>
         </div>
-        <div class="carousel-caption hidden md:block absolute text-center">
+        <div class="carousel-caption md:block absolute text-center">
           <h5 class="text-xl">Conferences for Businesses</h5>
           <p>Big conference room with video / audio technology</p>
         </div>
