@@ -26,6 +26,8 @@
         "tailwindcss": "^3.0.23"
     },
     "dependencies": {
-        "font-awesome": "^4.7.0"
+        "async": "^3.2.3",
+        "font-awesome": "^4.7.0",
+        "minimist": "^1.2.6"
     }
 }
