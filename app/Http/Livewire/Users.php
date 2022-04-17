@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
 use Livewire\WithPagination;
+use Illuminate\Validation\Rule;
 
 class Users extends Component
 {
@@ -89,7 +90,7 @@ class Users extends Component
         [
 
         'name'=> $this->name,
-        'email'=>  $this->email,
+        'email'=> $this ->email ,
         'role'=>  $this->role,
         'password' => bcrypt(self::generatePassword(12)),
         'address'=>  $this->address,

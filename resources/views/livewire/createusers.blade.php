@@ -13,17 +13,17 @@
                         
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" wire:model="name">
+                            <input required type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" wire:model="name">
                         </div>
 
                         <div class="mb-4">
                             <label for="role" class="block text-gray-700 text-sm font-bold mb-2">Role:</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="role" wire:model="role">
+                            <input  type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="role" wire:model="role" required>
                         </div>
 
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
-                            <input type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
+                            <input required type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
                         </div>
                         
 
@@ -48,12 +48,12 @@
 
                         <div class="mb-4">
                             <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Address:</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" wire:model="address">
+                            <input required type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="address" wire:model="address">
                         </div>
 
                         <div class="mb-4">
                             <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone number:</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone_number" wire:model="phone_number">
+                            <input required type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone_number" wire:model="phone_number">
                         </div>
 
                         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex  sm:flex-col space-y-4">

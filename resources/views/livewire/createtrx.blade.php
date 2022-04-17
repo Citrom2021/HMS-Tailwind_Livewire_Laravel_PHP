@@ -27,23 +27,23 @@
 
                         <div class="mb-4">
                             <label for="user_name" class="block text-gray-700 text-sm font-bold mb-2">Guest name</label>
-                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user_name" wire:model="user_name">
+                            <input  required type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="user_name" wire:model="user_name">
                         </div>
 
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Guest email:</label>
-                            <input type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
+                            <input required type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
                         </div>
 
                         <div class="mb-4">
                             <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Guest phone:</label>
-                            <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" wire:model="phone">
+                            <input required type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="phone" wire:model="phone">
                         </div>
 
                         <div class="mb-4">
                             <label for="room_name" class="block text-gray-700 text-sm font-bold mb-2">Select Room</label>
                             {{-- <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="room_id" wire:model="room_id"> --}}
-                            <select name="room_name"  id="room_name" wire:model="room_name" class="w-9/12">
+                            <select required name="room_name"  id="room_name" wire:model="room_name" class="w-9/12">
                                 <option disabled value="">Room types:</option>
                                 <option value="Single">Single</option>
                                 <option value="Double">Double</option>  
@@ -107,7 +107,7 @@
                         <div class="mb-4">
                             <label class="block text-gray-700 text-sm font-bold mb-2">Halfboard:</label>
                             {{-- <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="halfboard" wire:model="halfboard"> --}}
-                            <select for="halfboard" name="halfboard"  id="halfboard" wire:model="halfboard" class="w-9/12">
+                            <select for="halfboard" name="halfboard"  id="halfboard" wire:model="halfboard" class="w-9/12" required>
                                 <option disabled value="">Options:</option>
                                 <option value="Yes">Yes</option>
                                 <option value="No">No</option>    
@@ -115,7 +115,7 @@
                         </div>
                         <div class="mb-4">
                             <label for="number_of_guests" class="block text-gray-700 text-sm font-bold mb-2">Number of guests:</label>
-                            <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="number_of_guests" wire:model="number_of_guests">
+                            <input required type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="number_of_guests" wire:model="number_of_guests">
                         </div>
 
                         <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex  sm:flex-col space-y-4">
