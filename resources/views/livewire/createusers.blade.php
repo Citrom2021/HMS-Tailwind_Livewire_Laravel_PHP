@@ -43,7 +43,7 @@
 
                         <div class="mb-4" style="display: none;">
                             <label for="password" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
-                            <input type="hidden" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" wire:model="password">
+                            <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" wire:model="password">
                         </div>
 
                         <div class="mb-4">

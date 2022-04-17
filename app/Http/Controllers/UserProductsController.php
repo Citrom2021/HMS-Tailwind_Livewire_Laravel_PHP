@@ -17,7 +17,7 @@ class UserProductsController extends Controller
     public function renderall()
     {
          $products = Product::all();
-         /* return  Inertia::render('Showing', ['products'=>$products]); */
+         // return  Inertia::render('Showing', ['products'=>$products]); */
     }
 
     /**
@@ -68,7 +68,7 @@ class UserProductsController extends Controller
      */
     public function edit(Product $product)
     {
-        return Inertia::render('FormEditar', ['product' => $product]);
+        return Inertia::render('FormEdit', ['product' => $product]);
     }
 
     /**

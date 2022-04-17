@@ -91,7 +91,7 @@ class Users extends Component
         'name'=> $this->name,
         'email'=>  $this->email,
         'role'=>  $this->role,
-        'password' => $this ->password,
+        'password' => bcrypt(self::generatePassword(12)),
         'address'=>  $this->address,
         'phone_number'=>  $this->phone_number,
 
@@ -102,7 +102,7 @@ class Users extends Component
         $this->cleanupFields();
 
  }
- public function getRandomBytes($nbBytes = 32)
+  function getRandomBytes($nbBytes = 32)
 {
     $bytes = openssl_random_pseudo_bytes($nbBytes, $strong);
     if (false !== $bytes && true === $strong) {
@@ -113,7 +113,7 @@ class Users extends Component
     }
 }
 
- public function generatePassword($length){
+public function generatePassword($length){
     return substr(preg_replace("/[^a-zA-Z0-9]/", "", base64_encode(self::getRandomBytes($length+1))),0,$length);
 }
 

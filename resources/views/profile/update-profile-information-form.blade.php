@@ -66,6 +66,13 @@
             <x-jet-input-error for="email" class="mt-2" />
         </div>
 
+        <!-- Role -->
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="role" value="{{ __('Role') }}" />
+            <x-jet-input  disabled id="role" type="text" class="mt-1 block w-full" wire:model.defer="state.role" autocomplete="role"  readonly/>
+            <x-jet-input-error for="role" class="mt-2" />
+        </div>
+
         
         <!-- Address -->
         <div class="col-span-6 sm:col-span-4">
@@ -82,12 +89,7 @@
         </div>
 
 
-        <!--photo-url -->
-        <!-- <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="profile_photo_path" value="{{ __('Photo URL') }}" />
-            <x-jet-input id="profile_photo_path" type="text" class="mt-1 block w-full" wire:model.defer="state.profile_photo_path" autocomplete="profile_photo_path" />
-            <x-jet-input-error for="profile_photo_path" class="mt-2" />
-        </div> -->
+        
     </x-slot>
 
     <x-slot name="actions">

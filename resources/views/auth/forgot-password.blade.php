@@ -1,7 +1,8 @@
+@extends('layouts.master')
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <i class="fa-solid fa-unlock-keyhole fa-4x"></i>
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
