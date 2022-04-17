@@ -32,8 +32,21 @@
     
 
     <body>
+        
         <center><h1 style="margin-bottom:1%; margin-top:1%;"><b>Hi Admin! This is an Admin Center For Admin</b>
         </h1></center>
+        
+        <center>
+            <ul>
+                <li>
+        <a  href="../routes" target="_blank" class="text-center" style="color: blue;"> <u>Routes list</u> </a> <br>
+                </li>
+                
+                <li>
+                <a  href="../routestocsv" target="_blank" class="text-center" style="color: blue;"> <u>Download Routes list in CSV</u> </a>
+                </li>
+            </ul>
+        </center>
         
         <div id="app" class="flex items-center justify-center h-full bg-gray-200 p-4" style="margin-top:2em;">
                
