@@ -24,8 +24,12 @@
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
                             <input required type="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" wire:model="email">
+                            
                         </div>
                         
+                        
+                        @error('email') <span class="error text-red-900">{{ $message }}</span> @enderror
+                       
 
                         @if(session()->has('PasswordMessage'))
                         <div class="bg-red-100 rounded-b text-red-900 px-4 py-4 shadow-md my-3" role="alert">

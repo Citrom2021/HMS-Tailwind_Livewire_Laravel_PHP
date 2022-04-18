@@ -18,6 +18,11 @@ class Users extends Component
     public $name,$email,$password,$address,$phone_number;
     public $modal = false;
 
+    protected $rules = [
+        
+        'email' => 'required|string|unique:users,email',
+    ];
+
     public $searchTerm2;
     use WithPagination;
 
@@ -86,6 +91,7 @@ class Users extends Component
  public function save()
         
  {
+    $this->validate();
     User::updateOrCreate(['id'=>$this->user_id],
         [
 
