@@ -43,58 +43,7 @@ Clone Laravel projekt:
 
 Env file konfigurálása:
 Fontos az alábbi változók bemásolása az env fájlba (kivéve az APP_KEY változót, mivel azt a “php artisan key:generate” parancs generálja majd) mivel ezek a pamatéterek adják a környezet konfigurációját.
-Az ENV File a Docs mappában található
-APP_NAME="HMS System"
-APP_ENV=local
-APP_KEY=base64:ET5PUEUNqm6u1V7I1eqgIsqTdkinieqkAhwTm6wLdKM=
-APP_DEBUG=true
-APP_URL=http://127.0.0.1:8000
-ASSET_URL=/public/assets
-
-LOG_CHANNEL=stack
-LOG_LEVEL=debug
-
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
-DB_PASSWORD=
-
-BROADCAST_DRIVER=log
-CACHE_DRIVER=file
-QUEUE_CONNECTION=sync
-SESSION_DRIVER=database
-SESSION_LIFETIME=120
-
-MEMCACHED_HOST=127.0.0.1
-
-REDIS_HOST=127.0.0.1
-REDIS_PASSWORD=null
-REDIS_PORT=6379
-
-MAIL_MAILER=smtp
-MAIL_HOST=smtp.mailtrap.io
-MAIL_PORT=2525
-MAIL_USERNAME=474d8b7be5ef44
-MAIL_PASSWORD=6b25bed91ad7a9
-MAIL_ENCRYPTION=tls
-MAIL_FROM_ADDRESS= register@budapesthotels.com
-MAIL_FROM_NAME="${APP_NAME}"
-
-AWS_ACCESS_KEY_ID=
-AWS_SECRET_ACCESS_KEY=
-AWS_DEFAULT_REGION=us-east-1
-AWS_BUCKET=
-
-PUSHER_APP_ID=
-PUSHER_APP_KEY=
-PUSHER_APP_SECRET=
-PUSHER_APP_CLUSTER=mt1
-
-MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
-MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
-
+Az ENV File a Docs mappában található a Vizsgaremek PDF-ben van benne a az env paraméterek
 
 
 12.	php artisan key:generate
