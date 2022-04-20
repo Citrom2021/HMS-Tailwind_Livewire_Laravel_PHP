@@ -102,12 +102,17 @@ class Users extends Component
      session()->flash('message', 'User has been deleted successfully');
  }  
 
+ public function updated($email)
+    {
+        $this->validateOnly($email);
+    }
+
  public function save()
         
  {  
      if (empty($this->user_id))
      {
-    $this->validate();
+        $validatedData =$this->validate();
      }
     User::updateOrCreate(['id'=>$this->user_id],
         [
