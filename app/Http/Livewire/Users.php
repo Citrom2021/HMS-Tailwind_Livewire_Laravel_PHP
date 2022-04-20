@@ -12,17 +12,31 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Redirect;
 use Livewire\WithPagination;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Validator;
+
 
 class Users extends Component
 {
-    public $name,$email,$password,$address,$phone_number;
+    public  $user, $name,$email,$password,$address,$phone_number;
     public $modal = false;
 
-    protected $rules = [
+   /*  protected function rules()
         
-        'email' => 'required|string|unique:users,email',
+    {
+              
+        return [
+            'name' => 'required|min:6',
+            'email' => ['required', 'email', 'not_in:' . auth()->user()->email],
+        ];
+    }    */
+
+    protected $rules = [
+
+        'email' => 'required|string|unique:users,email', 
     ];
 
+
+ 
     public $searchTerm2;
     use WithPagination;
 
@@ -42,7 +56,7 @@ class Users extends Component
             
             
             
-              }
+    }
 
     public function create()
     {
@@ -90,8 +104,11 @@ class Users extends Component
 
  public function save()
         
- {
+ {  
+     if (empty($this->user_id))
+     {
     $this->validate();
+     }
     User::updateOrCreate(['id'=>$this->user_id],
         [
 

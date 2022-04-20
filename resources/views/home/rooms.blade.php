@@ -7,13 +7,13 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="../login">
                     <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-3.jpg">
                 </a>
 
                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="../login">
                             Single Room
                         </a>
                     </h1>
@@ -29,7 +29,7 @@
                             Budapest Hotels
                         </p>
                     </a>
-                    <a class="no-underline text-grey-darker hover:text-red-dark" href="#">
+                    <a class="no-underline text-grey-darker hover:text-red-dark" href="../login">
                         <span class="hidden">Like</span>
                         <i class="fa fa-heart"></i>
                     </a>
@@ -47,13 +47,13 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="../login">
                     <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/1.jpg">
                 </a>
 
                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="../login">
                             Double Room
                         </a>
                     </h1>
@@ -87,13 +87,13 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="../login">
                     <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/6.jpg">
                 </a>
 
                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="../register">
                             Luxury Room
                         </a>
                     </h1>
@@ -127,13 +127,13 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="../register">
                     <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-4.jpg">
                 </a>
 
                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="../register">
                             Executive Room
                         </a>
                     </h1>
@@ -167,13 +167,13 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="../register">
                     <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-6.jpg">
                 </a>
 
                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="../register">
                             Budget Room
                         </a>
                     </h1>
@@ -207,13 +207,13 @@
             <!-- Article -->
             <article class="overflow-hidden rounded-lg shadow-lg">
 
-                <a href="#">
+                <a href="../login">
                     <img alt="Placeholder" class="block h-auto w-full" src="../images/rooms/room-2.jpg">
                 </a>
 
                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                     <h1 class="text-lg">
-                        <a class="no-underline hover:underline text-black" href="#">
+                        <a class="no-underline hover:underline text-black" href="../login">
                             Danube view
                         </a>
                     </h1>

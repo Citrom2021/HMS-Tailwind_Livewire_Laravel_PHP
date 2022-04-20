@@ -239,14 +239,15 @@ background-color: #555;
 
 
 
+
 <!-- Our Story -->
 @include('home.chart')
 
  <!-- Chart line -->
-         
+    
 
 
-
+ 
 
 
          
