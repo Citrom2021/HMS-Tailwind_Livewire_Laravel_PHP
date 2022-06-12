@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Str;
 
+
+
 return [
 
     /*
@@ -14,8 +16,8 @@ return [
     | you may use many connections at once using the Database library.
     |
     */
-
-    'default' => env('DB_CONNECTION', 'mysql'),
+    
+    'default' => env('DB_CONNECTION', 'pgsql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -82,6 +84,21 @@ return [
                 PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
             ]) : [],
         ],
+
+        $herokuDb = parse_url(env('DATABASE_URL', "postgres://pcisuxcgnbonlt:414df19fb7654b7593a03b141e15ffc6cc25b708d8134fc1a7c93ba1d8ed61ed@ec2-54-228-32-29.eu-west-1.compute.amazonaws.com:5432/ddukr1qr02k9cm")),
+
+'pgsql' => [
+            'driver' => 'pgsql',
+            'host'     => $herokuDb['host'],
+            'database' => substr($herokuDb['path'], 1),
+            'username' => $herokuDb['user'],
+            'password' => $herokuDb['pass'],
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            
+],
+
 
         'pgsql' => [
             'driver' => 'pgsql',
