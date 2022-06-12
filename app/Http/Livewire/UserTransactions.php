@@ -117,7 +117,7 @@ class UserTransactions extends Component
         'days'=>$this->days,
         'bill'=>$this->bill,
         'halfboard'=> $this->halfboard,
-        'number_of_guests'=> $this->number_of_guests,
+        'number_of_guests'=> $this->number_of_guests
 
         ]);
         session()->flash('message', 
