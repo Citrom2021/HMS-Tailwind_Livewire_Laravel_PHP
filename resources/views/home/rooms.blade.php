@@ -178,7 +178,7 @@
                         </a>
                     </h1>
                     <p class="text-grey-darker text-sm">
-                        30 000 Forint / night
+                        30 000 HUF / night
                     </p>
                 </header>
 
